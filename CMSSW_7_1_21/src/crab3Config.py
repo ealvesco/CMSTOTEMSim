@@ -1,0 +1,25 @@
+from CRABClient.UserUtilities import config
+config = config()
+config.General.requestName = 'SIM_Production_CMS-RP_POMWIG-SDPlusDijets_v1'
+config.General.workArea = 'crab_projects'
+config.JobType.pluginName = 'Analysis'
+config.Data.outputPrimaryDataset = 'Production_CMSSIM-RPRECO_POMWIG-SDPlusDijets_v1'
+config.General.transferOutputs = True
+config.General.transferLogs = True
+#config.JobType.generator = 'lhe'
+config.JobType.psetName = 'step1_CMSOnly_generatedpw.py'
+config.JobType.outputFiles = ['step1_SDPlusPomwig_RPRECO_CMS_SIM.root']
+config.Data.userInputFiles = open('inputfile_pomwigsdplus.txt').readlines()
+#config.JobType.inputFiles = ['/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_1.root','gci/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_2.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_3.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_4.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_5.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_6.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_7.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_8.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_9.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_10.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_11.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_12.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_13.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_14.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_15.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_16.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_17.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_18.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_19.root','/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO_v4/MBRPythia8_RPRECO_20.root']
+#config.Data.primaryDataset = 'CMSTotemLowPU2015-DIGI-RECO-MBR-CMSTOTEM'
+#config.Data.splitting = 'EventBased'
+config.Data.splitting = 'FileBased'
+config.Data.unitsPerJob = 1
+NJOBS = 500
+config.Data.totalUnits = config.Data.unitsPerJob * NJOBS
+config.Data.outLFNDirBase = '/store/group/phys_diffraction/CMSTotemLowPU2015/emc/MC/pomwig/SDPlus/step1/Dijets_v1' # or '/store/group/<subdir>'
+config.Data.publication = True
+#config.Data.publishDataName = 'DIGI-RECO-MBR-CMSTOTEM'
+config.Site.whitelist = ['T2_CH_CERN']
+config.Site.storageSite = 'T2_CH_CERN'
+#config.Site.storageSite = 'T2_BR_UERJ'

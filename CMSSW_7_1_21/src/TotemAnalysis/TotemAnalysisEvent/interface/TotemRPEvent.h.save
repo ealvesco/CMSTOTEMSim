@@ -1,0 +1,33 @@
+#ifndef TotemAnalysis_TotemAnalysisEvent_TotemRPEvent
+#define TotemAnalysis_TotemAnalysisEvent_TotemRPEvent
+
+#include "TotemAnalysis/TotemAnalysisEvent/interface/RPTrackInfo.h"
+
+#include <vector>
+#include <map>
+
+namespace totemRPAnalysis {
+   class TotemRPAnalysis;
+}
+
+struct TotemRPEvent {
+
+    typedef totemRPAnalysis::TotemRPAnalysis analysis_type;
+    static const char* name;
+
+    TotemRPEvent() {}
+    ~TotemRPEvent() {}
+
+    void reset();
+
+    std::map<unsigned int, RPDumpTrackInfo> track_info_;
+    std::map<unsigned int, RPDumpDigiInfo> digi_info_;
+    std::map<unsigned int, RPDumpPatternInfo > par_patterns_info_, nonpar_patterns_info_;
+
+    std::map<unsigned int, std::vector<RPDumpTrackInfo> > multi_track_info_;
+    std::map<unsigned int, RPDumpReconstructedProton> rec_pr_info_;
+    std::map<unsigned int, RPDumpReconstructedProton> sim_pr_info_;
+    RPDumpReconstructedProtonPair rec_pr_pair_info_;
+};
+
+#endif

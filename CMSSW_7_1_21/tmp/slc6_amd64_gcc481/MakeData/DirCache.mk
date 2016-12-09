@@ -1,0 +1,4 @@
+ALL_SUBSYSTEMS+=TotemAnalysis
+subdirs_src_TotemAnalysis = src_TotemAnalysis_TotemAnalysisEvent
+ALL_PACKAGES += TotemAnalysis/TotemAnalysisEvent
+subdirs_src_TotemAnalysis_TotemAnalysisEvent := src_TotemAnalysis_TotemAnalysisEvent_interface src_TotemAnalysis_TotemAnalysisEvent_src

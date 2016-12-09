@@ -1,0 +1,36 @@
+<lcgdict>
+<selection>
+  <class name="TotemRPEvent"/> 
+  <class name="RPDumpTrackInfo"/> 
+  <class name="RPDumpDigiInfo"/> 
+  <class name="RPDumpReconstructedProton"/> 
+  <class name="RPDumpReconstructedProtonPair"/> 
+  <class name="RPDumpPattern"/> 
+  <class name="RPDumpPatternInfo"/> 
+  <class name="std::vector<RPDumpTrackInfo>"/> 
+  <class name="std::vector<RPDumpDigiInfo>"/> 
+  <class name="std::vector<RPDumpPatternInfo>"/> 
+  <class name="std::vector<RPDumpReconstructedProton>"/> 
+  <class name="std::map<unsigned int, RPDumpTrackInfo>"/> 
+  <class name="std::map<unsigned int, RPDumpDigiInfo>"/> 
+  <class name="std::map<unsigned int, RPDumpPatternInfo>"/> 
+  <class name="std::map<unsigned int, std::vector<RPDumpTrackInfo> >"/> 
+  <class name="std::map<unsigned int, RPDumpReconstructedProton>"/> 
+  <class name="edm::Wrapper<TotemRPEvent>"/> 
+  <class name="edm::Wrapper<RPDumpTrackInfo>"/> 
+  <class name="edm::Wrapper<RPDumpDigiInfo>"/> 
+  <class name="edm::Wrapper<RPDumpReconstructedProton>"/> 
+  <class name="edm::Wrapper<RPDumpReconstructedProtonPair>"/> 
+  <class name="edm::Wrapper<RPDumpPattern>"/> 
+  <class name="edm::Wrapper<RPDumpPatternInfo>"/> 
+  <class name="edm::Wrapper<std::vector<RPDumpTrackInfo> >"/> 
+  <class name="edm::Wrapper<std::vector<RPDumpDigiInfo> >"/> 
+  <class name="edm::Wrapper<std::vector<RPDumpPatternInfo> >"/> 
+  <class name="edm::Wrapper<std::vector<RPDumpReconstructedProton> >"/> 
+  <class name="edm::Wrapper<std::map<unsigned int, RPDumpTrackInfo> >"/> 
+  <class name="edm::Wrapper<std::map<unsigned int, RPDumpDigiInfo> >"/> 
+  <class name="edm::Wrapper<std::map<unsigned int, RPDumpPatternInfo> >"/> 
+  <class name="edm::Wrapper<std::map<unsigned int, std::vector<RPDumpTrackInfo> > >"/> 
+  <class name="edm::Wrapper<std::map<unsigned int, RPDumpReconstructedProton> >"/> 
+</selection>
+</lcgdict>
