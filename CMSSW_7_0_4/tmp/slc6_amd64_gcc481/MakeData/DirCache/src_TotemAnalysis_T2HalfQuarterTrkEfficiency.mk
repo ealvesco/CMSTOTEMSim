@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemAnalysis/T2HalfQuarterTrkEfficiency)
+subdirs_src_TotemAnalysis_T2HalfQuarterTrkEfficiency := src_TotemAnalysis_T2HalfQuarterTrkEfficiency_test src_TotemAnalysis_T2HalfQuarterTrkEfficiency_interface src_TotemAnalysis_T2HalfQuarterTrkEfficiency_python src_TotemAnalysis_T2HalfQuarterTrkEfficiency_src

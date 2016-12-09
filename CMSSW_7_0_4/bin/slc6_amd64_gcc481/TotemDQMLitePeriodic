@@ -1,0 +1,179 @@
+#!/bin/bash
+
+#----------------------------------------------------------------------------------------------------
+
+data_dir="/home/monitor/RawDataDirTest"
+
+reco_cfg_template="$CMSSW_BASE/src/TotemDQMLite/GUI/scripts/reco_template_RP_cfg.py"
+
+web_template="$CMSSW_BASE/src/TotemDQMLite/GUI/scripts/web_page_template.html"
+
+dqm_cfg_template="" # empty --> default
+
+#plot_dir="/home/monitor/periodic_dqm"
+plot_dir="/afs/cern.ch/user/j/jkaspar/www/totem/periodic_dqm"
+
+reco_cfg="$plot_dir/last_reco.py"
+reco_root="$plot_dir/last_reco.root"
+reco_log="$plot_dir/last_reco.log"
+
+#----------------------------------------------------------------------------------------------------
+
+current_file=""
+prev_file=""
+display_file="None"
+
+windows_open=0
+
+#----------------------------------------------------------------------------------------------------
+
+function FindCurrentFile()
+{
+	#echo "* searching for new file"
+
+	current_file=""
+	first=""
+	files=(`ls -1c "$data_dir"`)
+	for file in ${files[@]}
+	do
+		if [ -z "$first" ]
+		then
+			first="$file"
+		else
+			current_file="$file"
+			break
+		fi
+	done
+}
+#----------------------------------------------------------------------------------------------------
+
+function MakeReco()
+{
+	sed "\
+			s|\$input_file|$data_dir/$current_file|;\
+			s|\$output_file|$reco_root|;\
+		" < "$reco_cfg_template" > "$reco_cfg"
+
+	cmsRun "$reco_cfg" &> "$reco_log"
+	if [ $? -eq 0 ]
+	then
+		echo "  Succsess!"
+		display_file="$current_file"
+	else
+		echo "  ERROR in cmsRun."
+	fi
+}
+
+#----------------------------------------------------------------------------------------------------
+
+function MakePlots()
+{
+	cd "$plot_dir"
+
+	TotemDQMLiteBatch -cfg "$dqm_cfg_template" "$reco_root" -suffix ".png"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/active_planes.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/plane_activity_2d.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/recognized_patterns.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/u_and_v_profiles.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/XY_track_distributions_graph.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/XY_track_distributions_histogram.lay"\
+		&> /dev/null
+
+	cd - > /dev/null
+}
+
+#----------------------------------------------------------------------------------------------------
+
+function MakeWebPage()
+{
+	# make png images
+
+#	for f in $plot_dir/*.pdf
+#	do
+#		dir="${f%/*}"
+#		file="${f##*/}"
+#		png_file="${file%.*}.png"
+#		png_file="${png_file/:/_}"
+#		convert -density 300 "$f" "$dir/$png_file"
+#	done
+
+	# build HTML page
+	local run="${current_file##*/}"
+	run="${run##*_}"
+	run="${run%.*}"
+	local file="${run#*.}"
+	run="${run%.*}"
+	local date=`date`
+	local fdate=`date -r $data_dir/$current_file`
+
+	cat "$web_template" | sed "\
+			s|\$run|$run|;
+			s|\$file|$file|;
+			s|\$date|$date|;
+			s|\$fdate|$fdate|;
+		" > "$plot_dir/summary.html"
+}
+
+#----------------------------------------------------------------------------------------------------
+
+function Wait()
+{
+	sleep 10
+	clear
+}
+
+#----------------------------------------------------------------------------------------------------
+
+function OpenWindows()
+{
+	ls "$plot_dir" | grep ".eps" | while read f
+	do
+		gv "$plot_dir/$f" & > /dev/null
+	done
+	
+	windows_open="1"
+}
+
+#----------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------
+
+# assure existing directories
+mkdir -p "$plot_dir"
+
+# clean old results
+rm -f $plot_dir/*.root
+rm -f $plot_dir/*.eps
+rm -f $plot_dir/*.png
+
+clear
+
+while [ 1 ]
+do
+	FindCurrentFile
+	if [ "$current_file" != "$prev_file" ]
+	then
+		echo "* Running reconstruction: $current_file"
+		MakeReco
+
+		echo "* Making plots"
+		MakePlots
+
+		echo "* Making web page"
+		MakeWebPage
+
+		prev_file="$current_file"
+	else
+		echo "* Current file: $current_file"
+	fi
+
+	#if [ "$windows_open" -eq 0 -a "$display_file" != "None" ]
+	#then
+	#	OpenWindows
+	#fi
+	
+	echo "* Displaying file: $display_file"
+
+	echo "* Waiting ... (use Ctrl-C to stop the script)"
+	Wait
+done

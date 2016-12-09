@@ -1,0 +1,77 @@
+10
+
+dir
+11762
+svn+ssh://svn.cern.ch/reps/totem/branches/CMSSW_7_0_4/offline/cmssw/src/TotemRawData/RawToDigi
+svn+ssh://svn.cern.ch/reps/totem
+
+
+
+2015-10-16T13:18:49.271035Z
+11210
+jkaspar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4525493e-7705-40b1-a816-d608a930855b
+
+test
+dir
+
+interface
+dir
+
+plugins
+dir
+
+python
+dir
+
+src
+dir
+
+BuildFile.xml
+file
+
+
+
+
+2016-07-11T20:44:28.000000Z
+8f87831618b4d4d35bad52897343cf72
+2015-06-27T18:09:59.377616Z
+10602
+jkaspar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+466
+

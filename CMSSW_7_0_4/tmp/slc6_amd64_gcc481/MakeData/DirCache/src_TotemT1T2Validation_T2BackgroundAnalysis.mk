@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemT1T2Validation/T2BackgroundAnalysis)
+subdirs_src_TotemT1T2Validation_T2BackgroundAnalysis := src_TotemT1T2Validation_T2BackgroundAnalysis_test src_TotemT1T2Validation_T2BackgroundAnalysis_interface src_TotemT1T2Validation_T2BackgroundAnalysis_python src_TotemT1T2Validation_T2BackgroundAnalysis_src

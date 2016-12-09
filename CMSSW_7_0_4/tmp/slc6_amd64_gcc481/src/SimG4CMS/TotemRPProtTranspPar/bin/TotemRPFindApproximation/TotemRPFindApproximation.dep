@@ -1,0 +1,8 @@
+tmp/slc6_amd64_gcc481/src/SimG4CMS/TotemRPProtTranspPar/bin/TotemRPFindApproximation/FindApproximation.o: \
+ src/SimG4CMS/TotemRPProtTranspPar/bin/FindApproximation.cc \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/MADParamGenerator.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/TMultiDimFet.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/LHCOpticsApproximator.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/LHCOpticsApproximator_gcc.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/RPXMLConfig.h \
+

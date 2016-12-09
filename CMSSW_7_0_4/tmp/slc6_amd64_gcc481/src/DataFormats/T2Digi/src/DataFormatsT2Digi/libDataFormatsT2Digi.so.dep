@@ -1,0 +1,18 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/T2Digi/src/DataFormatsT2Digi/a/xr.cc: \
+ src/DataFormats/T2Digi/src/classes.h \
+ src/DataFormats/T2Digi/interface/T2StripDigi.h \
+ src/DataFormats/T2Digi/interface/T2StripDigiCollection.h \
+ src/DataFormats/T2DetId/interface/T2DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/DataFormats/TotemData/interface/TotemDigiCollection.h \
+ src/DataFormats/T2Digi/interface/T2PadDigi.h \
+ src/DataFormats/T2Digi/interface/T2PadDigiCollection.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/T2Digi/src/DataFormatsT2Digi/T2PadDigi.o: \
+ src/DataFormats/T2Digi/src/T2PadDigi.cc \
+ src/DataFormats/T2Digi/interface/T2PadDigi.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/T2Digi/src/DataFormatsT2Digi/T2StripDigi.o: \
+ src/DataFormats/T2Digi/src/T2StripDigi.cc \
+ src/DataFormats/T2Digi/interface/T2StripDigi.h \
+

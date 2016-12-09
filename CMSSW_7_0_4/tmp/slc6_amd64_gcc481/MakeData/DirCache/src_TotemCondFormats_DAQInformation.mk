@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemCondFormats/DAQInformation)
+subdirs_src_TotemCondFormats_DAQInformation := src_TotemCondFormats_DAQInformation_test src_TotemCondFormats_DAQInformation_interface src_TotemCondFormats_DAQInformation_plugins src_TotemCondFormats_DAQInformation_python src_TotemCondFormats_DAQInformation_scripts src_TotemCondFormats_DAQInformation_src

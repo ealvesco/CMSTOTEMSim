@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_TotemRPValidation_RPReconstructedTracksValidation_test
+src_TotemRPValidation_RPReconstructedTracksValidation_test_parent := TotemRPValidation/RPReconstructedTracksValidation
+src_TotemRPValidation_RPReconstructedTracksValidation_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_TotemRPValidation_RPReconstructedTracksValidation_test,src/TotemRPValidation/RPReconstructedTracksValidation/test,TEST))

@@ -1,0 +1,9 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/DetId/src/DataFormatsDetId/a/xr.cc: \
+ src/DataFormats/DetId/src/classes.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/DataFormats/DetId/interface/DetIdCollection.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/DetId/src/DataFormatsDetId/DetId.o: \
+ src/DataFormats/DetId/src/DetId.cc \
+ src/DataFormats/DetId/interface/DetId.h
+

@@ -1,0 +1,37 @@
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/RPElasticReconstruction/plugins/RecoTotemRPRPElasticReconstructionPlugins/RPElasticReconstruction.o: \
+ src/RecoTotemRP/RPElasticReconstruction/plugins/RPElasticReconstruction.cc \
+ src/TotemCondFormats/BeamOpticsParamsObjects/interface/BeamOpticsParams.h \
+ src/TotemCondFormats/BeamOpticsParamsObjects/interface/RPRecoProtMADXVariables.h \
+ src/TotemCondFormats/ProtonTransportFunctions/interface/ProtonTransportFunctions.h \
+ src/TotemCondFormats/DataRecord/interface/BeamOpticsParamsRcd.h \
+ src/TotemCondFormats/DataRecord/interface/ProtonTransportRcd.h \
+ src/Geometry/TotemRecords/interface/RealGeometryRecord.h \
+ src/Geometry/TotemRecords/interface/MeasuredGeometryRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPMeasuredAlignmentRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPRealAlignmentRecord.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/LHCOpticsApproximator.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/LHCOpticsApproximator_gcc.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/TMultiDimFet.h \
+ src/DataFormats/TotemRPDetId/interface/TotRPDetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPFittedTrackCollection.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPFittedTrack.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPRecoHit.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPTrackCandidate.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPRecoElasticEvent.h \
+
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/RPElasticReconstruction/plugins/RecoTotemRPRPElasticReconstructionPlugins/RPElasticReconstructionNew.o: \
+ src/RecoTotemRP/RPElasticReconstruction/plugins/RPElasticReconstructionNew.cc \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPFittedTrackCollection.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPFittedTrack.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPRecoHit.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPTrackCandidate.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPRecoElasticEvent.h \
+ src/TotemRawDataLibrary/DataFormats/interface/RawEvent.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrameCollection.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrame.h \
+ src/RecoTotemRP/RPElasticReconstruction/plugins/parameters.h
+

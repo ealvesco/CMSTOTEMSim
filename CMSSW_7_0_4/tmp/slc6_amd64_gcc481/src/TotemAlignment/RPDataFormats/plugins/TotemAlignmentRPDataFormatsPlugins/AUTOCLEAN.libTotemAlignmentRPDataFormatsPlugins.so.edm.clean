@@ -1,0 +1,2 @@
+01:/bin/rm -f lib/slc6_amd64_gcc481/pluginTotemAlignmentRPDataFormatsPlugins.so lib/slc6_amd64_gcc481/TotemAlignmentRPDataFormatsPlugins.edmplugin
+90:edmPluginRefresh lib/slc6_amd64_gcc481

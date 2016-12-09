@@ -1,0 +1,2 @@
+01:/bin/rm -f lib/slc6_amd64_gcc481/pluginDataFormatsT1DigiWireCapabilities.so lib/slc6_amd64_gcc481/DataFormatsT1DigiWireCapabilities.edmplugin
+90:edmPluginRefresh lib/slc6_amd64_gcc481

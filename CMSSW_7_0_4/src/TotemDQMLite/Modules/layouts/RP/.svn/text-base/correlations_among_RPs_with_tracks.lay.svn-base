@@ -1,0 +1,9 @@
+<!DOCTYPE layout>
+<layout>
+ <TabWindow windowTitle="correlations among RPs with tracks" ifLayout="1">
+  <CanvasGrid>
+   <model x="3" y="3" canvasTab_0_0="RP/sector 45/number of RPs with tracks in parallel groups" canvasTab_0_1="RP/sector 56/number of RPs with tracks in parallel groups" canvasTab_1_0="RP/sector 45/track RP correlation" canvasTab_0_2="" canvasTab_1_1="RP/sector 56/track RP correlation" canvasTab_2_0="" canvasTab_1_2="" canvasTab_2_1="" canvasTab_2_2=""/>
+   <view colNum="2" rowNum="2"/>
+  </CanvasGrid>
+ </TabWindow>
+</layout>

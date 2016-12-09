@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_SimTotem_RPTimingDetectorsDigiProducer_test
+src_SimTotem_RPTimingDetectorsDigiProducer_test_parent := SimTotem/RPTimingDetectorsDigiProducer
+src_SimTotem_RPTimingDetectorsDigiProducer_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_SimTotem_RPTimingDetectorsDigiProducer_test,src/SimTotem/RPTimingDetectorsDigiProducer/test,TEST))

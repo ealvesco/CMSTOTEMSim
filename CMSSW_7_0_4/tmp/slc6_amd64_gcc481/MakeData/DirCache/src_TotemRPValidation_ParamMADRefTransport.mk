@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemRPValidation/ParamMADRefTransport)
+subdirs_src_TotemRPValidation_ParamMADRefTransport := src_TotemRPValidation_ParamMADRefTransport_interface src_TotemRPValidation_ParamMADRefTransport_src

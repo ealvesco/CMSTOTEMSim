@@ -1,0 +1,9 @@
+tmp/slc6_amd64_gcc481/src/TotemAlignment/RPRates/src/TotemAlignmentRPRates/ScoringPlaneDistributions.o: \
+ src/TotemAlignment/RPRates/src/ScoringPlaneDistributions.cc \
+ src/Geometry/TotemRPGeometryBuilder/interface/TotemRPGeometry.h \
+ src/DataFormats/TotemRPDetId/interface/TotRPDetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/Geometry/TotemRPGeometryBuilder/interface/DetGeomDesc.h \
+ src/Geometry/TotemRPDetTopology/interface/RPTopology.h \
+ src/TotemAlignment/RPRates/interface/ScoringPlaneDistributions.h \
+

@@ -1,0 +1,10 @@
+tmp/slc6_amd64_gcc481/src/TotemCondFormats/BeamOpticsParamsObjects/src/TotemCondFormatsBeamOpticsParamsObjects/BeamOpticsParams.o: \
+ src/TotemCondFormats/BeamOpticsParamsObjects/src/BeamOpticsParams.cc \
+ src/TotemCondFormats/BeamOpticsParamsObjects/interface/BeamOpticsParams.h \
+ src/TotemCondFormats/BeamOpticsParamsObjects/interface/RPRecoProtMADXVariables.h \
+
+tmp/slc6_amd64_gcc481/src/TotemCondFormats/BeamOpticsParamsObjects/src/TotemCondFormatsBeamOpticsParamsObjects/T_EventSetup_BeamOpticsParams.o: \
+ src/TotemCondFormats/BeamOpticsParamsObjects/src/T_EventSetup_BeamOpticsParams.cc \
+ src/TotemCondFormats/BeamOpticsParamsObjects/interface/BeamOpticsParams.h \
+ src/TotemCondFormats/BeamOpticsParamsObjects/interface/RPRecoProtMADXVariables.h \
+

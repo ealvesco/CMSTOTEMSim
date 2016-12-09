@@ -1,0 +1,22 @@
+tmp/slc6_amd64_gcc481/src/Configuration/TotemOpticsConfiguration/src/ConfigurationTotemOpticsConfiguration/BeamOpticsParamsESSource.o: \
+ src/Configuration/TotemOpticsConfiguration/src/BeamOpticsParamsESSource.cc \
+ src/Configuration/TotemOpticsConfiguration/interface/BeamOpticsParamsESSource.h \
+ src/TotemCondFormats/BeamOpticsParamsObjects/interface/BeamOpticsParams.h \
+ src/TotemCondFormats/BeamOpticsParamsObjects/interface/RPRecoProtMADXVariables.h \
+ src/TotemCondFormats/DataRecord/interface/BeamOpticsParamsRcd.h \
+
+tmp/slc6_amd64_gcc481/src/Configuration/TotemOpticsConfiguration/src/ConfigurationTotemOpticsConfiguration/OpticsInformation.o: \
+ src/Configuration/TotemOpticsConfiguration/src/OpticsInformation.cc \
+ src/TotemCondFormats/DataRecord/interface/BeamOpticsParamsRcd.h \
+ src/TotemCondFormats/DataRecord/interface/ProtonTransportRcd.h \
+ src/Geometry/TotemRecords/interface/RealGeometryRecord.h \
+ src/Geometry/TotemRecords/interface/MeasuredGeometryRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPMeasuredAlignmentRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPRealAlignmentRecord.h \
+ src/TotemCondFormats/BeamOpticsParamsObjects/interface/BeamOpticsParams.h \
+ src/TotemCondFormats/BeamOpticsParamsObjects/interface/RPRecoProtMADXVariables.h \
+ src/TotemCondFormats/ProtonTransportFunctions/interface/ProtonTransportFunctions.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/LHCOpticsApproximator.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/LHCOpticsApproximator_gcc.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/TMultiDimFet.h \
+

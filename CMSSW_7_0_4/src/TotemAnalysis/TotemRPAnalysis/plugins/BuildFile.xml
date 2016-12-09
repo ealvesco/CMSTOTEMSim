@@ -1,0 +1,13 @@
+<library   name="TotemAnalysisTotemAnalysisEventPlugins" file="*.cc">
+  <use   name="FWCore/Framework"/>
+  <use   name="FWCore/ParameterSet"/>
+  <use   name="CommonTools/UtilAlgos"/>
+  <use   name="TotemAnalysis/TotemRPAnalysis"/>
+  <use   name="TotemAnalysis/TotemAnalysisEvent"/>
+  <use   name="ForwardAnalysis/ForwardTTreeAnalysis"/>
+  <use   name="root"/>
+  <use   name="hepmc"/>
+  <use   name="clhep"/>
+  <use   name="boost_header"/>
+  <flags   EDM_PLUGIN="1"/>
+</library>

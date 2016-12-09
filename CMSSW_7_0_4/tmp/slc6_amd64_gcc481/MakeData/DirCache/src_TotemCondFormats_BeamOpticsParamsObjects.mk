@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemCondFormats/BeamOpticsParamsObjects)
+subdirs_src_TotemCondFormats_BeamOpticsParamsObjects := src_TotemCondFormats_BeamOpticsParamsObjects_interface src_TotemCondFormats_BeamOpticsParamsObjects_src

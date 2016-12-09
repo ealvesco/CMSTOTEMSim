@@ -1,0 +1,5 @@
+tmp/slc6_amd64_gcc481/src/IOMC/DPEProtons/plugins/IOMCDPEProtonsPlugins/DPEProtons.o: \
+ src/IOMC/DPEProtons/plugins/DPEProtons.cc \
+ src/IOMC/DPEProtons/interface/DPEProtons.h \
+ src/IOMC/DPEProtons/interface/h101.h \
+

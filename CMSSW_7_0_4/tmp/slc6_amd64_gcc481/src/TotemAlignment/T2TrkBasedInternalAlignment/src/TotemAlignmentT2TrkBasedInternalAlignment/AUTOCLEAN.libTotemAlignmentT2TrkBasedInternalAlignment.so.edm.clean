@@ -1,0 +1,2 @@
+01:/bin/rm -f lib/slc6_amd64_gcc481/pluginTotemAlignmentT2TrkBasedInternalAlignment.so lib/slc6_amd64_gcc481/TotemAlignmentT2TrkBasedInternalAlignment.edmplugin
+90:edmPluginRefresh lib/slc6_amd64_gcc481

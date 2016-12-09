@@ -1,0 +1,9 @@
+<!DOCTYPE layout>
+<layout>
+ <TabWindow windowTitle="Planes contributing to fit" ifLayout="1">
+  <CanvasGrid>
+   <model canvasTab_1_2="RP/sector 45/station 210/fr_hr/planes contributing to fit" canvasTab_2_5="RP/sector 56/station 220/fr_bt/planes contributing to fit" canvasTab_0_0="RP/sector 45/station 220/fr_tp/planes contributing to fit" canvasTab_1_3="RP/sector 56/station 210/fr_hr/planes contributing to fit" canvasTab_0_1="RP/sector 45/station 220/nr_tp/planes contributing to fit" canvasTab_1_4="RP/sector 56/station 220/nr_hr/planes contributing to fit" canvasTab_0_2="RP/sector 45/station 210/fr_tp/planes contributing to fit" canvasTab_1_5="RP/sector 56/station 220/fr_hr/planes contributing to fit" canvasTab_0_3="RP/sector 56/station 210/fr_tp/planes contributing to fit" canvasTab_0_4="RP/sector 56/station 220/nr_tp/planes contributing to fit" canvasTab_0_5="RP/sector 56/station 220/fr_tp/planes contributing to fit" x="3" y="6" canvasTab_2_0="RP/sector 45/station 220/fr_bt/planes contributing to fit" canvasTab_2_1="RP/sector 45/station 220/nr_bt/planes contributing to fit" canvasTab_2_2="RP/sector 45/station 210/fr_bt/planes contributing to fit" canvasTab_1_0="RP/sector 45/station 220/fr_hr/planes contributing to fit" canvasTab_2_3="RP/sector 56/station 210/fr_bt/planes contributing to fit" canvasTab_1_1="RP/sector 45/station 220/nr_hr/planes contributing to fit" canvasTab_2_4="RP/sector 56/station 220/nr_bt/planes contributing to fit"/>
+   <view colNum="6" rowNum="3"/>
+  </CanvasGrid>
+ </TabWindow>
+</layout>

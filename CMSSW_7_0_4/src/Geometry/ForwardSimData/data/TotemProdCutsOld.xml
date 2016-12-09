@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<DDDefinition xmlns="http://www.cern.ch/cms/DDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cern.ch/cms/DDL ../../../DetectorDescription/Schema/DDLSchema.xsd">
+  
+<SpecParSection label="TotemProdCutsOld.xml" eval="true">
+  <SpecPar name="BeamPipe">
+    <PartSelector path="//BeamTube1" />
+    <PartSelector path="//BeamB*" />
+
+   <Parameter name="CMSCutsRegion" value="BeamPipe" eval="false"/>
+    <Parameter name="ProdCutsForElectrons" value="0.01*mm"/>
+    <Parameter name="ProdCutsForPositrons" value="0.01*mm"/>
+    <Parameter name="ProdCutsForGamma" value="0.01*mm"/>
+</SpecPar>
+
+  <SpecPar name="T1">
+    <PartSelector path="//Up_CSC*" />
+    <PartSelector path="//Low_CSC*" />
+    <PartSelector path="//Trap6*" />
+    <PartSelector path="//Frame*" />
+    <PartSelector path="//Tendif*" />
+
+   <Parameter name="CMSCutsRegion" value="T1" eval="false"/>
+    <Parameter name="ProdCutsForElectrons" value="0.01*mm"/>
+    <Parameter name="ProdCutsForPositrons" value="0.01*mm"/>
+    <Parameter name="ProdCutsForGamma" value="0.01*mm"/>
+</SpecPar>
+
+
+</SpecParSection>
+
+</DDDefinition>

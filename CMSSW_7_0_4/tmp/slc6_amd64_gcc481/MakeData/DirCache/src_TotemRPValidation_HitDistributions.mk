@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemRPValidation/HitDistributions)
+subdirs_src_TotemRPValidation_HitDistributions := src_TotemRPValidation_HitDistributions_test src_TotemRPValidation_HitDistributions_interface src_TotemRPValidation_HitDistributions_plugins src_TotemRPValidation_HitDistributions_python src_TotemRPValidation_HitDistributions_src

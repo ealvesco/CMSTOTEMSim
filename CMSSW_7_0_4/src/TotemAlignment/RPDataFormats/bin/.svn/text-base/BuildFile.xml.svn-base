@@ -1,0 +1,5 @@
+<use name="TotemAlignment/RPDataFormats" />
+
+<environment>
+	<bin file="PrintRPAlignmentSummary.cc"/>
+</environment>

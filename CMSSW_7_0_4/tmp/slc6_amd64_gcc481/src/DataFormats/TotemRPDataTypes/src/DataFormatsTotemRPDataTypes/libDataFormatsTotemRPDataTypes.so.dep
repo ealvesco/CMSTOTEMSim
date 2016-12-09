@@ -1,0 +1,18 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/TotemRPDataTypes/src/DataFormatsTotemRPDataTypes/a/xr.cc: \
+ src/DataFormats/TotemRPDataTypes/src/classes.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPStripDigi.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPDetTrigger.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPDigCluster.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPRecoHit.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTimingDetectorHit.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/TotemRPDataTypes/src/DataFormatsTotemRPDataTypes/RPMathUtils.o: \
+ src/DataFormats/TotemRPDataTypes/src/RPMathUtils.cc \
+ src/DataFormats/TotemRPDataTypes/interface/RPMathUtils.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/TotemRPDataTypes/src/DataFormatsTotemRPDataTypes/RPStripDigiCollection.o: \
+ src/DataFormats/TotemRPDataTypes/src/RPStripDigiCollection.cc \
+ src/DataFormats/TotemRPDataTypes/interface/RPStripDigiCollection.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+

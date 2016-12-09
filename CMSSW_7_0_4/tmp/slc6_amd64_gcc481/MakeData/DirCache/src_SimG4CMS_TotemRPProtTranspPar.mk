@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/SimG4CMS/TotemRPProtTranspPar)
+subdirs_src_SimG4CMS_TotemRPProtTranspPar := src_SimG4CMS_TotemRPProtTranspPar_interface src_SimG4CMS_TotemRPProtTranspPar_src src_SimG4CMS_TotemRPProtTranspPar_bin

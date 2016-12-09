@@ -1,0 +1,14 @@
+tmp/slc6_amd64_gcc481/src/IOMC/Elegent/bin/ElegentTDistributionSampler/ElegentTDistributionSampler.o: \
+ src/IOMC/Elegent/bin/ElegentTDistributionSampler.cc \
+ src/IOMC/Elegent/elegent/interface/Constants.h \
+ src/IOMC/Elegent/elegent/interface/ModelFactory.h \
+ src/IOMC/Elegent/elegent/interface/IslamModel.h \
+ src/IOMC/Elegent/elegent/interface/Model.h \
+ src/IOMC/Elegent/elegent/interface/PPPModel.h \
+ src/IOMC/Elegent/elegent/interface/BSWModel.h \
+ src/IOMC/Elegent/elegent/interface/BHModel.h \
+ src/IOMC/Elegent/elegent/interface/JenkovszkyModel.h \
+ src/IOMC/Elegent/elegent/interface/ExpModel.h \
+ src/IOMC/Elegent/elegent/interface/InterpolationModel.h \
+ src/IOMC/Elegent/elegent/interface/CoulombInterference.h \
+

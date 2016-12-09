@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/RecoTotemT1T2/T1TrackProducer2)
+subdirs_src_RecoTotemT1T2_T1TrackProducer2 := src_RecoTotemT1T2_T1TrackProducer2_test src_RecoTotemT1T2_T1TrackProducer2_interface src_RecoTotemT1T2_T1TrackProducer2_plugins src_RecoTotemT1T2_T1TrackProducer2_python

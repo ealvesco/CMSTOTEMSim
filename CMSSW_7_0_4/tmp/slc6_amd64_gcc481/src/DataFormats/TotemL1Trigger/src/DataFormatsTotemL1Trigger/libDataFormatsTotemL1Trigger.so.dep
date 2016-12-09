@@ -1,0 +1,18 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/TotemL1Trigger/src/DataFormatsTotemL1Trigger/a/xr.cc: \
+ src/DataFormats/TotemL1Trigger/src/classes.h \
+ src/DataFormats/TotemL1Trigger/interface/RPCCBits.h \
+ src/DataFormats/TotemL1Trigger/interface/RPCCId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/DataFormats/TotemL1Trigger/interface/T1TriggerBits.h \
+ src/DataFormats/TotemL1Trigger/interface/T2TriggerBits.h \
+ src/DataFormats/T2DetId/interface/T2DetId.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/TotemL1Trigger/src/DataFormatsTotemL1Trigger/RPCCId.o: \
+ src/DataFormats/TotemL1Trigger/src/RPCCId.cc \
+ src/DataFormats/TotemL1Trigger/interface/RPCCId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/TotemL1Trigger/src/DataFormatsTotemL1Trigger/T1TriggerBits.o: \
+ src/DataFormats/TotemL1Trigger/src/T1TriggerBits.cc \
+ src/DataFormats/TotemL1Trigger/interface/T1TriggerBits.h \
+

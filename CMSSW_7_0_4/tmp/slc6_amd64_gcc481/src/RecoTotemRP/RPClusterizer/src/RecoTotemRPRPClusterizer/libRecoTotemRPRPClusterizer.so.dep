@@ -1,0 +1,15 @@
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/RPClusterizer/src/RecoTotemRPRPClusterizer/RPClusterizerAlgorithm.o: \
+ src/RecoTotemRP/RPClusterizer/src/RPClusterizerAlgorithm.cc \
+ src/RecoTotemRP/RPClusterizer/interface/RPClusterizerAlgorithm.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPStripDigi.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPDigCluster.h \
+
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/RPClusterizer/src/RecoTotemRPRPClusterizer/RPClusterizer.o: \
+ src/RecoTotemRP/RPClusterizer/src/RPClusterizer.cc \
+ src/RecoTotemRP/RPClusterizer/interface/RPClusterizer.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPStripDigi.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+ src/RecoTotemRP/RPClusterizer/interface/RPClusterizerAlgorithm.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPDigCluster.h \
+

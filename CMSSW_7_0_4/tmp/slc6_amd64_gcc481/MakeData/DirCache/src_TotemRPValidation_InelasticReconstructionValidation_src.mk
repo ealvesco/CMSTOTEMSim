@@ -1,0 +1,14 @@
+ifeq ($(strip $(TotemRPValidation/InelasticReconstructionValidation)),)
+ALL_COMMONRULES += src_TotemRPValidation_InelasticReconstructionValidation_src
+src_TotemRPValidation_InelasticReconstructionValidation_src_parent := TotemRPValidation/InelasticReconstructionValidation
+src_TotemRPValidation_InelasticReconstructionValidation_src_INIT_FUNC := $$(eval $$(call CommonProductRules,src_TotemRPValidation_InelasticReconstructionValidation_src,src/TotemRPValidation/InelasticReconstructionValidation/src,LIBRARY))
+TotemRPValidationInelasticReconstructionValidation := self/TotemRPValidation/InelasticReconstructionValidation
+TotemRPValidation/InelasticReconstructionValidation := TotemRPValidationInelasticReconstructionValidation
+TotemRPValidationInelasticReconstructionValidation_files := $(patsubst src/TotemRPValidation/InelasticReconstructionValidation/src/%,%,$(wildcard $(foreach dir,src/TotemRPValidation/InelasticReconstructionValidation/src ,$(foreach ext,$(SRC_FILES_SUFFIXES),$(dir)/*.$(ext)))))
+TotemRPValidationInelasticReconstructionValidation_BuildFile    := $(WORKINGDIR)/cache/bf/src/TotemRPValidation/InelasticReconstructionValidation/BuildFile
+TotemRPValidationInelasticReconstructionValidation_LOC_USE := self  SimDataFormats/TrackingHit FWCore/ParameterSet DataFormats/TotemRPDataTypes FWCore/Framework DataFormats/Common clhep gsl boost geant4 DataFormats/TotemRPDetId Geometry/TotemRPDetTopology TotemRPValidation/BaseValidationClasses RecoTotemRP/RPRecoDataFormats SimDataFormats/GeneratorProducts SimG4Core/Notification TotemRPValidation/ParamMADRefTransport TotemRPValidation/ValidationTools TotemCondFormats/BeamOpticsParamsObjects TotemCondFormats/DataRecord
+TotemRPValidationInelasticReconstructionValidation_PRE_INIT_FUNC += $$(eval $$(call edmPlugin,TotemRPValidationInelasticReconstructionValidation,TotemRPValidationInelasticReconstructionValidation,$(SCRAMSTORENAME_LIB),src/TotemRPValidation/InelasticReconstructionValidation/src))
+TotemRPValidationInelasticReconstructionValidation_PACKAGE := self/src/TotemRPValidation/InelasticReconstructionValidation/src
+ALL_PRODS += TotemRPValidationInelasticReconstructionValidation
+TotemRPValidationInelasticReconstructionValidation_INIT_FUNC        += $$(eval $$(call Library,TotemRPValidationInelasticReconstructionValidation,src/TotemRPValidation/InelasticReconstructionValidation/src,src_TotemRPValidation_InelasticReconstructionValidation_src,$(SCRAMSTORENAME_BIN),,$(SCRAMSTORENAME_LIB),$(SCRAMSTORENAME_LOGS)))
+endif

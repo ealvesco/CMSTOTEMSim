@@ -1,0 +1,9 @@
+<!DOCTYPE layout>
+<layout>
+ <TabWindow windowTitle="Trigger histograms" ifLayout="1">
+  <CanvasGrid>
+   <model canvasTab_1_2="Trigger/input_status_bits histogram" canvasTab_0_0="Trigger/event_num histogram" canvasTab_1_3="" canvasTab_0_1="Trigger/orbit_num histogram" canvasTab_1_4="" canvasTab_0_2="Trigger/trigger_num histogram" canvasTab_0_3="" canvasTab_0_4="" x="4" y="5" canvasTab_3_0="" canvasTab_3_1="" canvasTab_3_2="" canvasTab_2_0="Trigger/type histogram" canvasTab_3_3="" canvasTab_2_1="Trigger/src_id histogram" canvasTab_3_4="" canvasTab_2_2="Trigger/inhibited_triggers_num histogram" canvasTab_1_0="Trigger/run_num histogram" canvasTab_2_3="Trigger/revision_num histogram" canvasTab_1_1="Trigger/bunch_num histogram" canvasTab_2_4=""/>
+   <view colNum="3" rowNum="3"/>
+  </CanvasGrid>
+ </TabWindow>
+</layout>

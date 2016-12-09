@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_TotemRPValidation_ValidationPlots_test
+src_TotemRPValidation_ValidationPlots_test_parent := TotemRPValidation/ValidationPlots
+src_TotemRPValidation_ValidationPlots_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_TotemRPValidation_ValidationPlots_test,src/TotemRPValidation/ValidationPlots/test,TEST))

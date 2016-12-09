@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemCondFormats/ProtonTransportFunctions)
+subdirs_src_TotemCondFormats_ProtonTransportFunctions := src_TotemCondFormats_ProtonTransportFunctions_interface src_TotemCondFormats_ProtonTransportFunctions_plugins src_TotemCondFormats_ProtonTransportFunctions_python src_TotemCondFormats_ProtonTransportFunctions_src

@@ -1,0 +1,19 @@
+<use name="FWCore/ParameterSet" />
+<use name="FWCore/Common" />
+
+<use name="TotemDQMLite/Core" />
+<use name="TotemDQMLite/Geometry" />
+<use name="Geometry/TotemRPDetTopology"/>
+<use name="Geometry/TotemGeometry" />
+<use name="DataFormats/T1DigiWire"/>
+<use name="DataFormats/T1DigiVfat"/>
+<use name="DataFormats/T2Hit"/>
+
+<use name="rootgraphics" />
+
+<!-- correlation-plot selectors unfortuantely need QString -->
+<use name="qt"/>
+
+<export>
+	<lib name="1"/>
+</export>

@@ -1,0 +1,20 @@
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/RPRecoHitProducer/src/RecoTotemRPRPRecoHitProducer/RPRecoHitProducerAlgorithm.o: \
+ src/RecoTotemRP/RPRecoHitProducer/src/RPRecoHitProducerAlgorithm.cc \
+ src/RecoTotemRP/RPRecoHitProducer/interface/RPRecoHitProducerAlgorithm.h \
+ src/Geometry/TotemRPDetTopology/interface/RPTopology.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPDigCluster.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPRecoHit.h \
+ src/RecoTotemRP/RPClusterSigmaService/interface/RPDetClusterSigmas.h \
+
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/RPRecoHitProducer/src/RecoTotemRPRPRecoHitProducer/RPRecoHitProducer.o: \
+ src/RecoTotemRP/RPRecoHitProducer/src/RPRecoHitProducer.cc \
+ src/RecoTotemRP/RPRecoHitProducer/interface/RPRecoHitProducer.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPDigCluster.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPRecoHit.h \
+ src/RecoTotemRP/RPRecoHitProducer/interface/RPRecoHitProducerAlgorithm.h \
+ src/Geometry/TotemRPDetTopology/interface/RPTopology.h \
+ src/RecoTotemRP/RPClusterSigmaService/interface/RPDetClusterSigmas.h \
+ src/RecoTotemRP/RPServiceRecords/interface/RPClusterSigmaServiceRecord.h \
+

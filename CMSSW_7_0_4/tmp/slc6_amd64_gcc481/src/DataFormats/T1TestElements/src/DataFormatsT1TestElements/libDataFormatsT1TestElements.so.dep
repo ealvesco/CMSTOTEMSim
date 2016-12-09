@@ -1,0 +1,8 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/T1TestElements/src/DataFormatsT1TestElements/a/xr.cc: \
+ src/DataFormats/T1TestElements/src/classes.h \
+ src/DataFormats/T1TestElements/interface/T1TestElements.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/T1TestElements/src/DataFormatsT1TestElements/T1TestElements.o: \
+ src/DataFormats/T1TestElements/src/T1TestElements.cc \
+ src/DataFormats/T1TestElements/interface/T1TestElements.h \
+

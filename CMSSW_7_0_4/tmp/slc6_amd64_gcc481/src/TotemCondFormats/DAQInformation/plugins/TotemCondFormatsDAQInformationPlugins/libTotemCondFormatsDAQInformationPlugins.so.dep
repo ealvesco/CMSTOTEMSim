@@ -1,0 +1,16 @@
+tmp/slc6_amd64_gcc481/src/TotemCondFormats/DAQInformation/plugins/TotemCondFormatsDAQInformationPlugins/DAQMappingSourceXML.o: \
+ src/TotemCondFormats/DAQInformation/plugins/DAQMappingSourceXML.cc \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemCondFormats/DAQInformation/interface/DAQMapping.h \
+ src/TotemCondFormats/DAQInformation/interface/TotemSymbId.h \
+ src/TotemCondFormats/DAQInformation/interface/AnalysisMask.h \
+ src/TotemCondFormats/DataRecord/interface/TotemDAQMappingRecord.h \
+
+tmp/slc6_amd64_gcc481/src/TotemCondFormats/DAQInformation/plugins/TotemCondFormatsDAQInformationPlugins/PrintDAQMapping.o: \
+ src/TotemCondFormats/DAQInformation/plugins/PrintDAQMapping.cc \
+ src/TotemCondFormats/DAQInformation/interface/AnalysisMask.h \
+ src/TotemCondFormats/DAQInformation/interface/TotemSymbId.h \
+ src/TotemCondFormats/DAQInformation/interface/DAQMapping.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemCondFormats/DataRecord/interface/TotemDAQMappingRecord.h \
+

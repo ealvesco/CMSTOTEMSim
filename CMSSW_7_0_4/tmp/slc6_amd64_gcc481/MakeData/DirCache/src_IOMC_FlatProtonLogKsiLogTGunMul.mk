@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/IOMC/FlatProtonLogKsiLogTGunMul)
+subdirs_src_IOMC_FlatProtonLogKsiLogTGunMul := src_IOMC_FlatProtonLogKsiLogTGunMul_test src_IOMC_FlatProtonLogKsiLogTGunMul_interface src_IOMC_FlatProtonLogKsiLogTGunMul_plugins src_IOMC_FlatProtonLogKsiLogTGunMul_python

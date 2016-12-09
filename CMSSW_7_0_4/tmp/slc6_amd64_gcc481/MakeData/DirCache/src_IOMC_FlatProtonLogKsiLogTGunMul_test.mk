@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_IOMC_FlatProtonLogKsiLogTGunMul_test
+src_IOMC_FlatProtonLogKsiLogTGunMul_test_parent := IOMC/FlatProtonLogKsiLogTGunMul
+src_IOMC_FlatProtonLogKsiLogTGunMul_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_IOMC_FlatProtonLogKsiLogTGunMul_test,src/IOMC/FlatProtonLogKsiLogTGunMul/test,TEST))

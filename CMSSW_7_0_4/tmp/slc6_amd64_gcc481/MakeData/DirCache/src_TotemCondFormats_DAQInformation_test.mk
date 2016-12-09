@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_TotemCondFormats_DAQInformation_test
+src_TotemCondFormats_DAQInformation_test_parent := TotemCondFormats/DAQInformation
+src_TotemCondFormats_DAQInformation_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_TotemCondFormats_DAQInformation_test,src/TotemCondFormats/DAQInformation/test,TEST))

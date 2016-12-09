@@ -1,0 +1,4 @@
+tmp/slc6_amd64_gcc481/src/TotemRPValidation/BaseValidationClasses/src/TotemRPValidationBaseValidationClasses/BaseHistogramManager.o: \
+ src/TotemRPValidation/BaseValidationClasses/src/BaseHistogramManager.cc \
+ src/TotemRPValidation/BaseValidationClasses/interface/BaseHistogramManager.h \
+

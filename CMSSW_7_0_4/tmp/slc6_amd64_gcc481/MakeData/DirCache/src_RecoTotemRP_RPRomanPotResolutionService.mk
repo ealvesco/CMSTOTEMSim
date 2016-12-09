@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/RecoTotemRP/RPRomanPotResolutionService)
+subdirs_src_RecoTotemRP_RPRomanPotResolutionService := src_RecoTotemRP_RPRomanPotResolutionService_interface src_RecoTotemRP_RPRomanPotResolutionService_src

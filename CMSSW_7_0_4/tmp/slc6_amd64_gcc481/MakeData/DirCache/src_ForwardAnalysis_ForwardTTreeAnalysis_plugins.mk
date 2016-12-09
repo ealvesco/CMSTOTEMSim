@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_ForwardAnalysis_ForwardTTreeAnalysis_plugins
+src_ForwardAnalysis_ForwardTTreeAnalysis_plugins_parent := ForwardAnalysis/ForwardTTreeAnalysis
+src_ForwardAnalysis_ForwardTTreeAnalysis_plugins_INIT_FUNC += $$(eval $$(call CommonProductRules,src_ForwardAnalysis_ForwardTTreeAnalysis_plugins,src/ForwardAnalysis/ForwardTTreeAnalysis/plugins,PLUGINS))

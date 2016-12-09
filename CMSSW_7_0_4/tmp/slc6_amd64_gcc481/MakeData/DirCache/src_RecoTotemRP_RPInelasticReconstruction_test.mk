@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_RecoTotemRP_RPInelasticReconstruction_test
+src_RecoTotemRP_RPInelasticReconstruction_test_parent := RecoTotemRP/RPInelasticReconstruction
+src_RecoTotemRP_RPInelasticReconstruction_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_RecoTotemRP_RPInelasticReconstruction_test,src/RecoTotemRP/RPInelasticReconstruction/test,TEST))

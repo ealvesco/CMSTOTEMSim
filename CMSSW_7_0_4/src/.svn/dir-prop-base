@@ -1,0 +1,10 @@
+K 13
+svn:externals
+V 79
+TotemRawDataLibrary svn+ssh://svn.cern.ch/reps/totem/trunk/TotemRawDataLibrary
+
+K 13
+svn:mergeinfo
+V 49
+/branches/CMSSW_6_2_0/offline/cmssw/src:9946-9947
+END

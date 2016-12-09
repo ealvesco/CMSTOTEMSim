@@ -1,0 +1,14 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/T1RawData/src/DataFormatsT1RawData/a/xr.cc: \
+ src/DataFormats/T1RawData/src/classes.h \
+ src/DataFormats/T1RawData/interface/TotemRawVFATFrame.h \
+ src/DataFormats/T1RawData/interface/TotemVFATFrameColl.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/T1RawData/src/DataFormatsT1RawData/TotemRawVFATFrame.o: \
+ src/DataFormats/T1RawData/src/TotemRawVFATFrame.cc \
+ src/DataFormats/T1RawData/interface/TotemRawVFATFrame.h
+
+tmp/slc6_amd64_gcc481/src/DataFormats/T1RawData/src/DataFormatsT1RawData/TotemVFATFrameColl.o: \
+ src/DataFormats/T1RawData/src/TotemVFATFrameColl.cc \
+ src/DataFormats/T1RawData/interface/TotemVFATFrameColl.h \
+ src/DataFormats/T1RawData/interface/TotemRawVFATFrame.h
+

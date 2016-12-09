@@ -1,0 +1,7 @@
+tmp/slc6_amd64_gcc481/src/IOMC/SmearingGenerator/plugins/IOMCSmearingGeneratorPlugins/SmearingGenerator.o: \
+ src/IOMC/SmearingGenerator/plugins/SmearingGenerator.cc \
+ src/IOMC/SmearingGenerator/interface/SmearingGenerator.h \
+ src/TotemCondFormats/BeamOpticsParamsObjects/interface/BeamOpticsParams.h \
+ src/TotemCondFormats/BeamOpticsParamsObjects/interface/RPRecoProtMADXVariables.h \
+ src/TotemCondFormats/DataRecord/interface/BeamOpticsParamsRcd.h \
+

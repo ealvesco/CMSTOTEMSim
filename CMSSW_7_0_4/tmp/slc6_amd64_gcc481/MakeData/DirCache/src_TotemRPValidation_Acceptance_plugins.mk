@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_TotemRPValidation_Acceptance_plugins
+src_TotemRPValidation_Acceptance_plugins_parent := TotemRPValidation/Acceptance
+src_TotemRPValidation_Acceptance_plugins_INIT_FUNC += $$(eval $$(call CommonProductRules,src_TotemRPValidation_Acceptance_plugins,src/TotemRPValidation/Acceptance/plugins,PLUGINS))

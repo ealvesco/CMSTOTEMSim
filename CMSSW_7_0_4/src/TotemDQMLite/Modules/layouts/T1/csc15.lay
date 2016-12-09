@@ -1,0 +1,9 @@
+<!DOCTYPE layout>
+<layout>
+ <TabWindow windowTitle="- Arm, 2nd plane, CSC 5" ifLayout="1" >
+  <CanvasGrid>
+   <model x="3" y="4" canvasTab_0_0="ArmMinus_/2ndPlane_/CSC_5/StripA number cumulative" canvasTab_0_1="ArmMinus_/2ndPlane_/CSC_5/StripB number cumulative" canvasTab_1_0="ArmMinus_/2ndPlane_/CSC_5/StripA profile cumulative" canvasTab_0_2="ArmMinus_/2ndPlane_/CSC_5/Wire number cumulative" canvasTab_1_1="ArmMinus_/2ndPlane_/CSC_5/StripB profile cumulative" canvasTab_2_0="" canvasTab_0_3="" canvasTab_1_2="ArmMinus_/2ndPlane_/CSC_5/Wire profile cumulative" canvasTab_2_1="ArmMinus_/2ndPlane_/CSC_5/Reco hits cumulative" canvasTab_1_3="" canvasTab_2_2="ArmMinus_/2ndPlane_/CSC_5/Reco hits number cumulative" canvasTab_2_3="" />
+   <view colNum="3" rowNum="3" />
+  </CanvasGrid>
+ </TabWindow>
+</layout>

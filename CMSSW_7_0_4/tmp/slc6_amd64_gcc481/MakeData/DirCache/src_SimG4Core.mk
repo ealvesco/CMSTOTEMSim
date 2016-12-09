@@ -1,0 +1,2 @@
+ALL_SUBSYSTEMS+=$(patsubst src/%,%,src/SimG4Core)
+subdirs_src_SimG4Core = src_SimG4Core_HelpfulWatchers src_SimG4Core_Application src_SimG4Core_Notification src_SimG4Core_TotemRPProtTransp src_SimG4Core_Generators

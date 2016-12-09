@@ -1,0 +1,12 @@
+tmp/slc6_amd64_gcc481/src/TotemAlignment/RPRecords/src/TotemAlignmentRPRecords/RPMeasuredAlignmentRecord.o: \
+ src/TotemAlignment/RPRecords/src/RPMeasuredAlignmentRecord.cc \
+ src/TotemAlignment/RPRecords/interface/RPMeasuredAlignmentRecord.h \
+
+tmp/slc6_amd64_gcc481/src/TotemAlignment/RPRecords/src/TotemAlignmentRPRecords/RPMisalignedAlignmentRecord.o: \
+ src/TotemAlignment/RPRecords/src/RPMisalignedAlignmentRecord.cc \
+ src/TotemAlignment/RPRecords/interface/RPMisalignedAlignmentRecord.h \
+
+tmp/slc6_amd64_gcc481/src/TotemAlignment/RPRecords/src/TotemAlignmentRPRecords/RPRealAlignmentRecord.o: \
+ src/TotemAlignment/RPRecords/src/RPRealAlignmentRecord.cc \
+ src/TotemAlignment/RPRecords/interface/RPRealAlignmentRecord.h \
+

@@ -1,0 +1,20 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/T2Road/src/DataFormatsT2Road/a/xr.cc: \
+ src/DataFormats/T2Road/src/classes.h \
+ src/DataFormats/T2Road/interface/T2Road.h \
+ src/DataFormats/T2Hit/interface/T2Hit.h \
+ src/DataFormats/T2Hit/interface/hit_entry.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+ src/DataFormats/T2Cluster/interface/T2Cluster.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+ src/DataFormats/T2Road/interface/T2RoadCollection.h \
+ src/DataFormats/T2Road/interface/T2RoadCollectionWrapper.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/T2Road/src/DataFormatsT2Road/T2Road.o: \
+ src/DataFormats/T2Road/src/T2Road.cc \
+ src/DataFormats/T2Road/interface/T2Road.h \
+ src/DataFormats/T2Hit/interface/T2Hit.h \
+ src/DataFormats/T2Hit/interface/hit_entry.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+ src/DataFormats/T2Cluster/interface/T2Cluster.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h
+

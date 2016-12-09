@@ -1,0 +1,9 @@
+<!DOCTYPE layout>
+<layout>
+ <TabWindow windowTitle="plane activity 2D" ifLayout="1" >
+  <CanvasGrid>
+   <model x="3" y="4" canvasTab_0_0="RP/sector 45/station 220/fr_tp/activity in planes (2D)" canvasTab_0_1="RP/sector 45/station 220/nr_tp/activity in planes (2D)" canvasTab_1_0="RP/sector 45/station 220/fr_hr/activity in planes (2D)" canvasTab_0_2="RP/sector 56/station 220/nr_tp/activity in planes (2D)" canvasTab_1_1="RP/sector 45/station 220/nr_hr/activity in planes (2D)" canvasTab_2_0="RP/sector 45/station 220/fr_bt/activity in planes (2D)" canvasTab_0_3="RP/sector 56/station 220/fr_tp/activity in planes (2D)" canvasTab_1_2="RP/sector 56/station 220/nr_hr/activity in planes (2D)" canvasTab_2_1="RP/sector 45/station 220/nr_bt/activity in planes (2D)" canvasTab_1_3="RP/sector 56/station 220/fr_hr/activity in planes (2D)" canvasTab_2_2="RP/sector 56/station 220/nr_bt/activity in planes (2D)" canvasTab_2_3="RP/sector 56/station 220/fr_bt/activity in planes (2D)" />
+   <view colNum="4" rowNum="3" />
+  </CanvasGrid>
+ </TabWindow>
+</layout>

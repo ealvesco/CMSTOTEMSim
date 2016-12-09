@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/Configuration/TotemStandardSequences)
+subdirs_src_Configuration_TotemStandardSequences := src_Configuration_TotemStandardSequences_test src_Configuration_TotemStandardSequences_python

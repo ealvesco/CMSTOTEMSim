@@ -1,0 +1,16 @@
+tmp/slc6_amd64_gcc481/src/SimTotem/RPTimingDetectorsDigiProducer/plugins/SimTotemRPTimingDetectorsDigiProducerAuto/RPTimingDetectorsDigiProducer.o: \
+ src/SimTotem/RPTimingDetectorsDigiProducer/plugins/RPTimingDetectorsDigiProducer.cc \
+ src/DataFormats/TotemRPDataTypes/interface/RPTimingDetectorHit.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+ src/DataFormats/TotemRPDetId/interface/TotRPDetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/SimTotem/RPTimingDetectorsDigiProducer/interface/RPTimingDetector.h \
+ src/SimTotem/RPTimingDetectorsDigiProducer/interface/RPTimingDetectorElectrode.h \
+ src/SimTotem/RPTimingDetectorsDigiProducer/interface/RPTimingDetectorFactory.h \
+ src/Geometry/TotemRecords/interface/RealGeometryRecord.h \
+ src/Geometry/TotemRecords/interface/MeasuredGeometryRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPMeasuredAlignmentRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPRealAlignmentRecord.h \
+ src/Geometry/TotemRPGeometryBuilder/interface/TotemRPGeometry.h \
+ src/Geometry/TotemRPGeometryBuilder/interface/DetGeomDesc.h \
+

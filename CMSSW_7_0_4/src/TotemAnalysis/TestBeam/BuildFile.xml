@@ -1,0 +1,9 @@
+<use   name="FWCore/Framework"/>
+<use   name="DataFormats/TotemRPDetId"/>
+<use   name="RecoTotemRP/RPRecoDataFormats"/>
+<use   name="Geometry/TotemRPGeometryBuilder"/>
+<use   name="Geometry/TotemRecords"/>
+<flags   cxxflags="-g3 -O3 $(CUSTOM_FLAGS)"/>
+<export>
+  <lib   name="1"/>
+</export>

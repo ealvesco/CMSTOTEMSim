@@ -1,0 +1,14 @@
+tmp/slc6_amd64_gcc481/src/SimG4Core/TotemRPProtTransp/plugins/SimG4CoreTotemRPProtTranspPlugins/TotemRPPhysicsList.o: \
+ src/SimG4Core/TotemRPProtTransp/plugins/TotemRPPhysicsList.cc \
+ src/SimG4Core/TotemRPProtTransp/interface/TotemRPPhysicsList.h \
+ src/SimG4Core/TotemRPProtTransp/interface/BeamProtTransportSetup.h \
+ src/SimG4Core/TotemRPProtTransp/interface/ProtTranspFastSimModel.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/LHCOpticsApproximator.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/LHCOpticsApproximator_gcc.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/TMultiDimFet.h \
+ src/SimG4Core/TotemRPProtTransp/interface/TotemRPParametrizedPhysics.h \
+ src/SimG4Core/Notification/interface/SimActivityRegistryEnroller.h \
+ src/SimG4Core/Notification/interface/Observer.h \
+ src/SimG4Core/Notification/interface/SimActivityRegistry.h \
+ src/SimG4Core/Notification/interface/Signaler.h \
+

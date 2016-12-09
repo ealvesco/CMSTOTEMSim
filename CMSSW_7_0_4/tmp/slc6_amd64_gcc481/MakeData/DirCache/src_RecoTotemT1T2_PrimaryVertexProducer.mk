@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/RecoTotemT1T2/PrimaryVertexProducer)
+subdirs_src_RecoTotemT1T2_PrimaryVertexProducer := src_RecoTotemT1T2_PrimaryVertexProducer_plugins src_RecoTotemT1T2_PrimaryVertexProducer_python

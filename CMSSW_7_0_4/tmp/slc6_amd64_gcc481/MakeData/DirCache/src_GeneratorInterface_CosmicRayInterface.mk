@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/GeneratorInterface/CosmicRayInterface)
+subdirs_src_GeneratorInterface_CosmicRayInterface := src_GeneratorInterface_CosmicRayInterface_interface src_GeneratorInterface_CosmicRayInterface_plugins src_GeneratorInterface_CosmicRayInterface_scripts src_GeneratorInterface_CosmicRayInterface_src

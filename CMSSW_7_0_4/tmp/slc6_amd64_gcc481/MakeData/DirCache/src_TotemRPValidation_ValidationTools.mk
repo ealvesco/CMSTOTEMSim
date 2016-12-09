@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemRPValidation/ValidationTools)
+subdirs_src_TotemRPValidation_ValidationTools := src_TotemRPValidation_ValidationTools_interface src_TotemRPValidation_ValidationTools_src src_TotemRPValidation_ValidationTools_bin

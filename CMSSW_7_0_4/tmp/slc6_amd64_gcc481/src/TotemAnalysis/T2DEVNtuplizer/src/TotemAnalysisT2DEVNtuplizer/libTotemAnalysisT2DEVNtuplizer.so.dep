@@ -1,0 +1,45 @@
+tmp/slc6_amd64_gcc481/src/TotemAnalysis/T2DEVNtuplizer/src/TotemAnalysisT2DEVNtuplizer/Ntuplizer.o: \
+ src/TotemAnalysis/T2DEVNtuplizer/src/Ntuplizer.cc \
+ src/TotemAnalysis/T2DEVNtuplizer/interface/Ntuplizer.h
+
+tmp/slc6_amd64_gcc481/src/TotemAnalysis/T2DEVNtuplizer/src/TotemAnalysisT2DEVNtuplizer/T2EventDEV.o: \
+ src/TotemAnalysis/T2DEVNtuplizer/src/T2EventDEV.cc \
+ src/TotemAnalysis/T2DEVNtuplizer/interface/T2EventDEV.h \
+
+tmp/slc6_amd64_gcc481/src/TotemAnalysis/T2DEVNtuplizer/src/TotemAnalysisT2DEVNtuplizer/T2Ntuplizer.o: \
+ src/TotemAnalysis/T2DEVNtuplizer/src/T2Ntuplizer.cc \
+ src/TotemAnalysis/T2DEVNtuplizer/interface/T2Ntuplizer.h \
+ src/TotemAnalysis/T2DEVNtuplizer/interface/Ntuplizer.h \
+ src/TotemAnalysis/T2DEVNtuplizer/interface/T2EventDEV.h \
+ src/Geometry/TotemGeometry/interface/T2Geometry.h \
+ src/DataFormats/T2DetId/interface/T2DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/Geometry/TotemGeometry/interface/T2GeometryUtil.h \
+ src/DataFormats/T2Hit/interface/T2Hit.h \
+ src/DataFormats/T2Hit/interface/hit_entry.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+ src/DataFormats/T2Cluster/interface/T2ROGeometry.h \
+ src/TotemAnalysis/T2Cuts/interface/T2SelectionCutUtils.h \
+ src/DataFormats/T1T2Track/interface/T1T2TrackCollection.h \
+ src/DataFormats/T1T2Track/interface/T1T2Track.h \
+ src/DataFormats/T1Road/interface/T1RecHitGlobal.h \
+ src/DataFormats/T1DetId/interface/T1DetId.h \
+ src/DataFormats/T2Road/interface/T2Road.h \
+ src/DataFormats/T2Cluster/interface/T2Cluster.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+ src/DataFormats/T2Road/interface/T2RoadCollection.h \
+ src/Geometry/TotemGeometry/interface/T1Geometry.h \
+ src/Geometry/TotemGeometry/interface/T1ChamberSpecs.h \
+ src/DataFormats/T2Digi/interface/T2StripDigiCollection.h \
+ src/DataFormats/T2Digi/interface/T2StripDigi.h \
+ src/DataFormats/TotemData/interface/TotemDigiCollection.h \
+ src/DataFormats/T2Digi/interface/T2PadDigiCollection.h \
+ src/DataFormats/T2Digi/interface/T2PadDigi.h \
+ src/DataFormats/T2Hit/interface/T2HitCollection.h \
+ src/DataFormats/T2Cluster/interface/T2PadClusterCollection.h \
+ src/DataFormats/T2Cluster/interface/T2StripClusterCollection.h \
+
+tmp/slc6_amd64_gcc481/src/TotemAnalysis/T2DEVNtuplizer/src/TotemAnalysisT2DEVNtuplizer/LinkDef.cc: \
+ src/TotemAnalysis/T2DEVNtuplizer/interface/T2EventDEV.h \
+ tmp/slc6_amd64_gcc481/src/TotemAnalysis/T2DEVNtuplizer/src/TotemAnalysisT2DEVNtuplizer/LinkDef.h \
+

@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemRPValidation/GeneratorValidation)
+subdirs_src_TotemRPValidation_GeneratorValidation := src_TotemRPValidation_GeneratorValidation_plugins src_TotemRPValidation_GeneratorValidation_python

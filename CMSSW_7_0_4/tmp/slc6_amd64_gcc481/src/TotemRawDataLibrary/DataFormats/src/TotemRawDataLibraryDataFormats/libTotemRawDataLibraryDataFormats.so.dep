@@ -1,0 +1,47 @@
+tmp/slc6_amd64_gcc481/src/TotemRawDataLibrary/DataFormats/src/TotemRawDataLibraryDataFormats/a/xr.cc: \
+ src/TotemRawDataLibrary/DataFormats/src/classes.h \
+ src/TotemRawDataLibrary/DataFormats/interface/RawEvent.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrameCollection.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrame.h \
+ src/TotemRawDataLibrary/DataFormats/interface/SimpleVFATFrameCollection.h \
+ src/TotemRawDataLibrary/DataFormats/interface/OptoRxVFATFrameCollection.h \
+
+tmp/slc6_amd64_gcc481/src/TotemRawDataLibrary/DataFormats/src/TotemRawDataLibraryDataFormats/FramePosition.o: \
+ src/TotemRawDataLibrary/DataFormats/src/FramePosition.cc \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemRawDataLibrary/DataFormats/interface/CommonDef.h
+
+tmp/slc6_amd64_gcc481/src/TotemRawDataLibrary/DataFormats/src/TotemRawDataLibraryDataFormats/OptoRxVFATFrameCollection.o: \
+ src/TotemRawDataLibrary/DataFormats/src/OptoRxVFATFrameCollection.cc \
+ src/TotemRawDataLibrary/DataFormats/interface/OptoRxVFATFrameCollection.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrameCollection.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrame.h
+
+tmp/slc6_amd64_gcc481/src/TotemRawDataLibrary/DataFormats/src/TotemRawDataLibraryDataFormats/SimpleVFATFrameCollection.o: \
+ src/TotemRawDataLibrary/DataFormats/src/SimpleVFATFrameCollection.cc \
+ src/TotemRawDataLibrary/DataFormats/interface/SimpleVFATFrameCollection.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrameCollection.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrame.h
+
+tmp/slc6_amd64_gcc481/src/TotemRawDataLibrary/DataFormats/src/TotemRawDataLibraryDataFormats/SlinkFrame.o: \
+ src/TotemRawDataLibrary/DataFormats/src/SlinkFrame.cc \
+ src/TotemRawDataLibrary/DataFormats/interface/SlinkFrame.h \
+ src/TotemRawDataLibrary/DataFormats/interface/SimpleVFATFrameCollection.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrameCollection.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrame.h
+
+tmp/slc6_amd64_gcc481/src/TotemRawDataLibrary/DataFormats/src/TotemRawDataLibraryDataFormats/VFATFrame.o: \
+ src/TotemRawDataLibrary/DataFormats/src/VFATFrame.cc \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrame.h \
+ src/TotemRawDataLibrary/DataFormats/interface/CommonDef.h
+
+tmp/slc6_amd64_gcc481/src/TotemRawDataLibrary/DataFormats/src/TotemRawDataLibraryDataFormats/VFATFrameCollection.o: \
+ src/TotemRawDataLibrary/DataFormats/src/VFATFrameCollection.cc \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrameCollection.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrame.h
+

@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_RecoTotemRP_RPTimingDetectorsRecoHitsProducer_test
+src_RecoTotemRP_RPTimingDetectorsRecoHitsProducer_test_parent := RecoTotemRP/RPTimingDetectorsRecoHitsProducer
+src_RecoTotemRP_RPTimingDetectorsRecoHitsProducer_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_RecoTotemRP_RPTimingDetectorsRecoHitsProducer_test,src/RecoTotemRP/RPTimingDetectorsRecoHitsProducer/test,TEST))

@@ -1,0 +1,722 @@
+/************************************************************	/************************************************************
+ *								 *
+ * This is a part of TOTEM offline software.			 * This is a part of TOTEM offline software.
+ * Authors:							 * Authors:
+ *  Hubert Niewiadomski						 *  Hubert Niewiadomski
+ *  Jan Kašpar (jan.kaspar@gmail.com)				 *  Jan Kašpar (jan.kaspar@gmail.com)
+ *								 *
+ ************************************************************	 ************************************************************
+
+#include "TotemAnalysis/TotemNtuplizer/interface/RPNtuplizer. |	#include "TotemAnalysis/TotemRPAnalysis/interface/RPNtuplizer
+							      >	#include "TotemAnalysis/TotemAnalysisEvent/interface/TotemRPE
+
+#include "RecoTotemRP/RPRecoDataFormats/interface/RPFittedTra	#include "RecoTotemRP/RPRecoDataFormats/interface/RPFittedTra
+#include "DataFormats/TotemRPDataTypes/interface/RPTypes.h"	#include "DataFormats/TotemRPDataTypes/interface/RPTypes.h"
+#include "RecoTotemRP/RPRecoDataFormats/interface/RPFittedTra	#include "RecoTotemRP/RPRecoDataFormats/interface/RPFittedTra
+#include "RecoTotemRP/RPRecoDataFormats/interface/RP2DHit.h"	#include "RecoTotemRP/RPRecoDataFormats/interface/RP2DHit.h"
+#include "DataFormats/TotemRPDataTypes/interface/RPDigCluster	#include "DataFormats/TotemRPDataTypes/interface/RPDigCluster
+#include "DataFormats/TotemRPDetId/interface/TotRPDetId.h"	#include "DataFormats/TotemRPDetId/interface/TotRPDetId.h"
+#include "DataFormats/TotemRPDataTypes/interface/RPDetTrigger	#include "DataFormats/TotemRPDataTypes/interface/RPDetTrigger
+#include "DataFormats/TotemRPDetId/interface/TotRPDetId.h"	#include "DataFormats/TotemRPDetId/interface/TotRPDetId.h"
+#include "DataFormats/TotemL1Trigger/interface/RPCCId.h"	#include "DataFormats/TotemL1Trigger/interface/RPCCId.h"
+#include "DataFormats/TotemL1Trigger/interface/RPCCBits.h"	#include "DataFormats/TotemL1Trigger/interface/RPCCBits.h"
+#include "RecoTotemRP/RPRecoDataFormats/interface/RPReconstru	#include "RecoTotemRP/RPRecoDataFormats/interface/RPReconstru
+#include "RecoTotemRP/RPRecoDataFormats/interface/RPFittedTra	#include "RecoTotemRP/RPRecoDataFormats/interface/RPFittedTra
+#include "RecoTotemRP/RPRecoDataFormats/interface/RPReconstru	#include "RecoTotemRP/RPRecoDataFormats/interface/RPReconstru
+#include "RecoTotemRP/RPRecoDataFormats/interface/RPReconstru	#include "RecoTotemRP/RPRecoDataFormats/interface/RPReconstru
+#include "RecoTotemRP/RPRecoDataFormats/interface/RPMulFitted	#include "RecoTotemRP/RPRecoDataFormats/interface/RPMulFitted
+#include "RecoTotemRP/RPRecoDataFormats/interface/RPRecognize	#include "RecoTotemRP/RPRecoDataFormats/interface/RPRecognize
+#include "RecoTotemRP/RPRecoDataFormats/interface/RPTrackCand	#include "RecoTotemRP/RPRecoDataFormats/interface/RPTrackCand
+
+#include "SimDataFormats/GeneratorProducts/interface/HepMCPro	#include "SimDataFormats/GeneratorProducts/interface/HepMCPro
+#include "DataFormats/Common/interface/DetSetVector.h"		#include "DataFormats/Common/interface/DetSetVector.h"
+#include "DataFormats/Common/interface/DetSet.h"		#include "DataFormats/Common/interface/DetSet.h"
+#include "FWCore/Framework/interface/Event.h"			#include "FWCore/Framework/interface/Event.h"
+#include "FWCore/Framework/interface/EventSetup.h"		#include "FWCore/Framework/interface/EventSetup.h"
+#include "FWCore/Framework/interface/ESHandle.h"		#include "FWCore/Framework/interface/ESHandle.h"
+#include "RecoTotemRP/RPRecoDataFormats/interface/CentralMass |	//#include "RecoTotemRP/RPRecoDataFormats/interface/CentralMa
+
+#include <iostream>						#include <iostream>
+#include <string>						#include <string>
+
+#include "TTree.h"						#include "TTree.h"
+
+#include <map>							#include <map>
+
+ClassImp(RPRootDumpTrackInfo)				      |	using namespace totemRPAnalysis;
+ClassImp(RPRootDumpDigiInfo)				      |	using totemRPAnalysis::RPNtuplizer;
+ClassImp(RPRootDumpReconstructedProton)			      |
+ClassImp(RPRootDumpReconstructedProtonPair)		      |	const char* RPNtuplizer::name = "TotemRPAnalysis";
+
+RPNtuplizer::RPNtuplizer(const edm::ParameterSet& conf) :	RPNtuplizer::RPNtuplizer(const edm::ParameterSet& conf) :
+  Ntuplizer(conf), Verbosity_(conf.getUntrackedParameter<unsi	  Ntuplizer(conf), Verbosity_(conf.getUntrackedParameter<unsi
+{								{
+  modulLabelSimu_ = conf.getParameter<std::string> ("ModulLab	  modulLabelSimu_ = conf.getParameter<std::string> ("ModulLab
+  productLabelSimu_ = conf.getParameter<std::string> ("Produc	  productLabelSimu_ = conf.getParameter<std::string> ("Produc
+  primaryProtons = false;					  primaryProtons = false;
+  rpFittedTrackCollectionLabel = conf.getParameter<edm::Input	  rpFittedTrackCollectionLabel = conf.getParameter<edm::Input
+  rpMulFittedTrackCollectionLabel = conf.getParameter<edm::In	  rpMulFittedTrackCollectionLabel = conf.getParameter<edm::In
+  rpStripDigiSetLabel = conf.getParameter<edm::InputTag>("RPS	  rpStripDigiSetLabel = conf.getParameter<edm::InputTag>("RPS
+  rpDigClusterLabel = conf.getParameter<edm::InputTag>("RPDig	  rpDigClusterLabel = conf.getParameter<edm::InputTag>("RPDig
+  rpReconstructedProtonCollectionLabel = conf.getParameter<ed	  rpReconstructedProtonCollectionLabel = conf.getParameter<ed
+  rpReconstructedProtonPairCollectionLabel = conf.getParamete	  rpReconstructedProtonPairCollectionLabel = conf.getParamete
+
+  if (conf.exists("primaryProtons")) //check if "primaryProto	  if (conf.exists("primaryProtons")) //check if "primaryProto
+  {								  {
+  	primaryProtons = conf.getParameter<bool> ("primaryPro	  	primaryProtons = conf.getParameter<bool> ("primaryPro
+  }								  }
+  								  
+  primaryJets_ = false;						  primaryJets_ = false;
+  if (conf.exists("primaryJets")) //check if "primaryProtons" |	  /*if (conf.exists("primaryJets")) //check if "primaryProton
+  { 								  { 
+    primaryJets_ = conf.getParameter<bool> ("primaryJets");	    primaryJets_ = conf.getParameter<bool> ("primaryJets");
+    primaryJetsInstance_ = conf.getParameter<std::string> ("p	    primaryJetsInstance_ = conf.getParameter<std::string> ("p
+    primaryJetsLabel_ = conf.getParameter<std::string> ("prim	    primaryJetsLabel_ = conf.getParameter<std::string> ("prim
+  }							      |	  }*/
+
+  includeDigi = false;						  includeDigi = false;
+  if (conf.exists("includeDigi"))				  if (conf.exists("includeDigi"))
+  {								  {
+  	includeDigi = conf.getParameter<bool> ("includeDigi")	  	includeDigi = conf.getParameter<bool> ("includeDigi")
+  }								  }
+  								  
+  includePatterns = false;					  includePatterns = false;
+  if (conf.exists("includePatterns"))				  if (conf.exists("includePatterns"))
+  {								  {
+  	includePatterns = conf.getParameter<bool> ("includePa	  	includePatterns = conf.getParameter<bool> ("includePa
+  }								  }
+}								}
+
+							      >	void RPNtuplizer::begin() {}
+							      >
+							      >	void RPNtuplizer::begin(const edm::Run& run, const edm::Event
+							      >
+							      >	    edm::ESHandle<BeamOpticsParams> BOParH;
+							      >	    setup.get<BeamOpticsParamsRcd>().get(BOParH);
+							      >	    if (!BOParH.isValid())
+							      >	      throw cms::Exception("TotemRPAnalysis::beginRun") << " 
+							      >
+							      >	    SetOpticsConfig(*BOParH);
+							      >	}
+							      >
+							      >	void RPNtuplizer::end() {}
+							      >
+							      >	void RPNtuplizer::fill(event_type& eventData, const edm::Even
+							      >
+							      >	   eventData.reset();
+							      >
+							      >	   FillEvent(event,setup);
+							      >
+							      >	   eventData.track_info_           = track_info_;
+							      >	   eventData.digi_info_            = digi_info_;
+							      >	   eventData.par_patterns_info_    = par_patterns_info_;
+							      >	   eventData.nonpar_patterns_info_ = nonpar_patterns_info_;
+							      >	 
+							      >	   eventData.multi_track_info_ = multi_track_info_;
+							      >	   eventData.rec_pr_info_      = rec_pr_info_;
+							      >	   eventData.sim_pr_info_      = sim_pr_info_;
+							      >	   eventData.rec_pr_pair_info_ = rec_pr_pair_info_;
+							      >	}
+
+void RPNtuplizer::CreateBranches(const edm::EventSetup &es, T	void RPNtuplizer::CreateBranches(const edm::EventSetup &es, T
+{								{
+  for (unsigned int a = 0; a < 2; ++a)				  for (unsigned int a = 0; a < 2; ++a)
+  	for (unsigned int s = 0; s < 3; ++s) 			  	for (unsigned int s = 0; s < 3; ++s) 
+    {								    {
+  	  if (s == 1)						  	  if (s == 1)
+  			continue;				  			continue;
+  	  for (unsigned int r = 0; r < 6; r++)			  	  for (unsigned int r = 0; r < 6; r++)
+      {								      {
+  		unsigned int id = 100 * a + 10 * s + r;		  		unsigned int id = 100 * a + 10 * s + r;
+        char br_name[500];					        char br_name[500];
+
+        if (includeDigi)					        if (includeDigi)
+        {							        {
+  		  sprintf(br_name, "digi_rp_%u.", id);		  		  sprintf(br_name, "digi_rp_%u.", id);
+  		  out_tree_->Branch(br_name, &digi_info_[id])	  		  out_tree_->Branch(br_name, &digi_info_[id])
+        }							        }
+
+        if (includePatterns)					        if (includePatterns)
+        {							        {
+  		  sprintf(br_name, "par_patterns_rp_%u.", id)	  		  sprintf(br_name, "par_patterns_rp_%u.", id)
+  		  sprintf(br_name, "nonpar_patterns_rp_%u.", 	  		  sprintf(br_name, "nonpar_patterns_rp_%u.", 
+        }							        }
+  								  			
+        sprintf(br_name, "track_rp_%u.", id);			        sprintf(br_name, "track_rp_%u.", id);
+  		out_tree_->Branch(br_name, &track_info_[id]);	  		out_tree_->Branch(br_name, &track_info_[id]);
+
+  		sprintf(br_name, "multi_track_rp_%u", id);	  		sprintf(br_name, "multi_track_rp_%u", id);
+  		out_tree_->Branch(br_name, &multi_track_info_	  		out_tree_->Branch(br_name, &multi_track_info_
+  	}							  	}
+  }								  }
+
+  out_tree_->Branch("rec_prot_left.", &rec_pr_info_[0]);	  out_tree_->Branch("rec_prot_left.", &rec_pr_info_[0]);
+  out_tree_->Branch("rec_prot_right.", &rec_pr_info_[1]);	  out_tree_->Branch("rec_prot_right.", &rec_pr_info_[1]);
+  out_tree_->Branch("rec_prot_pair.", &rec_pr_pair_info_);	  out_tree_->Branch("rec_prot_pair.", &rec_pr_pair_info_);
+
+  if (primaryProtons)						  if (primaryProtons)
+  {								  {
+  	out_tree_->Branch("sim_prot_left.", &sim_pr_info_[0])	  	out_tree_->Branch("sim_prot_left.", &sim_pr_info_[0])
+  	out_tree_->Branch("sim_prot_right.", &sim_pr_info_[1]	  	out_tree_->Branch("sim_prot_right.", &sim_pr_info_[1]
+  }								  }
+  								  
+  if(primaryJets_)					      |	  /*if(primaryJets_)
+  {								  {
+    out_tree_->Branch("MCjets.", &MCjets_);			    out_tree_->Branch("MCjets.", &MCjets_);
+    out_tree_->Branch("DiffMassInfo.", &diff_mass_info_);	    out_tree_->Branch("DiffMassInfo.", &diff_mass_info_);
+  }							      |	  }*/
+}								}
+
+
+							      <
+void RPNtuplizer::FillEvent(const edm::Event& e, const edm::E	void RPNtuplizer::FillEvent(const edm::Event& e, const edm::E
+{								{
+#ifdef DEBUG							#ifdef DEBUG
+  printf(">> RPNtuplizer::FillEvent(%u:%u)\n", e.id().run(), 	  printf(">> RPNtuplizer::FillEvent(%u:%u)\n", e.id().run(), 
+#endif								#endif
+
+  // initialize objects with default values			  // initialize objects with default values
+  for (unsigned int a = 0; a < 2; ++a)				  for (unsigned int a = 0; a < 2; ++a)
+  {								  {
+  	for (unsigned int s = 0; s < 3; ++s)			  	for (unsigned int s = 0; s < 3; ++s)
+    {								    {
+  		if (s == 1)					  		if (s == 1)
+  			continue;				  			continue;
+
+  		for (unsigned int r = 0; r < 6; r++)		  		for (unsigned int r = 0; r < 6; r++)
+        {							        {
+  			unsigned int id = 100 * a + 10 * s + 	  			unsigned int id = 100 * a + 10 * s + 
+  			track_info_[id] = RPRootDumpTrackInfo |	  			track_info_[id] = RPDumpTrackInfo();
+  								  
+            if (includeDigi)					            if (includeDigi)
+    		  digi_info_[id] = RPRootDumpDigiInfo();      |	    		  digi_info_[id] = RPDumpDigiInfo();
+
+            if (includePatterns)				            if (includePatterns)
+            {							            {
+  			  par_patterns_info_[id].Reset();	  			  par_patterns_info_[id].Reset();
+  			  nonpar_patterns_info_[id].Reset();	  			  nonpar_patterns_info_[id].Reset();
+            }							            }
+
+  			multi_track_info_[id].clear();		  			multi_track_info_[id].clear();
+  		}						  		}
+  	}							  	}
+  }								  }
+
+  rec_pr_info_[0] = RPRootDumpReconstructedProton();	      |	  rec_pr_info_[0] = RPDumpReconstructedProton();
+  rec_pr_info_[1] = RPRootDumpReconstructedProton();	      |	  rec_pr_info_[1] = RPDumpReconstructedProton();
+  rec_pr_pair_info_ = RPRootDumpReconstructedProtonPair();    |	  rec_pr_pair_info_ = RPDumpReconstructedProtonPair();
+  								  
+  if (primaryProtons)						  if (primaryProtons)
+  {								  {
+  	sim_pr_info_[0] = RPRootDumpReconstructedProton();    |	  	sim_pr_info_[0] = RPDumpReconstructedProton();
+  	sim_pr_info_[1] = RPRootDumpReconstructedProton();    |	  	sim_pr_info_[1] = RPDumpReconstructedProton();
+  }								  }
+
+  // single-RP track fits					  // single-RP track fits
+  edm::Handle < RPFittedTrackCollection > fitted_tracks;	  edm::Handle < RPFittedTrackCollection > fitted_tracks;
+  e.getByLabel(rpFittedTrackCollectionLabel, fitted_tracks);	  e.getByLabel(rpFittedTrackCollectionLabel, fitted_tracks);
+  if (fitted_tracks.isValid())					  if (fitted_tracks.isValid())
+  {								  {
+  	for (RPFittedTrackCollection::const_iterator it = fit	  	for (RPFittedTrackCollection::const_iterator it = fit
+    {								    {
+  	  track_info_[it->first].valid = it->second.IsValid()	  	  track_info_[it->first].valid = it->second.IsValid()
+  	  track_info_[it->first].chi2 = it->second.ChiSquared	  	  track_info_[it->first].chi2 = it->second.ChiSquared
+  	  track_info_[it->first].chi2ndf = it->second.ChiSqua	  	  track_info_[it->first].chi2ndf = it->second.ChiSqua
+  	  track_info_[it->first].x = it->second.X0();		  	  track_info_[it->first].x = it->second.X0();
+  	  track_info_[it->first].y = it->second.Y0();		  	  track_info_[it->first].y = it->second.Y0();
+  	  track_info_[it->first].z = it->second.Z0();		  	  track_info_[it->first].z = it->second.Z0();
+      track_info_[it->first].thx = it->second.GetTx();		      track_info_[it->first].thx = it->second.GetTx();
+      track_info_[it->first].thy = it->second.GetTy();		      track_info_[it->first].thy = it->second.GetTy();
+  	  track_info_[it->first].entries = it->second.GetHitE	  	  track_info_[it->first].entries = it->second.GetHitE
+  	}							  	}
+  }								  }
+
+  // save the multi-track fits, if present			  // save the multi-track fits, if present
+  try {								  try {
+  	edm::Handle < RPMulFittedTrackCollection > multi_fitt	  	edm::Handle < RPMulFittedTrackCollection > multi_fitt
+  	e.getByLabel(rpMulFittedTrackCollectionLabel, multi_f	  	e.getByLabel(rpMulFittedTrackCollectionLabel, multi_f
+
+  	if (multi_fitted_tracks.isValid())			  	if (multi_fitted_tracks.isValid())
+    {								    {
+  	  for (RPMulFittedTrackCollection::const_iterator rit	  	  for (RPMulFittedTrackCollection::const_iterator rit
+  		        != multi_fitted_tracks->end(); ++rit)	  		        != multi_fitted_tracks->end(); ++rit)
+      {								      {
+  	    std::vector < RPRootDumpTrackInfo > &tiv = multi_ |	  	    std::vector < RPDumpTrackInfo > &tiv = multi_trac
+  		for (std::vector<RPFittedTrack>::const_iterat	  		for (std::vector<RPFittedTrack>::const_iterat
+  			        != rit->second.end(); ++it)	  			        != rit->second.end(); ++it)
+        {							        {
+  	      RPRootDumpTrackInfo ti;			      |	  	      RPDumpTrackInfo ti;
+  		  ti.valid = it->IsValid();			  		  ti.valid = it->IsValid();
+  		  ti.chi2 = it->ChiSquared();			  		  ti.chi2 = it->ChiSquared();
+  		  ti.chi2ndf = it->ChiSquaredOverN();		  		  ti.chi2ndf = it->ChiSquaredOverN();
+  		  ti.x = it->X0();				  		  ti.x = it->X0();
+  		  ti.y = it->Y0();				  		  ti.y = it->Y0();
+  		  ti.z = it->Z0();				  		  ti.z = it->Z0();
+          ti.thx = it->GetTx();					          ti.thx = it->GetTx();
+          ti.thy = it->GetTy();					          ti.thy = it->GetTy();
+  		  ti.entries = it->GetHitEntries();		  		  ti.entries = it->GetHitEntries();
+          ti.u_id = it->GetUid();				          ti.u_id = it->GetUid();
+          ti.v_id = it->GetVid();				          ti.v_id = it->GetVid();
+  		  tiv.push_back(ti);				  		  tiv.push_back(ti);
+  		}						  		}
+  	  }							  	  }
+  	}							  	}
+  } catch (...) {}						  } catch (...) {}
+
+  if (includeDigi)						  if (includeDigi)
+  {								  {
+  	edm::Handle < edm::DetSetVector<RPDigCluster> > clust	  	edm::Handle < edm::DetSetVector<RPDigCluster> > clust
+  	e.getByLabel(rpDigClusterLabel, clusters);		  	e.getByLabel(rpDigClusterLabel, clusters);
+  								  
+  	edm::DetSetVector<RPDigCluster>::const_iterator input	  	edm::DetSetVector<RPDigCluster>::const_iterator input
+  	for (; inputIteratorCl != clusters->end(); inputItera	  	for (; inputIteratorCl != clusters->end(); inputItera
+    {								    {
+  	  TotRPDetId detectorId(inputIteratorCl->id);		  	  TotRPDetId detectorId(inputIteratorCl->id);
+  	  							  	  
+      //inputIterator->data : vector< RPDigCluster>		      //inputIterator->data : vector< RPDigCluster>
+      //(inputIterator->data)[i] : RPDigCluster			      //(inputIterator->data)[i] : RPDigCluster
+      for (unsigned int i = 0; i < (inputIteratorCl->data).si	      for (unsigned int i = 0; i < (inputIteratorCl->data).si
+      {								      {
+        unsigned int detNo = TotRPDetId::RawToDecId((inputIte	        unsigned int detNo = TotRPDetId::RawToDecId((inputIte
+  	  	unsigned int planeNo = detNo % 10;		  	  	unsigned int planeNo = detNo % 10;
+  	  	unsigned int RPNo = detNo / 10;			  	  	unsigned int RPNo = detNo / 10;
+
+  	  	double centralStrip = (inputIteratorCl->data)	  	  	double centralStrip = (inputIteratorCl->data)
+  	  	int clusterSize = (inputIteratorCl->data)[i].	  	  	int clusterSize = (inputIteratorCl->data)[i].
+  								  
+  	  	// if up to now no clusters in this plane -> 	  	  	// if up to now no clusters in this plane -> 
+  	  	if (digi_info_[RPNo].numberOfClusters[planeNo	  	  	if (digi_info_[RPNo].numberOfClusters[planeNo
+        {							        {
+  	  		digi_info_[RPNo].numberOfPlanesOn++;	  	  		digi_info_[RPNo].numberOfPlanesOn++;
+            if (TotRPDetId::IsStripsCoordinateUDirection(plan	            if (TotRPDetId::IsStripsCoordinateUDirection(plan
+  	  		  digi_info_[RPNo].uPlanesOn++;		  	  		  digi_info_[RPNo].uPlanesOn++;
+            else						            else
+  	  		  digi_info_[RPNo].vPlanesOn++;		  	  		  digi_info_[RPNo].vPlanesOn++;
+        }							        }
+  								  
+  	  	digi_info_[RPNo].numberOfClusters[planeNo]++;	  	  	digi_info_[RPNo].numberOfClusters[planeNo]++;
+  								  
+  	  	digi_info_[RPNo].planeId.push_back(planeNo);	  	  	digi_info_[RPNo].planeId.push_back(planeNo);
+  	  	digi_info_[RPNo].clusterSize.push_back(cluste	  	  	digi_info_[RPNo].clusterSize.push_back(cluste
+  	  	digi_info_[RPNo].centralStrip.push_back((int)	  	  	digi_info_[RPNo].centralStrip.push_back((int)
+      }								      }
+  	}							  	}
+  }								  }
+
+  // fill in pattern-recognition results (parallel)		  // fill in pattern-recognition results (parallel)
+  try {								  try {
+    edm::Handle< RPRecognizedPatternsCollection > patterns;	    edm::Handle< RPRecognizedPatternsCollection > patterns;
+    e.getByLabel("RPSinglTrackCandFind", "", patterns);		    e.getByLabel("RPSinglTrackCandFind", "", patterns);
+
+    edm::Handle< RPTrackCandidateCollection > trCand;		    edm::Handle< RPTrackCandidateCollection > trCand;
+    e.getByLabel("RPSinglTrackCandFind", "", trCand);		    e.getByLabel("RPSinglTrackCandFind", "", trCand);
+
+    for (RPRecognizedPatternsCollection::const_iterator rpit 	    for (RPRecognizedPatternsCollection::const_iterator rpit 
+      unsigned int rp = rpit->first;				      unsigned int rp = rpit->first;
+
+      for (std::vector<RPRecognizedPatterns::Line>::const_ite	      for (std::vector<RPRecognizedPatterns::Line>::const_ite
+      {								      {
+        par_patterns_info_[rp].u.push_back(RPRootDumpPattern( |	        par_patterns_info_[rp].u.push_back(RPDumpPattern(lit-
+        par_patterns_info_[rp].u_no = par_patterns_info_[rp].	        par_patterns_info_[rp].u_no = par_patterns_info_[rp].
+      }								      }
+      								      
+      for (std::vector<RPRecognizedPatterns::Line>::const_ite	      for (std::vector<RPRecognizedPatterns::Line>::const_ite
+      {								      {
+        par_patterns_info_[rp].v.push_back(RPRootDumpPattern( |	        par_patterns_info_[rp].v.push_back(RPDumpPattern(lit-
+        par_patterns_info_[rp].v_no = par_patterns_info_[rp].	        par_patterns_info_[rp].v_no = par_patterns_info_[rp].
+      }								      }
+
+      RPTrackCandidateCollection::const_iterator sr = trCand-	      RPTrackCandidateCollection::const_iterator sr = trCand-
+      par_patterns_info_[rp].fittable = (sr != trCand->end())	      par_patterns_info_[rp].fittable = (sr != trCand->end())
+    }								    }
+  } catch (...) {}						  } catch (...) {}
+
+  // fill in pattern-recognition results (non-parallel)		  // fill in pattern-recognition results (non-parallel)
+  try {								  try {
+    edm::Handle< RPRecognizedPatternsCollection > patterns;	    edm::Handle< RPRecognizedPatternsCollection > patterns;
+    e.getByLabel("NonParallelTrackFinder", "", patterns);	    e.getByLabel("NonParallelTrackFinder", "", patterns);
+
+    edm::Handle< RPTrackCandidateCollection > trCand;		    edm::Handle< RPTrackCandidateCollection > trCand;
+    e.getByLabel("NonParallelTrackFinder", "", trCand);		    e.getByLabel("NonParallelTrackFinder", "", trCand);
+
+    for (RPRecognizedPatternsCollection::const_iterator rpit 	    for (RPRecognizedPatternsCollection::const_iterator rpit 
+    {								    {
+      unsigned int rp = rpit->first;				      unsigned int rp = rpit->first;
+
+      for (std::vector<RPRecognizedPatterns::Line>::const_ite	      for (std::vector<RPRecognizedPatterns::Line>::const_ite
+      {								      {
+        nonpar_patterns_info_[rp].u.push_back(RPRootDumpPatte |	        nonpar_patterns_info_[rp].u.push_back(RPDumpPattern(l
+        nonpar_patterns_info_[rp].u_no = nonpar_patterns_info	        nonpar_patterns_info_[rp].u_no = nonpar_patterns_info
+      }								      }
+      								      
+      for (std::vector<RPRecognizedPatterns::Line>::const_ite	      for (std::vector<RPRecognizedPatterns::Line>::const_ite
+      {								      {
+        nonpar_patterns_info_[rp].v.push_back(RPRootDumpPatte |	        nonpar_patterns_info_[rp].v.push_back(RPDumpPattern(l
+        nonpar_patterns_info_[rp].v_no = nonpar_patterns_info	        nonpar_patterns_info_[rp].v_no = nonpar_patterns_info
+      }								      }
+
+      RPTrackCandidateCollection::const_iterator sr = trCand-	      RPTrackCandidateCollection::const_iterator sr = trCand-
+      nonpar_patterns_info_[rp].fittable = (sr != trCand->end	      nonpar_patterns_info_[rp].fittable = (sr != trCand->end
+    }								    }
+  } catch (...) {}						  } catch (...) {}
+
+  // fill coincidence chip data					  // fill coincidence chip data
+  edm::Handle < std::vector<RPCCBits> > cc_chip_bits;		  edm::Handle < std::vector<RPCCBits> > cc_chip_bits;
+  e.getByLabel(modulLabelSimu_, productLabelSimu_, cc_chip_bi	  e.getByLabel(modulLabelSimu_, productLabelSimu_, cc_chip_bi
+  if (cc_chip_bits.isValid())					  if (cc_chip_bits.isValid())
+  {								  {
+  	std::vector<RPCCBits>::const_iterator itc;		  	std::vector<RPCCBits>::const_iterator itc;
+  	for (itc = cc_chip_bits->begin(); itc != cc_chip_bits	  	for (itc = cc_chip_bits->begin(); itc != cc_chip_bits
+    {								    {
+  	  RPCCId rawid(itc->getId());				  	  RPCCId rawid(itc->getId());
+  	  RPId decid = rawid.Arm() * 100 + rawid.Station() * 	  	  RPId decid = rawid.Arm() * 100 + rawid.Station() * 
+
+  	  const bool *bits = itc->getRawBS();			  	  const bool *bits = itc->getRawBS();
+
+      if (rawid.IsStripsCoordinateUDirection())			      if (rawid.IsStripsCoordinateUDirection())
+      {								      {
+  		for (int i = 0; i < 16; ++i)			  		for (int i = 0; i < 16; ++i)
+        {							        {
+  		  if (bits[i])					  		  if (bits[i])
+  		    track_info_[decid].u_sect.push_back(i);	  		    track_info_[decid].u_sect.push_back(i);
+  		}						  		}
+  		track_info_[decid].u_sect_no = track_info_[de	  		track_info_[decid].u_sect_no = track_info_[de
+  	  } else {						  	  } else {
+  		for (int i = 0; i < 16; ++i)			  		for (int i = 0; i < 16; ++i)
+        {							        {
+  		  if (bits[i])					  		  if (bits[i])
+  		    track_info_[decid].v_sect.push_back(i);	  		    track_info_[decid].v_sect.push_back(i);
+  		}						  		}
+  		track_info_[decid].v_sect_no = track_info_[de	  		track_info_[decid].v_sect_no = track_info_[de
+  	  }							  	  }
+  	}							  	}
+  }								  }
+
+  // fill in primary (simulated) proton data			  // fill in primary (simulated) proton data
+  if (primaryProtons && FindSimulatedProtons(e) && FindSimula	  if (primaryProtons && FindSimulatedProtons(e) && FindSimula
+  {								  {
+  	if (left_prim_prot_.found)				  	if (left_prim_prot_.found)
+  	  FindParametersOfSimulatedProtons(left_prim_prot_, 0	  	  FindParametersOfSimulatedProtons(left_prim_prot_, 0
+
+  	if (right_prim_prot_.found)				  	if (right_prim_prot_.found)
+  	  FindParametersOfSimulatedProtons(right_prim_prot_, 	  	  FindParametersOfSimulatedProtons(right_prim_prot_, 
+  }								  }
+
+  // fill in reconstructed proton data 				  // fill in reconstructed proton data 
+  if (FindReconstrucedProtons(e))				  if (FindReconstrucedProtons(e))
+  {								  {
+  	if (left_rec_prot_fund_)				  	if (left_rec_prot_fund_)
+    {								    {
+      rec_pr_info_[0].valid = reconstructed_protons_[0]->Vali	      rec_pr_info_[0].valid = reconstructed_protons_[0]->Vali
+      RPRecoProtMADXVariables mad_var = reconstructed_protons	      RPRecoProtMADXVariables mad_var = reconstructed_protons
+  								  
+      rec_pr_info_[0].thx = reconstructed_protons_[0]->Theta_	      rec_pr_info_[0].thx = reconstructed_protons_[0]->Theta_
+      rec_pr_info_[0].thy = reconstructed_protons_[0]->Theta_	      rec_pr_info_[0].thy = reconstructed_protons_[0]->Theta_
+      double reconstructed_phi = BOPar_.MADXCanonicalVariable	      double reconstructed_phi = BOPar_.MADXCanonicalVariable
+      rec_pr_info_[0].phi = reconstructed_phi;			      rec_pr_info_[0].phi = reconstructed_phi;
+      double sin_phi = TMath::Sin(reconstructed_phi);		      double sin_phi = TMath::Sin(reconstructed_phi);
+      double cos_phi = TMath::Cos(reconstructed_phi);		      double cos_phi = TMath::Cos(reconstructed_phi);
+      double reconstructed_t = BOPar_.MADXCanonicalVariablesT	      double reconstructed_t = BOPar_.MADXCanonicalVariablesT
+  								  
+      rec_pr_info_[0].t = reconstructed_t;			      rec_pr_info_[0].t = reconstructed_t;
+      rec_pr_info_[0].tx = reconstructed_t * cos_phi * cos_ph	      rec_pr_info_[0].tx = reconstructed_t * cos_phi * cos_ph
+      rec_pr_info_[0].ty = reconstructed_t * sin_phi * sin_ph	      rec_pr_info_[0].ty = reconstructed_t * sin_phi * sin_ph
+      rec_pr_info_[0].xi = reconstructed_protons_[0]->Ksi();	      rec_pr_info_[0].xi = reconstructed_protons_[0]->Ksi();
+      rec_pr_info_[0].x0 = reconstructed_protons_[0]->X();	      rec_pr_info_[0].x0 = reconstructed_protons_[0]->X();
+      rec_pr_info_[0].y0 = reconstructed_protons_[0]->Y();	      rec_pr_info_[0].y0 = reconstructed_protons_[0]->Y();
+      rec_pr_info_[0].chi2 = reconstructed_protons_[0]->Chi2(	      rec_pr_info_[0].chi2 = reconstructed_protons_[0]->Chi2(
+      rec_pr_info_[0].chindf = reconstructed_protons_[0]->Chi	      rec_pr_info_[0].chindf = reconstructed_protons_[0]->Chi
+  	}							  	}
+
+  	if (right_rec_prot_fund_)				  	if (right_rec_prot_fund_)
+    {								    {
+      rec_pr_info_[1].valid = reconstructed_protons_[1]->Vali	      rec_pr_info_[1].valid = reconstructed_protons_[1]->Vali
+      RPRecoProtMADXVariables mad_var = reconstructed_protons	      RPRecoProtMADXVariables mad_var = reconstructed_protons
+
+      rec_pr_info_[1].thx = reconstructed_protons_[1]->Theta_	      rec_pr_info_[1].thx = reconstructed_protons_[1]->Theta_
+      rec_pr_info_[1].thy = reconstructed_protons_[1]->Theta_	      rec_pr_info_[1].thy = reconstructed_protons_[1]->Theta_
+      double reconstructed_phi = BOPar_.MADXCanonicalVariable	      double reconstructed_phi = BOPar_.MADXCanonicalVariable
+      rec_pr_info_[1].phi = reconstructed_phi;			      rec_pr_info_[1].phi = reconstructed_phi;
+      double sin_phi = TMath::Sin(reconstructed_phi);		      double sin_phi = TMath::Sin(reconstructed_phi);
+      double cos_phi = TMath::Cos(reconstructed_phi);		      double cos_phi = TMath::Cos(reconstructed_phi);
+      double reconstructed_t = BOPar_.MADXCanonicalVariablesT	      double reconstructed_t = BOPar_.MADXCanonicalVariablesT
+      //      std::cout<<"reconstructed_t="<<reconstructed_t<	      //      std::cout<<"reconstructed_t="<<reconstructed_t<
+
+      rec_pr_info_[1].t = reconstructed_t;			      rec_pr_info_[1].t = reconstructed_t;
+      rec_pr_info_[1].tx = reconstructed_t * cos_phi * cos_ph	      rec_pr_info_[1].tx = reconstructed_t * cos_phi * cos_ph
+      rec_pr_info_[1].ty = reconstructed_t * sin_phi * sin_ph	      rec_pr_info_[1].ty = reconstructed_t * sin_phi * sin_ph
+      rec_pr_info_[1].xi = reconstructed_protons_[1]->Ksi();	      rec_pr_info_[1].xi = reconstructed_protons_[1]->Ksi();
+      rec_pr_info_[1].x0 = reconstructed_protons_[1]->X();	      rec_pr_info_[1].x0 = reconstructed_protons_[1]->X();
+      rec_pr_info_[1].y0 = reconstructed_protons_[1]->Y();	      rec_pr_info_[1].y0 = reconstructed_protons_[1]->Y();
+      rec_pr_info_[1].chi2 = reconstructed_protons_[1]->Chi2(	      rec_pr_info_[1].chi2 = reconstructed_protons_[1]->Chi2(
+      rec_pr_info_[1].chindf = reconstructed_protons_[1]->Chi	      rec_pr_info_[1].chindf = reconstructed_protons_[1]->Chi
+  	}							  	}
+  }								  }
+
+  if (FindReconstrucedProtonPair(e))				  if (FindReconstrucedProtonPair(e))
+  {								  {
+  	rec_pr_pair_info_.valid = reconstructed_proton_pair_.	  	rec_pr_pair_info_.valid = reconstructed_proton_pair_.
+  	rec_pr_pair_info_.x0 = reconstructed_proton_pair_.X3D	  	rec_pr_pair_info_.x0 = reconstructed_proton_pair_.X3D
+  	rec_pr_pair_info_.y0 = reconstructed_proton_pair_.Y3D	  	rec_pr_pair_info_.y0 = reconstructed_proton_pair_.Y3D
+  	rec_pr_pair_info_.z0 = reconstructed_proton_pair_.Z3D	  	rec_pr_pair_info_.z0 = reconstructed_proton_pair_.Z3D
+  	rec_pr_pair_info_.thxl = reconstructed_proton_pair_.T	  	rec_pr_pair_info_.thxl = reconstructed_proton_pair_.T
+  	rec_pr_pair_info_.thyl = reconstructed_proton_pair_.T	  	rec_pr_pair_info_.thyl = reconstructed_proton_pair_.T
+  	rec_pr_pair_info_.thxr = reconstructed_proton_pair_.T	  	rec_pr_pair_info_.thxr = reconstructed_proton_pair_.T
+  	rec_pr_pair_info_.thyr = reconstructed_proton_pair_.T	  	rec_pr_pair_info_.thyr = reconstructed_proton_pair_.T
+  	rec_pr_pair_info_.xil = reconstructed_proton_pair_.Ks	  	rec_pr_pair_info_.xil = reconstructed_proton_pair_.Ks
+  	rec_pr_pair_info_.xir = reconstructed_proton_pair_.Ks	  	rec_pr_pair_info_.xir = reconstructed_proton_pair_.Ks
+  	rec_pr_pair_info_.chi2 = reconstructed_proton_pair_.C	  	rec_pr_pair_info_.chi2 = reconstructed_proton_pair_.C
+  	rec_pr_pair_info_.chindf = reconstructed_proton_pair_	  	rec_pr_pair_info_.chindf = reconstructed_proton_pair_
+
+  	RPRecoProtMADXVariables mad_var_right = reconstructed	  	RPRecoProtMADXVariables mad_var_right = reconstructed
+  	RPRecoProtMADXVariables mad_var_left = reconstructed_	  	RPRecoProtMADXVariables mad_var_left = reconstructed_
+
+  	double phi_reconst_right = BOPar_.MADXCanonicalVariab	  	double phi_reconst_right = BOPar_.MADXCanonicalVariab
+  	double phi_reconst_left = BOPar_.MADXCanonicalVariabl	  	double phi_reconst_left = BOPar_.MADXCanonicalVariabl
+  	double cos_rec_phir = TMath::Cos(phi_reconst_right);	  	double cos_rec_phir = TMath::Cos(phi_reconst_right);
+  	double sin_rec_phir = TMath::Sin(phi_reconst_right);	  	double sin_rec_phir = TMath::Sin(phi_reconst_right);
+  	double cos_rec_phil = TMath::Cos(phi_reconst_left);	  	double cos_rec_phil = TMath::Cos(phi_reconst_left);
+  	double sin_rec_phil = TMath::Sin(phi_reconst_left);	  	double sin_rec_phil = TMath::Sin(phi_reconst_left);
+
+  	rec_pr_pair_info_.phir = phi_reconst_right;		  	rec_pr_pair_info_.phir = phi_reconst_right;
+  	rec_pr_pair_info_.phil = phi_reconst_left;		  	rec_pr_pair_info_.phil = phi_reconst_left;
+
+  	double t_reconst_right = BOPar_.MADXCanonicalVariable	  	double t_reconst_right = BOPar_.MADXCanonicalVariable
+  	double t_reconst_left = BOPar_.MADXCanonicalVariables	  	double t_reconst_left = BOPar_.MADXCanonicalVariables
+
+  	rec_pr_pair_info_.tr = t_reconst_right;			  	rec_pr_pair_info_.tr = t_reconst_right;
+  	rec_pr_pair_info_.tl = t_reconst_left;			  	rec_pr_pair_info_.tl = t_reconst_left;
+
+  	rec_pr_pair_info_.txr = t_reconst_right * cos_rec_phi	  	rec_pr_pair_info_.txr = t_reconst_right * cos_rec_phi
+  	rec_pr_pair_info_.tyr = t_reconst_right * sin_rec_phi	  	rec_pr_pair_info_.tyr = t_reconst_right * sin_rec_phi
+  	rec_pr_pair_info_.txl = t_reconst_left * cos_rec_phil	  	rec_pr_pair_info_.txl = t_reconst_left * cos_rec_phil
+  	rec_pr_pair_info_.tyl = t_reconst_left * sin_rec_phil	  	rec_pr_pair_info_.tyl = t_reconst_left * sin_rec_phil
+
+  	rec_pr_pair_info_.t = BOPar_.MADXCanonicalVariablesTo	  	rec_pr_pair_info_.t = BOPar_.MADXCanonicalVariablesTo
+  }								  }
+  								  
+  // fill in other primary (simulated) object data		  // fill in other primary (simulated) object data
+  if(primaryJets_)					      |	  /*if(primaryJets_)
+  {								  {
+    edm::Handle < std::vector<fastjet::PseudoJet> > MCjets_ha	    edm::Handle < std::vector<fastjet::PseudoJet> > MCjets_ha
+    e.getByLabel(primaryJetsInstance_, primaryJetsLabel_, MCj	    e.getByLabel(primaryJetsInstance_, primaryJetsLabel_, MCj
+    if(MCjets_handle.isValid())					    if(MCjets_handle.isValid())
+    {								    {
+      if (Verbosity_)						      if (Verbosity_)
+        std::cout << "MC jets found" << std::endl;		        std::cout << "MC jets found" << std::endl;
+      MCjets_.AddJets( (*MCjets_handle) );			      MCjets_.AddJets( (*MCjets_handle) );
+    }								    }
+    else							    else
+    {								    {
+      if (Verbosity_)						      if (Verbosity_)
+        std::cout << "MC jets not found" << std::endl;		        std::cout << "MC jets not found" << std::endl;
+    }								    }
+    								    
+    edm::Handle < CentralMassInfo > central_mass_info_handle;	    edm::Handle < CentralMassInfo > central_mass_info_handle;
+    e.getByLabel(primaryJetsInstance_, primaryJetsLabel_, cen	    e.getByLabel(primaryJetsInstance_, primaryJetsLabel_, cen
+    if(central_mass_info_handle.isValid())			    if(central_mass_info_handle.isValid())
+    {								    {
+      if (Verbosity_)						      if (Verbosity_)
+        std::cout << "Central mass info found" << std::endl;	        std::cout << "Central mass info found" << std::endl;
+      diff_mass_info_.SetVariables( (*central_mass_info_handl	      diff_mass_info_.SetVariables( (*central_mass_info_handl
+    }								    }
+    else							    else
+    {								    {
+      if (Verbosity_)						      if (Verbosity_)
+        std::cout << "Central mass info not found" << std::en	        std::cout << "Central mass info not found" << std::en
+    }								    }
+  }							      |	  }*/
+							      >
+}								}
+
+
+/**								/**
+ * This function computes the parameters of simulated proton 	 * This function computes the parameters of simulated proton 
+ * proton - can be left_prim_prot_ or right_prim_prot_		 * proton - can be left_prim_prot_ or right_prim_prot_
+ * simulatedProtonNumber - left_prim_prot_ - 0, right_prim_pr	 * simulatedProtonNumber - left_prim_prot_ - 0, right_prim_pr
+ */								 */
+void RPNtuplizer::FindParametersOfSimulatedProtons(PrimaryPro	void RPNtuplizer::FindParametersOfSimulatedProtons(PrimaryPro
+{								{
+  double phi = BOPar_.ComputeNonSmearedProtonPhi(proton.momen	  double phi = BOPar_.ComputeNonSmearedProtonPhi(proton.momen
+  double sin_phi = TMath::Sin(phi);				  double sin_phi = TMath::Sin(phi);
+  double cos_phi = TMath::Cos(phi);				  double cos_phi = TMath::Cos(phi);
+  sim_pr_info_[simulatedProtonNumber].phi = phi;		  sim_pr_info_[simulatedProtonNumber].phi = phi;
+  sim_pr_info_[simulatedProtonNumber].x0 = proton.vertex.x();	  sim_pr_info_[simulatedProtonNumber].x0 = proton.vertex.x();
+  sim_pr_info_[simulatedProtonNumber].y0 = proton.vertex.y();	  sim_pr_info_[simulatedProtonNumber].y0 = proton.vertex.y();
+  sim_pr_info_[simulatedProtonNumber].thx = BOPar_.IPNonSmear	  sim_pr_info_[simulatedProtonNumber].thx = BOPar_.IPNonSmear
+  sim_pr_info_[simulatedProtonNumber].thy = BOPar_.IPNonSmear	  sim_pr_info_[simulatedProtonNumber].thy = BOPar_.IPNonSmear
+  sim_pr_info_[simulatedProtonNumber].xi = BOPar_.IPNonSmeare	  sim_pr_info_[simulatedProtonNumber].xi = BOPar_.IPNonSmeare
+          proton.momentum.py(), proton.momentum.pz());		          proton.momentum.py(), proton.momentum.pz());
+  sim_pr_info_[simulatedProtonNumber].t = BOPar_.IPNonSmeared	  sim_pr_info_[simulatedProtonNumber].t = BOPar_.IPNonSmeared
+          proton.momentum.py(), proton.momentum.pz());		          proton.momentum.py(), proton.momentum.pz());
+  sim_pr_info_[simulatedProtonNumber].tx = sim_pr_info_[simul	  sim_pr_info_[simulatedProtonNumber].tx = sim_pr_info_[simul
+  sim_pr_info_[simulatedProtonNumber].ty = sim_pr_info_[simul	  sim_pr_info_[simulatedProtonNumber].ty = sim_pr_info_[simul
+  sim_pr_info_[simulatedProtonNumber].valid = true;		  sim_pr_info_[simulatedProtonNumber].valid = true;
+}								}
+
+
+bool RPNtuplizer::FindReconstrucedProtons(const edm::Event& e	bool RPNtuplizer::FindReconstrucedProtons(const edm::Event& e
+{								{
+  reconstructed_protons_.clear();				  reconstructed_protons_.clear();
+
+  if (Verbosity_)						  if (Verbosity_)
+  	std::cout << "Finding the reconstructed protons" << s |	  	std::cout << "[TotemRPAnalysis] Finding the reconstru
+							      >
+  edm::Handle < RPReconstructedProtonCollection > input;	  edm::Handle < RPReconstructedProtonCollection > input;
+  e.getByLabel(rpReconstructedProtonCollectionLabel, input);	  e.getByLabel(rpReconstructedProtonCollectionLabel, input);
+
+  right_rec_prot_fund_ = 0;					  right_rec_prot_fund_ = 0;
+  left_rec_prot_fund_ = 0;					  left_rec_prot_fund_ = 0;
+  if (input.isValid()) {					  if (input.isValid()) {
+							      >	        std::cout << "[TotemRPAnalysis] input collection " <<
+  	for (RPReconstructedProtonCollection::const_iterator 	  	for (RPReconstructedProtonCollection::const_iterator 
+  		if (Verbosity_)					  		if (Verbosity_)
+  			std::cout << "Reconstructed proton ks |	  			std::cout << "[TotemRPAnalysis] Recon
+  			        << std::endl;			  			        << std::endl;
+  		if (it->ZDirection() > 0) {			  		if (it->ZDirection() > 0) {
+  			++right_rec_prot_fund_;			  			++right_rec_prot_fund_;
+  			reconstructed_protons_[1] = &(*it);	  			reconstructed_protons_[1] = &(*it);
+  			if (Verbosity_)				  			if (Verbosity_)
+  				std::cout << "Setting the rec |	  				std::cout << "[TotemRPAnalysi
+  		}						  		}
+  		if (it->ZDirection() < 0) {			  		if (it->ZDirection() < 0) {
+  			++left_rec_prot_fund_;			  			++left_rec_prot_fund_;
+  			reconstructed_protons_[0] = &(*it);	  			reconstructed_protons_[0] = &(*it);
+  			if (Verbosity_)				  			if (Verbosity_)
+  				std::cout << "Setting the rec |	  				std::cout << "[TotemRPAnalysi
+  		}						  		}
+  	}							  	}
+  }								  }
+  bool result = right_rec_prot_fund_ <= 1 && left_rec_prot_fu	  bool result = right_rec_prot_fund_ <= 1 && left_rec_prot_fu
+          || left_rec_prot_fund_ > 0);				          || left_rec_prot_fund_ > 0);
+							      >	  if(!result) std::cout << "[TotemRPAnalysis] reconstructed p
+  return result;						  return result;
+}								}
+
+/**								/**
+ * The purpose of this function is to read most forward prima	 * The purpose of this function is to read most forward prima
+ */								 */
+bool RPNtuplizer::FindSimulatedProtons(const edm::Event& e)	bool RPNtuplizer::FindSimulatedProtons(const edm::Event& e)
+{								{
+  edm::Handle < edm::HepMCProduct > input;			  edm::Handle < edm::HepMCProduct > input;
+  e.getByLabel("SmearingGenerator", "original", input);		  e.getByLabel("SmearingGenerator", "original", input);
+
+  if (input.isValid())						  if (input.isValid())
+  {								  {
+  	const HepMC::GenEvent *evt = input->GetEvent();		  	const HepMC::GenEvent *evt = input->GetEvent();
+  	right_prim_prot_.found = false;				  	right_prim_prot_.found = false;
+  	left_prim_prot_.found = false;				  	left_prim_prot_.found = false;
+
+  	for (HepMC::GenEvent::particle_const_iterator it = ev	  	for (HepMC::GenEvent::particle_const_iterator it = ev
+    {								    {
+      HepMC::GenParticle * g = (*it);				      HepMC::GenParticle * g = (*it);
+      int g_status = g->status();				      int g_status = g->status();
+      int pdg_id = g->pdg_id();					      int pdg_id = g->pdg_id();
+
+      // scanning only for particles with status == 1		      // scanning only for particles with status == 1
+      if (g_status == 1 && pdg_id == 2212)			      if (g_status == 1 && pdg_id == 2212)
+      {								      {
+        const HepMC::FourVector &vtx = g->production_vertex()	        const HepMC::FourVector &vtx = g->production_vertex()
+        const HepMC::FourVector &mom = g->momentum();		        const HepMC::FourVector &mom = g->momentum();
+
+        if (mom.z() > 0)					        if (mom.z() > 0)
+        {							        {
+          if (!right_prim_prot_.found || ( fabs(mom.z()) > fa	          if (!right_prim_prot_.found || ( fabs(mom.z()) > fa
+          {							          {
+            right_prim_prot_.vertex = vtx; //[mm]		            right_prim_prot_.vertex = vtx; //[mm]
+            right_prim_prot_.momentum = mom; //[GeV]		            right_prim_prot_.momentum = mom; //[GeV]
+            right_prim_prot_.found = true;			            right_prim_prot_.found = true;
+          }							          }
+        }							        }
+
+        if (mom.z() < 0)					        if (mom.z() < 0)
+        {							        {
+          if (!left_prim_prot_.found || (fabs(mom.z()) > fabs	          if (!left_prim_prot_.found || (fabs(mom.z()) > fabs
+          {							          {
+            left_prim_prot_.vertex = vtx; //[mm]		            left_prim_prot_.vertex = vtx; //[mm]
+            left_prim_prot_.momentum = mom; //[GeV]		            left_prim_prot_.momentum = mom; //[GeV]
+            left_prim_prot_.found = true;			            left_prim_prot_.found = true;
+          }							          }
+        }							        }
+      }								      }
+  	}							  	}
+
+  	return true;						  	return true;
+  }								  }
+
+  return false;							  return false;
+}								}
+
+/**								/**
+ * The purpose of this function is to read most forward prima	 * The purpose of this function is to read most forward prima
+ */								 */
+bool RPNtuplizer::FindSimulatedProtonsVertex(const edm::Event	bool RPNtuplizer::FindSimulatedProtonsVertex(const edm::Event
+  edm::Handle < edm::HepMCProduct > input;			  edm::Handle < edm::HepMCProduct > input;
+  e.getByLabel("generator", input);				  e.getByLabel("generator", input);
+  								  
+  bool left_found = false;					  bool left_found = false;
+  bool right_found = false;					  bool right_found = false;
+  HepMC::FourVector mom_left;					  HepMC::FourVector mom_left;
+  HepMC::FourVector mom_right;					  HepMC::FourVector mom_right;
+  								  
+  if (input.isValid()) {					  if (input.isValid()) {
+    const HepMC::GenEvent *evt = input->GetEvent();		    const HepMC::GenEvent *evt = input->GetEvent();
+
+    for (HepMC::GenEvent::particle_const_iterator it = evt->p	    for (HepMC::GenEvent::particle_const_iterator it = evt->p
+      HepMC::GenParticle * g = (*it);				      HepMC::GenParticle * g = (*it);
+      int g_status = g->status();				      int g_status = g->status();
+      int pdg_id = g->pdg_id();					      int pdg_id = g->pdg_id();
+
+      // scanning only for particles with status == 1		      // scanning only for particles with status == 1
+      if (g_status == 1 && pdg_id == 2212) {			      if (g_status == 1 && pdg_id == 2212) {
+        const HepMC::FourVector &vtx = g->production_vertex()	        const HepMC::FourVector &vtx = g->production_vertex()
+        const HepMC::FourVector &mom = g->momentum();		        const HepMC::FourVector &mom = g->momentum();
+
+        if (mom.z() > 0) {					        if (mom.z() > 0) {
+          if (!right_found || (fabs(mom.z()) > fabs(mom_right	          if (!right_found || (fabs(mom.z()) > fabs(mom_right
+            right_prim_prot_.vertex = vtx; //[mm]		            right_prim_prot_.vertex = vtx; //[mm]
+            mom_right = mom; //[GeV]				            mom_right = mom; //[GeV]
+            right_found = true;					            right_found = true;
+          }							          }
+        }							        }
+        if (mom.z() < 0) {					        if (mom.z() < 0) {
+          if (!left_found || (fabs(mom.z()) > fabs(mom_left.z	          if (!left_found || (fabs(mom.z()) > fabs(mom_left.z
+            left_prim_prot_.vertex = vtx; //[mm]		            left_prim_prot_.vertex = vtx; //[mm]
+            mom_left = mom; //[GeV]				            mom_left = mom; //[GeV]
+            left_found = true;					            left_found = true;
+          }							          }
+        }							        }
+      }								      }
+    }								    }
+    								    
+//    if(!result)						//    if(!result)
+//      std::cout<<"FindSimulatedProtonsVertex:: Vertex not f	//      std::cout<<"FindSimulatedProtonsVertex:: Vertex not f
+//    else							//    else
+//      std::cout<<"FindSimulatedProtonsVertex:: Vertex found	//      std::cout<<"FindSimulatedProtonsVertex:: Vertex found
+
+    return true;						    return true;
+  }								  }
+  								  
+//  std::cout<<"FindSimulatedProtonsVertex:: Vertex not found	//  std::cout<<"FindSimulatedProtonsVertex:: Vertex not found
+  return false;							  return false;
+}								}
+
+
+bool RPNtuplizer::FindReconstrucedProtonPair(const edm::Event	bool RPNtuplizer::FindReconstrucedProtonPair(const edm::Event
+  if (Verbosity_)						  if (Verbosity_)
+  	std::cout << "Finding the reconstructed protons" << s |	  	std::cout << "[TotemRPAnalysis] Finding the reconstru
+  edm::Handle < RPReconstructedProtonPairCollection > input;	  edm::Handle < RPReconstructedProtonPairCollection > input;
+  e.getByLabel(rpReconstructedProtonPairCollectionLabel, inpu	  e.getByLabel(rpReconstructedProtonPairCollectionLabel, inpu
+
+  if (!input.isValid() || input->size() != 1) {			  if (!input.isValid() || input->size() != 1) {
+  	if (Verbosity_)						  	if (Verbosity_)
+  		std::cout << "reconstructed protons not found |	  		std::cout << "[TotemRPAnalysis] reconstructed
+  	return false;						  	return false;
+  } else {							  } else {
+  	if (Verbosity_)						  	if (Verbosity_)
+  		std::cout << "reconstructed protons found" << |	  		std::cout << "[TotemRPAnalysis] reconstructed
+  	reconstructed_proton_pair_ = (*input)[0];		  	reconstructed_proton_pair_ = (*input)[0];
+  	return true;						  	return true;
+  }								  }
+}								}
+

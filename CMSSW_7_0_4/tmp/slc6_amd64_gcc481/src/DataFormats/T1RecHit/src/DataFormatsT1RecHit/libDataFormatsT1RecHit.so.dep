@@ -1,0 +1,13 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/T1RecHit/src/DataFormatsT1RecHit/a/xr.cc: \
+ src/DataFormats/T1RecHit/src/classes.h \
+ src/DataFormats/T1RecHit/interface/T1RecHit2D.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/DataFormats/T1DetId/interface/T1DetId.h \
+ src/DataFormats/T1RecHit/interface/T1RecHit2DCollection.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/T1RecHit/src/DataFormatsT1RecHit/T1RecHit2D.o: \
+ src/DataFormats/T1RecHit/src/T1RecHit2D.cc \
+ src/DataFormats/T1RecHit/interface/T1RecHit2D.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/DataFormats/T1DetId/interface/T1DetId.h \
+

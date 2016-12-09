@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemAlignment/RPTrackBased)
+subdirs_src_TotemAlignment_RPTrackBased := src_TotemAlignment_RPTrackBased_test src_TotemAlignment_RPTrackBased_plugins src_TotemAlignment_RPTrackBased_python src_TotemAlignment_RPTrackBased_src

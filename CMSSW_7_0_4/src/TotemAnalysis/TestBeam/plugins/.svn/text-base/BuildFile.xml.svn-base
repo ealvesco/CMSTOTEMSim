@@ -1,0 +1,11 @@
+<library   name="TotemAnalysisTestBeamPlugins" file="*.cc">
+  <use   name="FWCore/Framework"/>
+  <use   name="Geometry/TotemRPGeometryBuilder"/>
+  <use   name="clhep"/>
+  <use   name="Geometry/TotemRecords"/>
+  <use   name="TotemAnalysis/TestBeam"/>
+  <use   name="root"/>
+  <use   name="rootgraphics"/>
+  <flags   EDM_PLUGIN="1"/>
+  <flags   cxxflags="-g3 -O3 $(CUSTOM_FLAGS)"/>
+</library>

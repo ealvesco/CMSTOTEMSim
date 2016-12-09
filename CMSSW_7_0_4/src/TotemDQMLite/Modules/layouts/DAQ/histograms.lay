@@ -1,0 +1,9 @@
+<!DOCTYPE layout>
+<layout>
+ <TabWindow windowTitle="DAQ histograms" ifLayout="1">
+  <CanvasGrid>
+   <model x="3" y="3" canvasTab_0_0="DAQ/dataEventNumber histogram" canvasTab_0_1="DAQ/dataConfNumber histogram" canvasTab_1_0="DAQ/OptoRxID histogram" canvasTab_0_2="DAQ/timestamp histogram" canvasTab_1_1="DAQ/OptoRxBX histogram" canvasTab_2_0="" canvasTab_1_2="DAQ/OptoRxLV1 histogram" canvasTab_2_1="" canvasTab_2_2=""/>
+   <view colNum="3" rowNum="2"/>
+  </CanvasGrid>
+ </TabWindow>
+</layout>

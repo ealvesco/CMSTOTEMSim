@@ -1,0 +1,22 @@
+tmp/slc6_amd64_gcc481/src/TotemAlignment/RPProfiles/plugins/TotemAlignmentRPProfilesPlugins/RPAlignmentProfiles.o: \
+ src/TotemAlignment/RPProfiles/plugins/RPAlignmentProfiles.cc \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPFittedTrackCollection.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPFittedTrack.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPRecoHit.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPTrackCandidate.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPTrackCandidateCollection.h \
+ src/DataFormats/TotemRPDetId/interface/TotRPDetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/Geometry/TotemRecords/interface/RealGeometryRecord.h \
+ src/Geometry/TotemRecords/interface/MeasuredGeometryRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPMeasuredAlignmentRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPRealAlignmentRecord.h \
+ src/Geometry/TotemRPGeometryBuilder/interface/TotemRPGeometry.h \
+ src/Geometry/TotemRPGeometryBuilder/interface/DetGeomDesc.h \
+ src/TotemAlignment/RPTrackBased/interface/LocalTrackFitter.h \
+ src/TotemAlignment/RPDataFormats/interface/LocalTrackFit.h \
+ src/TotemAlignment/RPTrackBased/interface/AlignmentGeometry.h \
+ src/TotemAlignment/RPTrackBased/interface/HitCollection.h \
+ src/TotemAlignment/RPTrackBased/interface/AlignmentTask.h \
+

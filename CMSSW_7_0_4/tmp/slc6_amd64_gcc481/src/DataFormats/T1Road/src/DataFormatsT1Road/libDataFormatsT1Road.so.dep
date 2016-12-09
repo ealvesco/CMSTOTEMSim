@@ -1,0 +1,13 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/T1Road/src/DataFormatsT1Road/a/xr.cc: \
+ src/DataFormats/T1Road/src/classes.h \
+ src/DataFormats/T1Road/interface/T1Road.h \
+ src/DataFormats/T1Road/interface/T1RecHitGlobal.h \
+ src/DataFormats/T1DetId/interface/T1DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/T1Road/src/DataFormatsT1Road/T1RecHitGlobal.o: \
+ src/DataFormats/T1Road/src/T1RecHitGlobal.cc \
+ src/DataFormats/T1Road/interface/T1RecHitGlobal.h \
+ src/DataFormats/T1DetId/interface/T1DetId.h \
+ src/DataFormats/DetId/interface/DetId.h
+

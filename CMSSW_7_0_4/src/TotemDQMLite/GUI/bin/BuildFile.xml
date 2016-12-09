@@ -1,0 +1,20 @@
+<use name="FWCore/Framework"/>
+<use name="FWCore/FWLite"/>
+<use name="FWCore/ParameterSet"/>
+<use name="FWCore/ServiceRegistry"/>
+
+<use name="DataFormats/TotemRPDetId" />
+<use name="DataFormats/FWLite"/>
+
+<use name="TotemDQMLite/Core" />
+<use name="TotemDQMLite/GUI" />
+
+<use name="qt"/>
+<use name="root"/>
+<use name="rootgraphics"/>
+<use name="rootinteractive"/>
+
+<environment>
+	<bin file="TotemDQMLite.cc"/>
+	<bin file="TotemDQMLiteBatch.cc"/>
+</environment>

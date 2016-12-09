@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_TotemT1T2Validation_GeneratorAnalysis_test
+src_TotemT1T2Validation_GeneratorAnalysis_test_parent := TotemT1T2Validation/GeneratorAnalysis
+src_TotemT1T2Validation_GeneratorAnalysis_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_TotemT1T2Validation_GeneratorAnalysis_test,src/TotemT1T2Validation/GeneratorAnalysis/test,TEST))

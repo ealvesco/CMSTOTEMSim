@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/ForwardAnalysis/ForwardTTreeAnalysis)
+subdirs_src_ForwardAnalysis_ForwardTTreeAnalysis := src_ForwardAnalysis_ForwardTTreeAnalysis_plugins src_ForwardAnalysis_ForwardTTreeAnalysis_python src_ForwardAnalysis_ForwardTTreeAnalysis_src

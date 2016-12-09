@@ -1,0 +1,9 @@
+<!DOCTYPE layout>
+<layout>
+ <TabWindow windowTitle="Trigger time-profiles" ifLayout="1">
+  <CanvasGrid>
+   <model x="3" y="3" canvasTab_0_0="Trigger/event_num time profile" canvasTab_0_1="Trigger/trigger_num time profile" canvasTab_1_0="Trigger/orbit_num time profile" canvasTab_0_2="" canvasTab_1_1="" canvasTab_2_0="" canvasTab_1_2="" canvasTab_2_1="" canvasTab_2_2=""/>
+   <view colNum="2" rowNum="2"/>
+  </CanvasGrid>
+ </TabWindow>
+</layout>

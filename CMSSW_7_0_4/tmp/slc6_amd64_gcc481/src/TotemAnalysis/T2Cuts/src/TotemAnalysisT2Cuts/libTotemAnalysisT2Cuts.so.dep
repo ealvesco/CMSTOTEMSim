@@ -1,0 +1,30 @@
+tmp/slc6_amd64_gcc481/src/TotemAnalysis/T2Cuts/src/TotemAnalysisT2Cuts/DAQInformationSourceXML_b.o: \
+ src/TotemAnalysis/T2Cuts/src/DAQInformationSourceXML_b.cc \
+ src/TotemAnalysis/T2Cuts/interface/DAQInformationSourceXML_b.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemAnalysis/T2Cuts/interface/DAQInformationT2_b.h \
+ src/TotemCondFormats/DAQInformation/interface/VFATRegisters.h \
+ src/TotemCondFormats/DataRecord/interface/TotemDAQRecord.h \
+
+tmp/slc6_amd64_gcc481/src/TotemAnalysis/T2Cuts/src/TotemAnalysisT2Cuts/T2SelectionCutUtils.o: \
+ src/TotemAnalysis/T2Cuts/src/T2SelectionCutUtils.cc \
+ src/TotemAnalysis/T2Cuts/interface/T2SelectionCutUtils.h \
+ src/DataFormats/T1T2Track/interface/T1T2TrackCollection.h \
+ src/DataFormats/T1T2Track/interface/T1T2Track.h \
+ src/DataFormats/T1Road/interface/T1RecHitGlobal.h \
+ src/DataFormats/T1DetId/interface/T1DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/DataFormats/T2Road/interface/T2Road.h \
+ src/DataFormats/T2Hit/interface/T2Hit.h \
+ src/DataFormats/T2Hit/interface/hit_entry.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+ src/DataFormats/T2Cluster/interface/T2Cluster.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+ src/DataFormats/T2Road/interface/T2RoadCollection.h \
+ src/Geometry/TotemGeometry/interface/T1Geometry.h \
+ src/Geometry/TotemGeometry/interface/T1ChamberSpecs.h \
+ src/Geometry/TotemGeometry/interface/T2GeometryUtil.h \
+ src/DataFormats/T2DetId/interface/T2DetId.h \
+ src/Geometry/TotemGeometry/interface/T2Geometry.h \
+ src/DataFormats/T2Cluster/interface/T2ROGeometry.h
+

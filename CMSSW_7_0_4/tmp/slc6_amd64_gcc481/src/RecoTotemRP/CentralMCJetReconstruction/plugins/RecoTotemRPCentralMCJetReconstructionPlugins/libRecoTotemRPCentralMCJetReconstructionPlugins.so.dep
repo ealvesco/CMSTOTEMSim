@@ -1,0 +1,7 @@
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/CentralMCJetReconstruction/plugins/RecoTotemRPCentralMCJetReconstructionPlugins/CentralMCJetReconstruction.o: \
+ src/RecoTotemRP/CentralMCJetReconstruction/plugins/CentralMCJetReconstruction.cc \
+ src/RecoTotemRP/CentralMCJetReconstruction/interface/CentralMCJetReconstruction.h \
+ src/RecoTotemRP/CentralMCJetReconstruction/interface/BuildClusters.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/CentralMassInfo.h \
+ src/RecoTotemRP/CentralMCJetReconstruction/interface/PseudoJetVectorWrapper.h
+

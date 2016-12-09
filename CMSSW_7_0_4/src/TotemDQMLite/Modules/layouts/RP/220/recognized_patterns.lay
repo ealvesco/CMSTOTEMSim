@@ -1,0 +1,9 @@
+<!DOCTYPE layout>
+<layout>
+ <TabWindow windowTitle="recognized patterns" ifLayout="1" >
+  <CanvasGrid>
+   <model x="3" y="4" canvasTab_0_0="RP/sector 45/station 220/fr_tp/numbers of recognized patterns" canvasTab_0_1="RP/sector 45/station 220/nr_tp/numbers of recognized patterns" canvasTab_1_0="RP/sector 45/station 220/fr_hr/numbers of recognized patterns" canvasTab_0_2="RP/sector 56/station 220/nr_tp/numbers of recognized patterns" canvasTab_1_1="RP/sector 45/station 220/nr_hr/numbers of recognized patterns" canvasTab_2_0="RP/sector 45/station 220/fr_bt/numbers of recognized patterns" canvasTab_0_3="RP/sector 56/station 220/fr_tp/numbers of recognized patterns" canvasTab_1_2="RP/sector 56/station 220/nr_hr/numbers of recognized patterns" canvasTab_2_1="RP/sector 45/station 220/nr_bt/numbers of recognized patterns" canvasTab_1_3="RP/sector 56/station 220/fr_hr/numbers of recognized patterns" canvasTab_2_2="RP/sector 56/station 220/nr_bt/numbers of recognized patterns" canvasTab_2_3="RP/sector 56/station 220/fr_bt/numbers of recognized patterns" />
+   <view colNum="4" rowNum="3" />
+  </CanvasGrid>
+ </TabWindow>
+</layout>

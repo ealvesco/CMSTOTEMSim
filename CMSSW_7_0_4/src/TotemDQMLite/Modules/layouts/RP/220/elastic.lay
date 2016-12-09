@@ -1,0 +1,9 @@
+<!DOCTYPE layout>
+<layout>
+ <TabWindow windowTitle="Untitled" ifLayout="1">
+  <CanvasGrid>
+   <model canvasTab_1_2="RP/sector 56/station 220/nr_tp/actual track - v projection" canvasTab_0_0="" canvasTab_1_3="RP/sector 56/station 220/fr_tp/actual track - v projection" canvasTab_0_1="" canvasTab_1_4="" canvasTab_0_2="RP/sector 56/station 220/nr_tp/current track 2D" canvasTab_0_3="RP/sector 56/station 220/fr_tp/current track 2D" canvasTab_0_4="" x="6" y="5" canvasTab_5_0="RP/sector 45/station 220/fr_bt/actual track - u projection" canvasTab_5_1="RP/sector 45/station 220/nr_bt/actual track - u projection" canvasTab_5_2="RP/sector 56/station 220/nr_bt/actual track - u projection" canvasTab_4_0="RP/sector 45/station 220/fr_bt/actual track - v projection" canvasTab_5_3="RP/sector 56/station 220/fr_bt/actual track - u projection" canvasTab_4_1="RP/sector 45/station 220/nr_bt/actual track - v projection" canvasTab_5_4="" canvasTab_4_2="RP/sector 56/station 220/nr_bt/actual track - v projection" canvasTab_3_0="RP/sector 45/station 220/fr_bt/current track 2D" canvasTab_4_3="RP/sector 56/station 220/fr_bt/actual track - v projection" canvasTab_3_1="RP/sector 45/station 220/nr_bt/current track 2D" canvasTab_4_4="" canvasTab_3_2="RP/sector 56/station 220/nr_bt/current track 2D" canvasTab_2_0="" canvasTab_3_3="RP/sector 56/station 220/fr_bt/current track 2D" canvasTab_2_1="" canvasTab_3_4="" canvasTab_2_2="RP/sector 56/station 220/nr_tp/actual track - u projection" canvasTab_1_0="" canvasTab_2_3="RP/sector 56/station 220/fr_tp/actual track - u projection" canvasTab_1_1="" canvasTab_2_4=""/>
+   <view colNum="4" rowNum="6"/>
+  </CanvasGrid>
+ </TabWindow>
+</layout>

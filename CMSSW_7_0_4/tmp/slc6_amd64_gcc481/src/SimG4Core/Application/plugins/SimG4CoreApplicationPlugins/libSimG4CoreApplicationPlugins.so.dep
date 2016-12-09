@@ -1,0 +1,18 @@
+tmp/slc6_amd64_gcc481/src/SimG4Core/Application/plugins/SimG4CoreApplicationPlugins/OscarProducer.o: \
+ src/SimG4Core/Application/plugins/OscarProducer.cc \
+ src/SimG4Core/Application/interface/OscarProducer.h \
+ src/SimG4Core/Application/interface/RunManager.h \
+ src/SimG4Core/Notification/interface/SimActivityRegistry.h \
+ src/SimG4Core/Notification/interface/Signaler.h \
+ src/SimG4Core/Notification/interface/Observer.h \
+ src/SimG4Core/Application/interface/CustomUIsession.h \
+ src/SimG4Core/Application/interface/G4SimEvent.h \
+ src/SimG4Core/Application/interface/G4SimTrack.h \
+ src/SimG4Core/Application/interface/G4SimVertex.h \
+ src/SimG4Core/Notification/interface/SimG4Exception.h \
+ src/SimG4Core/TotemRPProtTransp/interface/BeamProtTransportSetup.h \
+ src/SimG4Core/TotemRPProtTransp/interface/ProtTranspFastSimModel.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/LHCOpticsApproximator.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/LHCOpticsApproximator_gcc.h \
+ src/SimG4CMS/TotemRPProtTranspPar/interface/TMultiDimFet.h \
+

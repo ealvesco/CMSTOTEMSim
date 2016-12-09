@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemRPValidation/EdgeEfficiency)
+subdirs_src_TotemRPValidation_EdgeEfficiency := src_TotemRPValidation_EdgeEfficiency_test src_TotemRPValidation_EdgeEfficiency_interface src_TotemRPValidation_EdgeEfficiency_python src_TotemRPValidation_EdgeEfficiency_src

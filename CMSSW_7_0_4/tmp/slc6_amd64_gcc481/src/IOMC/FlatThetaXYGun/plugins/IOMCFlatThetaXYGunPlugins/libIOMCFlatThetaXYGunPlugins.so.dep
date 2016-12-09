@@ -1,0 +1,3 @@
+tmp/slc6_amd64_gcc481/src/IOMC/FlatThetaXYGun/plugins/IOMCFlatThetaXYGunPlugins/FlatThetaXYGun.o: \
+ src/IOMC/FlatThetaXYGun/plugins/FlatThetaXYGun.cc \
+

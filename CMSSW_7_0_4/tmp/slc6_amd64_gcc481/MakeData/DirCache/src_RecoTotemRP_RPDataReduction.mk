@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/RecoTotemRP/RPDataReduction)
+subdirs_src_RecoTotemRP_RPDataReduction := src_RecoTotemRP_RPDataReduction_test src_RecoTotemRP_RPDataReduction_interface src_RecoTotemRP_RPDataReduction_python src_RecoTotemRP_RPDataReduction_doc src_RecoTotemRP_RPDataReduction_src

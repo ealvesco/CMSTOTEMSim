@@ -1,0 +1,5 @@
+tmp/slc6_amd64_gcc481/src/TotemAlignment/RPTrackBased/test/summarizeRealAlignmentResults/summarizeRealAlignmentResults.o: \
+ src/TotemAlignment/RPTrackBased/test/summarizeRealAlignmentResults.cc \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrections.h \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrection.h \
+

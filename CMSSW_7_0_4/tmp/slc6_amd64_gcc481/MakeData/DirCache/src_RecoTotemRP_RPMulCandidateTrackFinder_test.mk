@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_RecoTotemRP_RPMulCandidateTrackFinder_test
+src_RecoTotemRP_RPMulCandidateTrackFinder_test_parent := RecoTotemRP/RPMulCandidateTrackFinder
+src_RecoTotemRP_RPMulCandidateTrackFinder_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_RecoTotemRP_RPMulCandidateTrackFinder_test,src/RecoTotemRP/RPMulCandidateTrackFinder/test,TEST))

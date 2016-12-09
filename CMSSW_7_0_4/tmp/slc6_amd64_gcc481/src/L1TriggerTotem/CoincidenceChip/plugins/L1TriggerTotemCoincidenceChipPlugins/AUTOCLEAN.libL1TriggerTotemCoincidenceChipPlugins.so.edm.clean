@@ -1,0 +1,2 @@
+01:/bin/rm -f lib/slc6_amd64_gcc481/pluginL1TriggerTotemCoincidenceChipPlugins.so lib/slc6_amd64_gcc481/L1TriggerTotemCoincidenceChipPlugins.edmplugin
+90:edmPluginRefresh lib/slc6_amd64_gcc481

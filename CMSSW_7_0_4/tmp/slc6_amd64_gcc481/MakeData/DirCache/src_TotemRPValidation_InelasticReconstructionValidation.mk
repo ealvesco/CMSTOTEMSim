@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemRPValidation/InelasticReconstructionValidation)
+subdirs_src_TotemRPValidation_InelasticReconstructionValidation := src_TotemRPValidation_InelasticReconstructionValidation_python src_TotemRPValidation_InelasticReconstructionValidation_scripts src_TotemRPValidation_InelasticReconstructionValidation_src

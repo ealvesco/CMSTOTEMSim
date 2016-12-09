@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/RecoTotemRP/CentralMCJetReconstruction)
+subdirs_src_RecoTotemRP_CentralMCJetReconstruction := src_RecoTotemRP_CentralMCJetReconstruction_plugins src_RecoTotemRP_CentralMCJetReconstruction_python src_RecoTotemRP_CentralMCJetReconstruction_src

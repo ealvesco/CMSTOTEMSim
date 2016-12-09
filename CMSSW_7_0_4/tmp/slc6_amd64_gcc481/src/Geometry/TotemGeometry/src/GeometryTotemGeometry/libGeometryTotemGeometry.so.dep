@@ -1,0 +1,33 @@
+tmp/slc6_amd64_gcc481/src/Geometry/TotemGeometry/src/GeometryTotemGeometry/T1Geometry.o: \
+ src/Geometry/TotemGeometry/src/T1Geometry.cc \
+ src/Geometry/TotemGeometry/interface/T1Geometry.h \
+ src/DataFormats/T1DetId/interface/T1DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/Geometry/TotemGeometry/interface/T1ChamberSpecs.h \
+
+tmp/slc6_amd64_gcc481/src/Geometry/TotemGeometry/src/GeometryTotemGeometry/T1GeomPars.o: \
+ src/Geometry/TotemGeometry/src/T1GeomPars.cc \
+ src/Geometry/TotemGeometry/interface/T1GeomPars.h \
+
+tmp/slc6_amd64_gcc481/src/Geometry/TotemGeometry/src/GeometryTotemGeometry/T2Geometry.o: \
+ src/Geometry/TotemGeometry/src/T2Geometry.cc \
+ src/Geometry/TotemGeometry/interface/T2Geometry.h \
+ src/DataFormats/T2DetId/interface/T2DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/Geometry/TotemGeometry/interface/T2GeometryUtil.h \
+ src/DataFormats/T2Hit/interface/T2Hit.h \
+ src/DataFormats/T2Hit/interface/hit_entry.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+ src/DataFormats/T2Cluster/interface/T2ROGeometry.h \
+
+tmp/slc6_amd64_gcc481/src/Geometry/TotemGeometry/src/GeometryTotemGeometry/T2GeometryUtil.o: \
+ src/Geometry/TotemGeometry/src/T2GeometryUtil.cc \
+ src/Geometry/TotemGeometry/interface/T2GeometryUtil.h \
+ src/DataFormats/T2DetId/interface/T2DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/Geometry/TotemGeometry/interface/T2Geometry.h \
+ src/DataFormats/T2Cluster/interface/T2ROGeometry.h \
+ src/DataFormats/T2Hit/interface/T2Hit.h \
+ src/DataFormats/T2Hit/interface/hit_entry.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h
+

@@ -1,0 +1,9 @@
+<!DOCTYPE layout>
+<layout>
+ <TabWindow windowTitle="4th plane" ifLayout="1" >
+  <CanvasGrid>
+   <model x="3" y="3" canvasTab_0_0="ArmMinus_/4thPlane_/CSC_0/Reco hits cumulative" canvasTab_0_1="" canvasTab_1_0="" canvasTab_0_2="" canvasTab_1_1="ArmMinus_/4thPlane_/CSC_4/Reco hits cumulative" canvasTab_2_0="" canvasTab_1_2="ArmMinus_/4thPlane_/CSC_5/Reco hits cumulative" canvasTab_2_1="" canvasTab_2_2="" />
+   <view colNum="3" rowNum="2" />
+  </CanvasGrid>
+ </TabWindow>
+</layout>

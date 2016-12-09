@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemRawData/RawToDigi)
+subdirs_src_TotemRawData_RawToDigi := src_TotemRawData_RawToDigi_test src_TotemRawData_RawToDigi_interface src_TotemRawData_RawToDigi_plugins src_TotemRawData_RawToDigi_python src_TotemRawData_RawToDigi_src

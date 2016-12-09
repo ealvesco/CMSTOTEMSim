@@ -1,0 +1,7 @@
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/RPClusterSigmaService/src/RecoTotemRPRPClusterSigmaService/RPDetClusterSigmas.o: \
+ src/RecoTotemRP/RPClusterSigmaService/src/RPDetClusterSigmas.cc \
+ src/RecoTotemRP/RPClusterSigmaService/interface/RPClusterSigmaService.h \
+ src/RecoTotemRP/RPServiceRecords/interface/RPClusterSigmaServiceRecord.h \
+ src/RecoTotemRP/RPClusterSigmaService/interface/RPDetClusterSigmas.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h
+

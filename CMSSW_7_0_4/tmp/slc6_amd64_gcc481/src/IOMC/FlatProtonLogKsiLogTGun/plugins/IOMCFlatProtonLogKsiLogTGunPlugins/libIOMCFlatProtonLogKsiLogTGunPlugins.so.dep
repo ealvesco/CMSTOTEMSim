@@ -1,0 +1,4 @@
+tmp/slc6_amd64_gcc481/src/IOMC/FlatProtonLogKsiLogTGun/plugins/IOMCFlatProtonLogKsiLogTGunPlugins/FlatProtonLogKsiLogTGun.o: \
+ src/IOMC/FlatProtonLogKsiLogTGun/plugins/FlatProtonLogKsiLogTGun.cc \
+ src/IOMC/FlatProtonLogKsiLogTGun/interface/FlatProtonLogKsiLogTGun.h \
+

@@ -1,0 +1,10 @@
+tmp/slc6_amd64_gcc481/src/TotemRawData/Filters/plugins/TotemRawDataLibraryFiltresPlugins/EventNumberArrayFilter.o: \
+ src/TotemRawData/Filters/plugins/EventNumberArrayFilter.cc \
+
+tmp/slc6_amd64_gcc481/src/TotemRawData/Filters/plugins/TotemRawDataLibraryFiltresPlugins/EventNumberTimeFilter.o: \
+ src/TotemRawData/Filters/plugins/EventNumberTimeFilter.cc \
+ src/TotemRawDataLibrary/DataFormats/interface/RawEvent.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrameCollection.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrame.h
+

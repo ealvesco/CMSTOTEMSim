@@ -1,0 +1,9 @@
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/RPRomanPotResolutionService/src/RecoTotemRPRPRomanPotResolutionService/RPFitResolution.o: \
+ src/RecoTotemRP/RPRomanPotResolutionService/src/RPFitResolution.cc \
+ src/RecoTotemRP/RPRomanPotResolutionService/interface/RPFitResolution.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPFittedTrack.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPRecoHit.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPTrackCandidate.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RP2DHit.h
+

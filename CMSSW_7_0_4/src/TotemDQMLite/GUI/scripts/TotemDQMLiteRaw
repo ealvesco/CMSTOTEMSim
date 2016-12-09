@@ -1,0 +1,174 @@
+#!/bin/bash
+
+#----------------------------------------------------------------------------------------------------
+# hard-coded defaults
+
+rawDir=""
+recoDir="/tmp"
+
+recoCfgDir="$CMSSW_BASE/src/TotemDQMLite/GUI/scripts"
+recoCfg="RP"
+
+dqmCfgDir="$CMSSW_BASE/src/TotemDQMLite/GUI/python"
+dqmCfg="all"
+
+dqmLayout=""
+
+#----------------------------------------------------------------------------------------------------
+# load defaults from config file, if it exists
+
+cfgFile="$CMSSW_BASE/src/TotemDQMLite/GUI/scripts/TotemDQMLiteRaw.cfg"
+
+if [ -e "$cfgFile" ]
+then
+	source "$cfgFile"	
+fi
+
+#----------------------------------------------------------------------------------------------------
+
+function PrintUsage()
+{
+	echo "USAGE: TotemRawDQMLiteRaw [option] [option] ... <input file>"
+	echo "OPTIONS:"
+	echo "    -h, --help        print this help and exit"
+	echo "    --raw-dir         set the directory with RAW files, default:"
+	echo "                          '$rawDir'"
+	echo "    --reco-dir        set the directory with RECO files, default:"
+	echo "                          '$recoDir'"
+	echo "    --reco-cfg        set the template of reconstruction config (options: RP, T1, T2, all), default:"
+	echo "                          '$recoCfg'"
+	echo "    --force-reco, -fr unconditionally run the reconstruction"
+	echo "    --dqm-cfg         set the config file for DQM (options: RP, T1, T2, all), default:"
+	echo "                          '$dqmCfg'"
+	echo "    -l                set the start-up layout for DQM, default:"
+	echo "                          '$dqmLayout'"
+	echo "DEFAULTS:"
+	echo "    For changing the defaults see TotemDQMLiteRaw_README."
+}
+
+#----------------------------------------------------------------------------------------------------
+# process command-line arguments
+
+inputFile=""
+forceReco="0"
+
+while [ -n "$1" ]
+do
+	case "$1" in
+		"-h" | "--help")
+			PrintUsage
+			exit
+			;;
+
+		"--raw-dir")
+			shift
+			rawDir="$1"
+			;;
+
+		"--reco-dir")
+			shift
+			recoDir="$1"
+			;;
+
+		"--reco-cfg")
+			shift
+			recoCfg="$1"
+			;;
+
+		"--force-reco" | "-fr")
+			forceReco="1"
+			;;
+
+		"--dqm-cfg")
+			shift
+			dqmCfg="$1"
+			;;
+
+		"-l")
+			shift
+			dqmLayout="$1"
+			;;
+
+		*)
+			if [ -n "$inputFile" ]
+			then
+				echo "ERROR: can't accept multiple input files."
+				PrintUsage
+				exit
+			else
+				inputFile="$1"
+			fi
+			;;
+	esac
+
+	shift
+done
+
+#----------------------------------------------------------------------------------------------------
+# check whether an input was given
+
+if [ -z "$inputFile" ]
+then
+	echo "ERROR: no input file given."
+	PrintUsage
+	exit
+fi
+
+#----------------------------------------------------------------------------------------------------
+# run processing, if needed
+
+recoFileBase="$recoDir/${inputFile##*/}"
+tag="${recoFileBase}_reco_${recoCfg}"
+recoFile="${tag}.root"
+recoFileCfg="${tag}_cfg.py"
+recoFileLog="${tag}.log"
+
+if [ ! -e "$recoFile" -o $forceReco == "1" ]
+then
+	# check whether the config file template exists
+	cfgTemp="$recoCfgDir/reco_template_${recoCfg}_cfg.py"
+	if [ ! -e "$cfgTemp" ]
+	then
+		echo "ERROR: reconstruction template '$cfgTemp' doesn't exist."
+		exit
+	fi
+
+	# build input file path
+	if [ -n "$rawDir" ]
+	then
+		inputFile="${rawDir}/${inputFile}"
+	fi
+
+	# make config file for reconstruction
+	cat "$cfgTemp" | sed "\
+			s|\$input_file|$inputFile|;
+			s|\$output_file|$recoFile|;
+		" > "$recoFileCfg"
+	
+	# inform user	
+	if [ $forceReco == "1" ]
+	then
+		echo "* Reconstruction forced"
+	else
+		echo "* RECO file NOT found - running reconstruction"
+	fi
+
+	# run reconstruction
+	cmsRun "$recoFileCfg" &> "$recoFileLog"
+	rc="$?"
+	echo "    return code $rc"
+	if [ $rc != 0 ]
+	then
+		echo "    log is available at: $recoFileLog"
+		exit
+	fi
+else
+	echo "* RECO file found: $recoFile"
+fi
+
+#----------------------------------------------------------------------------------------------------
+# run DQM
+
+dqmFullCfg="$dqmCfgDir/TotemDQMLite_${dqmCfg}_cfg.py"
+
+TotemDQMLite -cfg "$dqmFullCfg" -l "$dqmLayout" "$recoFile"

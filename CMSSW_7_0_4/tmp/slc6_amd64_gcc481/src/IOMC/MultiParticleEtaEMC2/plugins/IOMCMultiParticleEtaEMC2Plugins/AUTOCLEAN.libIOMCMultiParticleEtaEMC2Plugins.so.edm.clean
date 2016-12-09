@@ -1,0 +1,2 @@
+01:/bin/rm -f lib/slc6_amd64_gcc481/pluginIOMCMultiParticleEtaEMC2Plugins.so lib/slc6_amd64_gcc481/IOMCMultiParticleEtaEMC2Plugins.edmplugin
+90:edmPluginRefresh lib/slc6_amd64_gcc481

@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/Geometry/TotemRPGeometryBuilder)
+subdirs_src_Geometry_TotemRPGeometryBuilder := src_Geometry_TotemRPGeometryBuilder_interface src_Geometry_TotemRPGeometryBuilder_plugins src_Geometry_TotemRPGeometryBuilder_python src_Geometry_TotemRPGeometryBuilder_doc src_Geometry_TotemRPGeometryBuilder_src

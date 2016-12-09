@@ -1,0 +1,22 @@
+tmp/slc6_amd64_gcc481/src/TotemAlignment/RPDataFormats/src/TotemAlignmentRPDataFormats/a/xr.cc: \
+ src/TotemAlignment/RPDataFormats/src/classes.h \
+ src/TotemAlignment/RPDataFormats/interface/LocalTrackFit.h \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrection.h \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrections.h \
+
+tmp/slc6_amd64_gcc481/src/TotemAlignment/RPDataFormats/src/TotemAlignmentRPDataFormats/RPAlignmentCorrection.o: \
+ src/TotemAlignment/RPDataFormats/src/RPAlignmentCorrection.cc \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrection.h \
+
+tmp/slc6_amd64_gcc481/src/TotemAlignment/RPDataFormats/src/TotemAlignmentRPDataFormats/RPAlignmentCorrections.o: \
+ src/TotemAlignment/RPDataFormats/src/RPAlignmentCorrections.cc \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrections.h \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrection.h \
+ src/TotemAlignment/RPTrackBased/interface/AlignmentGeometry.h \
+
+tmp/slc6_amd64_gcc481/src/TotemAlignment/RPDataFormats/src/TotemAlignmentRPDataFormats/RPAlignmentCorrectionsSequence.o: \
+ src/TotemAlignment/RPDataFormats/src/RPAlignmentCorrectionsSequence.cc \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrectionsSequence.h \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrections.h \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrection.h \
+

@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemRPValidation/BeamSmearing)
+subdirs_src_TotemRPValidation_BeamSmearing := src_TotemRPValidation_BeamSmearing_test src_TotemRPValidation_BeamSmearing_interface src_TotemRPValidation_BeamSmearing_plugins src_TotemRPValidation_BeamSmearing_python src_TotemRPValidation_BeamSmearing_src

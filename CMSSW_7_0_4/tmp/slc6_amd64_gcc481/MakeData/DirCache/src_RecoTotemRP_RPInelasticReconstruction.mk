@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/RecoTotemRP/RPInelasticReconstruction)
+subdirs_src_RecoTotemRP_RPInelasticReconstruction := src_RecoTotemRP_RPInelasticReconstruction_test src_RecoTotemRP_RPInelasticReconstruction_interface src_RecoTotemRP_RPInelasticReconstruction_python src_RecoTotemRP_RPInelasticReconstruction_src

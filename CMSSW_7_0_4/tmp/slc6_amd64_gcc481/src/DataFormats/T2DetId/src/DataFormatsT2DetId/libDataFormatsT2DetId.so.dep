@@ -1,0 +1,10 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/T2DetId/src/DataFormatsT2DetId/a/xr.cc: \
+ src/DataFormats/T2DetId/src/classes.h \
+ src/DataFormats/T2DetId/interface/T2DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/T2DetId/src/DataFormatsT2DetId/T2DetId.o: \
+ src/DataFormats/T2DetId/src/T2DetId.cc \
+ src/DataFormats/T2DetId/interface/T2DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+

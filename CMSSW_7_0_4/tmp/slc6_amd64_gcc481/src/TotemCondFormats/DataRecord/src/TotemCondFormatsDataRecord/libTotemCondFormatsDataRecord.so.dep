@@ -1,0 +1,21 @@
+tmp/slc6_amd64_gcc481/src/TotemCondFormats/DataRecord/src/TotemCondFormatsDataRecord/BeamOpticsParamsRcd.o: \
+ src/TotemCondFormats/DataRecord/src/BeamOpticsParamsRcd.cc \
+ src/TotemCondFormats/DataRecord/interface/BeamOpticsParamsRcd.h \
+
+tmp/slc6_amd64_gcc481/src/TotemCondFormats/DataRecord/src/TotemCondFormatsDataRecord/ProtonTransportRcd.o: \
+ src/TotemCondFormats/DataRecord/src/ProtonTransportRcd.cc \
+ src/TotemCondFormats/DataRecord/interface/ProtonTransportRcd.h \
+ src/TotemCondFormats/DataRecord/interface/BeamOpticsParamsRcd.h \
+ src/Geometry/TotemRecords/interface/RealGeometryRecord.h \
+ src/Geometry/TotemRecords/interface/MeasuredGeometryRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPMeasuredAlignmentRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPRealAlignmentRecord.h \
+
+tmp/slc6_amd64_gcc481/src/TotemCondFormats/DataRecord/src/TotemCondFormatsDataRecord/TotemDAQMappingRecord.o: \
+ src/TotemCondFormats/DataRecord/src/TotemDAQMappingRecord.cc \
+ src/TotemCondFormats/DataRecord/interface/TotemDAQMappingRecord.h \
+
+tmp/slc6_amd64_gcc481/src/TotemCondFormats/DataRecord/src/TotemCondFormatsDataRecord/TotemDAQRecord.o: \
+ src/TotemCondFormats/DataRecord/src/TotemDAQRecord.cc \
+ src/TotemCondFormats/DataRecord/interface/TotemDAQRecord.h \
+

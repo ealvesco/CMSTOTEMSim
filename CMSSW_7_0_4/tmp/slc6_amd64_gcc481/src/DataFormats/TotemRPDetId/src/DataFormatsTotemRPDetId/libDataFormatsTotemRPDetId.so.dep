@@ -1,0 +1,10 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/TotemRPDetId/src/DataFormatsTotemRPDetId/a/xr.cc: \
+ src/DataFormats/TotemRPDetId/src/classes.h \
+ src/DataFormats/TotemRPDetId/interface/TotRPDetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/TotemRPDetId/src/DataFormatsTotemRPDetId/TotRPDetId.o: \
+ src/DataFormats/TotemRPDetId/src/TotRPDetId.cc \
+ src/DataFormats/TotemRPDetId/interface/TotRPDetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+

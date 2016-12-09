@@ -1,0 +1,11 @@
+tmp/slc6_amd64_gcc481/src/TotemDQMLite/GUI/bin/TotemDQMLite/TotemDQMLite.o: \
+ src/TotemDQMLite/GUI/bin/TotemDQMLite.cc \
+ src/TotemDQMLite/GUI/interface/MainWindow.h \
+ src/TotemDQMLite/GUI/interface/ProcessManager.h \
+ src/TotemDQMLite/Core/interface/DQMModule.h \
+ src/TotemDQMLite/Core/interface/PlotManager.h \
+ src/TotemDQMLite/Core/interface/DQMPlot.h \
+ src/DataFormats/TotemRPDetId/interface/TotRPDetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/TotemDQMLite/GUI/interface/QRootEventHandler.h \
+

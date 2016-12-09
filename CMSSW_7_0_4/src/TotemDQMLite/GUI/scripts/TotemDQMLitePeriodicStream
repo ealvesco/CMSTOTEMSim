@@ -1,0 +1,169 @@
+#!/bin/bash
+
+#----------------------------------------------------------------------------------------------------
+
+#data_dir="/dqm/periodic"
+data_dir="/dqm/T1"
+
+data_file="run_001_EVB12_1.000_mon.srs"
+
+data_lock_file="lockFile"
+
+reco_cfg_template="$CMSSW_BASE/src/TotemDQMLite/GUI/scripts/reco_template_RP_cfg.py"
+
+web_template="$CMSSW_BASE/src/TotemDQMLite/GUI/scripts/web_page_template.html"
+
+dqm_cfg_template="$CMSSW_BASE/src/TotemDQMLite/GUI/python/TotemDQMLite_RP_cfg.py"
+
+plot_dir="/home/monitor/PeriodicDQM"
+
+reco_cfg="$plot_dir/last_reco.py"
+reco_root="$plot_dir/last_reco.root"
+reco_log="$plot_dir/last_reco.log"
+
+#----------------------------------------------------------------------------------------------------
+
+windows_open=0
+
+#----------------------------------------------------------------------------------------------------
+
+function MakeReco()
+{
+	sed "\
+			s|\$input_file|$data_dir/$data_file|;\
+			s|\$output_file|$reco_root|;\
+		" < "$reco_cfg_template" > "$reco_cfg"
+
+	cmsRun "$reco_cfg" &> "$reco_log"
+	rv="$?"
+
+	if [ $rv -eq 0 ]
+	then
+		echo "  Succsess!"
+	else
+		echo "  ERROR in cmsRun."
+	fi
+
+	return $rv
+}
+
+#----------------------------------------------------------------------------------------------------
+
+function MakePlots()
+{
+	cd "$plot_dir"
+
+	TotemDQMLiteBatch -cfg "$dqm_cfg_template" "$reco_root" -suffix ".png"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/DAQ/histograms.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/Trigger/histograms.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/active_planes.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/plane_activity_2d.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/u_and_v_profiles.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/recognized_patterns.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/planes_contributing_to_fit.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/event_categories.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/XY_track_distributions_graph.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/210F_220/XY_track_distributions_histogram.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/correlations_among_RPs_with_tracks.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/left_right_correlations_graph.lay"\
+		-l "$CMSSW_BASE/src/TotemDQMLite/Modules/layouts/RP/left_right_correlations_histogram.lay"\
+		&> /dev/null
+
+	cd - > /dev/null
+}
+
+#----------------------------------------------------------------------------------------------------
+
+function MakeWebPage()
+{
+	# make png images
+
+#	for f in $plot_dir/*.pdf
+#	do
+#		dir="${f%/*}"
+#		file="${f##*/}"
+#		png_file="${file%.*}.png"
+#		png_file="${png_file/:/_}"
+#		convert -density 300 "$f" "$dir/$png_file"
+#	done
+
+	# build HTML page
+	local run="${current_file##*/}"
+	run="${run##*_}"
+	run="${run%.*}"
+	local file="${run#*.}"
+	run="${run%.*}"
+	local date=`date`
+	local fdate=`date -r $data_dir/$current_file`
+
+	cat "$web_template" | sed "\
+			s|\$run|$run|;
+			s|\$file|$file|;
+			s|\$date|$date|;
+			s|\$fdate|$fdate|;
+		" > "$plot_dir/summary.html"
+}
+
+#----------------------------------------------------------------------------------------------------
+
+function OpenWindows()
+{
+	echo "* Opening windows"
+
+	ls "$plot_dir" | grep ".png" | while read f
+	do
+		gv "$plot_dir/$f" & > /dev/null
+	done
+	
+	windows_open="1"
+}
+
+#----------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------
+
+# assure existing directories
+mkdir -p "$plot_dir"
+
+# clean old results
+rm -f $plot_dir/*.root
+rm -f $plot_dir/*.eps
+rm -f $plot_dir/*.png
+
+# run processing loop
+while [ 1 ]
+do
+	clear
+
+	echo "* Removing data and lock file"
+	rm -rf "$data_dir/$data_file"
+	rm -rf "$data_dir/$data_lock_file"
+
+	echo "* Waiting for data"
+	sleep 10
+
+	echo "* Time: " `date`
+
+	echo "* Actual data file:"
+	ls -l "$data_dir/$data_file"
+
+	echo "* Running reconstruction"
+	MakeReco
+
+	if [ $rv -eq 0 ]
+	then
+		echo "* Making plots"
+		MakePlots
+	
+		echo "* Making web page"
+		MakeWebPage
+	
+		if [ "$windows_open" -eq 0 ]
+		then
+			OpenWindows
+		fi
+	fi
+	
+	echo "* Waiting ... (use Ctrl-C to stop the script)"
+	sleep 180
+done

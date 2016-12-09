@@ -1,0 +1,2 @@
+01:/bin/rm -f lib/slc6_amd64_gcc481/pluginRecoTotemT1T2T1RecHitPlugins.so lib/slc6_amd64_gcc481/RecoTotemT1T2T1RecHitPlugins.edmplugin
+90:edmPluginRefresh lib/slc6_amd64_gcc481

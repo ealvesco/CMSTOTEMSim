@@ -1,0 +1,13 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/T2DigiVfat/src/DataFormatsT2DigiVfat/a/xr.cc: \
+ src/DataFormats/T2DigiVfat/src/classes.h \
+ src/DataFormats/T2DigiVfat/interface/T2DigiVfat.h \
+ src/DataFormats/T2DigiVfat/interface/T2DigiVfatCollection.h \
+ src/DataFormats/T2DetId/interface/T2DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/DataFormats/TotemData/interface/TotemDigiCollection.h \
+ src/DataFormats/T2DigiVfat/interface/T2VfatInformation.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/T2DigiVfat/src/DataFormatsT2DigiVfat/T2DigiVfat.o: \
+ src/DataFormats/T2DigiVfat/src/T2DigiVfat.cc \
+ src/DataFormats/T2DigiVfat/interface/T2DigiVfat.h \
+

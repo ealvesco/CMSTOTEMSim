@@ -1,0 +1,4 @@
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/RPDetectorMaskingService/src/RecoTotemRPRPDetectorMaskingService/RPDetectorAvailability.o: \
+ src/RecoTotemRP/RPDetectorMaskingService/src/RPDetectorAvailability.cc \
+ src/RecoTotemRP/RPDetectorMaskingService/interface/RPDetectorAvailability.h
+

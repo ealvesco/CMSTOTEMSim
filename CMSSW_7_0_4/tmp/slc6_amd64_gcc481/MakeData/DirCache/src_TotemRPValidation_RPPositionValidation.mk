@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemRPValidation/RPPositionValidation)
+subdirs_src_TotemRPValidation_RPPositionValidation := src_TotemRPValidation_RPPositionValidation_test src_TotemRPValidation_RPPositionValidation_interface src_TotemRPValidation_RPPositionValidation_python src_TotemRPValidation_RPPositionValidation_src

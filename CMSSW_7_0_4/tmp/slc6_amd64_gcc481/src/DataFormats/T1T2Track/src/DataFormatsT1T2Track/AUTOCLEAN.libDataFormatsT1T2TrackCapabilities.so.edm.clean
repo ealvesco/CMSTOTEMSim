@@ -1,0 +1,2 @@
+01:/bin/rm -f lib/slc6_amd64_gcc481/pluginDataFormatsT1T2TrackCapabilities.so lib/slc6_amd64_gcc481/DataFormatsT1T2TrackCapabilities.edmplugin
+90:edmPluginRefresh lib/slc6_amd64_gcc481

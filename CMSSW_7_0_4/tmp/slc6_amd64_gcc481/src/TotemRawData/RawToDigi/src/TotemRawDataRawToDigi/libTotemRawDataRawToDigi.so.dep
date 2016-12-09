@@ -1,0 +1,24 @@
+tmp/slc6_amd64_gcc481/src/TotemRawData/RawToDigi/src/TotemRawDataRawToDigi/a/xr.cc: \
+ src/TotemRawData/RawToDigi/src/classes.h \
+ src/TotemRawData/RawToDigi/interface/Raw2DigiStatus.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+
+tmp/slc6_amd64_gcc481/src/TotemRawData/RawToDigi/src/TotemRawDataRawToDigi/CounterChecker.o: \
+ src/TotemRawData/RawToDigi/src/CounterChecker.cc \
+ src/TotemRawData/RawToDigi/interface/CounterChecker.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemRawDataLibrary/DataFormats/interface/CommonDef.h \
+ src/TotemRawData/RawToDigi/interface/Raw2DigiStatus.h
+
+tmp/slc6_amd64_gcc481/src/TotemRawData/RawToDigi/src/TotemRawDataRawToDigi/Raw2DigiStatus.o: \
+ src/TotemRawData/RawToDigi/src/Raw2DigiStatus.cc \
+ src/TotemRawData/RawToDigi/interface/Raw2DigiStatus.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h
+
+tmp/slc6_amd64_gcc481/src/TotemRawData/RawToDigi/src/TotemRawDataRawToDigi/T2Mapping.o: \
+ src/TotemRawData/RawToDigi/src/T2Mapping.cc \
+ src/TotemRawData/RawToDigi/interface/T2Mapping.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrameCollection.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrame.h
+

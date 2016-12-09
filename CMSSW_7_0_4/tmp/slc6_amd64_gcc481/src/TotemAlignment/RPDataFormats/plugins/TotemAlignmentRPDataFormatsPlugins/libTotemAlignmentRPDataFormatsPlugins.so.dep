@@ -1,0 +1,23 @@
+tmp/slc6_amd64_gcc481/src/TotemAlignment/RPDataFormats/plugins/TotemAlignmentRPDataFormatsPlugins/BuildElasticCorrectionsFile.o: \
+ src/TotemAlignment/RPDataFormats/plugins/BuildElasticCorrectionsFile.cc \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrectionsSequence.h \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrections.h \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrection.h \
+ src/Geometry/TotemRPGeometryBuilder/interface/TotemRPGeometry.h \
+ src/DataFormats/TotemRPDetId/interface/TotRPDetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/Geometry/TotemRPGeometryBuilder/interface/DetGeomDesc.h \
+ src/Geometry/TotemRecords/interface/RealGeometryRecord.h \
+ src/Geometry/TotemRecords/interface/MeasuredGeometryRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPMeasuredAlignmentRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPRealAlignmentRecord.h
+
+tmp/slc6_amd64_gcc481/src/TotemAlignment/RPDataFormats/plugins/TotemAlignmentRPDataFormatsPlugins/TotemRPIncludeAlignments.o: \
+ src/TotemAlignment/RPDataFormats/plugins/TotemRPIncludeAlignments.cc \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrectionsSequence.h \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrections.h \
+ src/TotemAlignment/RPDataFormats/interface/RPAlignmentCorrection.h \
+ src/TotemAlignment/RPRecords/interface/RPMeasuredAlignmentRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPRealAlignmentRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPMisalignedAlignmentRecord.h
+

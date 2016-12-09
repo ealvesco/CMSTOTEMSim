@@ -1,0 +1,4 @@
+tmp/slc6_amd64_gcc481/src/TotemDQMLite/Geometry/src/TotemDQMLiteGeometry/TotemRPGeometryLite.o: \
+ src/TotemDQMLite/Geometry/src/TotemRPGeometryLite.cc \
+ src/TotemDQMLite/Geometry/interface/TotemRPGeometryLite.h \
+

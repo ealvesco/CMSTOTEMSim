@@ -1,0 +1,2 @@
+ALL_SUBSYSTEMS+=$(patsubst src/%,%,src/TotemCondFormats)
+subdirs_src_TotemCondFormats = src_TotemCondFormats_BeamOpticsParamsObjects src_TotemCondFormats_ProtonTransportFunctions src_TotemCondFormats_DataRecord src_TotemCondFormats_DAQInformation

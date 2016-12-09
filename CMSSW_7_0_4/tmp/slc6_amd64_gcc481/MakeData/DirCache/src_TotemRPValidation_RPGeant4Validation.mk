@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemRPValidation/RPGeant4Validation)
+subdirs_src_TotemRPValidation_RPGeant4Validation := src_TotemRPValidation_RPGeant4Validation_interface src_TotemRPValidation_RPGeant4Validation_src src_TotemRPValidation_RPGeant4Validation_bin

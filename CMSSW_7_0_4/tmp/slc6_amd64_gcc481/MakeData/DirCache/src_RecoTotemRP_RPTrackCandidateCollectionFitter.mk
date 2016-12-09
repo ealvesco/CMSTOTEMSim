@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/RecoTotemRP/RPTrackCandidateCollectionFitter)
+subdirs_src_RecoTotemRP_RPTrackCandidateCollectionFitter := src_RecoTotemRP_RPTrackCandidateCollectionFitter_python src_RecoTotemRP_RPTrackCandidateCollectionFitter_src

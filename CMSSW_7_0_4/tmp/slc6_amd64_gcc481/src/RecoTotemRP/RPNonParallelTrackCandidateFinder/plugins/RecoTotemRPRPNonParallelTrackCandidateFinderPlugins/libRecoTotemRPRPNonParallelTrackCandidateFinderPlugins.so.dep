@@ -1,0 +1,18 @@
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/RPNonParallelTrackCandidateFinder/plugins/RecoTotemRPRPNonParallelTrackCandidateFinderPlugins/RPNonParallelTrackCandidateFinder.o: \
+ src/RecoTotemRP/RPNonParallelTrackCandidateFinder/plugins/RPNonParallelTrackCandidateFinder.cc \
+ src/DataFormats/TotemRPDetId/interface/TotRPDetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPRecoHit.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+ src/Geometry/TotemRecords/interface/RealGeometryRecord.h \
+ src/Geometry/TotemRecords/interface/MeasuredGeometryRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPMeasuredAlignmentRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPRealAlignmentRecord.h \
+ src/Geometry/TotemRPGeometryBuilder/interface/TotemRPGeometry.h \
+ src/Geometry/TotemRPGeometryBuilder/interface/DetGeomDesc.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPTrackCandidateCollection.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPTrackCandidate.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPRecognizedPatternsCollection.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPRecognizedPatterns.h \
+ src/RecoTotemRP/RPNonParallelTrackCandidateFinder/interface/FastLineRecognition.h
+

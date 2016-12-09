@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/GeneratorInterface/PompytInterface)
+subdirs_src_GeneratorInterface_PompytInterface := src_GeneratorInterface_PompytInterface_src src_GeneratorInterface_PompytInterface_python src_GeneratorInterface_PompytInterface_test

@@ -1,0 +1,22 @@
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/RPTrackCandidateCollectionFitter/src/RecoTotemRPRPTrackCandidateCollectionFitter/RPTrackCandidateCollectionFitter.o: \
+ src/RecoTotemRP/RPTrackCandidateCollectionFitter/src/RPTrackCandidateCollectionFitter.cc \
+ src/RecoTotemRP/RPTrackCandidateCollectionFitter/interface/RPTrackCandidateCollectionFitter.h \
+ src/Geometry/TotemRecords/interface/RealGeometryRecord.h \
+ src/Geometry/TotemRecords/interface/MeasuredGeometryRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPMeasuredAlignmentRecord.h \
+ src/TotemAlignment/RPRecords/interface/RPRealAlignmentRecord.h \
+ src/Geometry/TotemRPGeometryBuilder/interface/TotemRPGeometry.h \
+ src/DataFormats/TotemRPDetId/interface/TotRPDetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/Geometry/TotemRPGeometryBuilder/interface/DetGeomDesc.h \
+ src/RecoTotemRP/RPTrackCandidateFitter/interface/RPTrackCandidateFitter.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPFittedTrack.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPRecoHit.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPTrackCandidate.h \
+ src/RecoTotemRP/RPDetectorMaskingService/interface/RPDetectorAvailability.h \
+ src/Geometry/TotemRPDetTopology/interface/RPTopology.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPMathUtils.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPTrackCandidateCollection.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPFittedTrackCollection.h
+

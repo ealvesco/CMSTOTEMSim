@@ -1,0 +1,2 @@
+ALL_SUBSYSTEMS+=$(patsubst src/%,%,src/TotemRawDataLibrary)
+subdirs_src_TotemRawDataLibrary = src_TotemRawDataLibrary_DataFormats src_TotemRawDataLibrary_Readers src_TotemRawDataLibrary_DAQA src_TotemRawDataLibrary_Utilities

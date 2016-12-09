@@ -1,0 +1,5 @@
+tmp/slc6_amd64_gcc481/src/IOMC/Phojet/plugins/IOMCPhojetPlugins/Phojet.o: \
+ src/IOMC/Phojet/plugins/Phojet.cc \
+ src/IOMC/Phojet/interface/Phojet.h \
+ src/IOMC/Phojet/interface/HepMCFileReader.h \
+

@@ -1,0 +1,9 @@
+<!DOCTYPE layout>
+<layout>
+ <TabWindow windowTitle="hits in station" ifLayout="1">
+  <CanvasGrid>
+   <model x="3" y="4" canvasTab_0_0="RP/sector 45/station 220/RP fits in X,Y" canvasTab_0_1="RP/sector 45/station 210/RP fits in X,Y" canvasTab_1_0="" canvasTab_0_2="RP/sector 56/station 210/RP fits in X,Y" canvasTab_1_1="" canvasTab_2_0="" canvasTab_0_3="RP/sector 56/station 220/RP fits in X,Y" canvasTab_1_2="" canvasTab_2_1="" canvasTab_1_3="" canvasTab_2_2="" canvasTab_2_3=""/>
+   <view colNum="4" rowNum="2"/>
+  </CanvasGrid>
+ </TabWindow>
+</layout>

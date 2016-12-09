@@ -1,0 +1,12 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/T1DigiSantiard/src/DataFormatsT1DigiSantiard/a/xr.cc: \
+ src/DataFormats/T1DigiSantiard/src/classes.h \
+ src/DataFormats/T1DigiSantiard/interface/T1DigiSantiard.h \
+ src/DataFormats/T1DigiSantiard/interface/T1DigiSantiardCollection.h \
+ src/DataFormats/T1DetId/interface/T1DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/DataFormats/TotemData/interface/TotemDigiCollection.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/T1DigiSantiard/src/DataFormatsT1DigiSantiard/T1DigiSantiard.o: \
+ src/DataFormats/T1DigiSantiard/src/T1DigiSantiard.cc \
+ src/DataFormats/T1DigiSantiard/interface/T1DigiSantiard.h \
+

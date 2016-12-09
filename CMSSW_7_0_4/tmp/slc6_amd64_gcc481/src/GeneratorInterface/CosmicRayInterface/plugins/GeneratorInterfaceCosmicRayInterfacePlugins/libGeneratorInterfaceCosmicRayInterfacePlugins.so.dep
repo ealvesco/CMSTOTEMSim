@@ -1,0 +1,5 @@
+tmp/slc6_amd64_gcc481/src/GeneratorInterface/CosmicRayInterface/plugins/GeneratorInterfaceCosmicRayInterfacePlugins/plugin.o: \
+ src/GeneratorInterface/CosmicRayInterface/plugins/plugin.cc \
+ src/GeneratorInterface/CosmicRayInterface/interface/CosmicRayGeneratorFilter.h \
+ src/GeneratorInterface/CosmicRayInterface/interface/CosmicRayHadronizer.h \
+

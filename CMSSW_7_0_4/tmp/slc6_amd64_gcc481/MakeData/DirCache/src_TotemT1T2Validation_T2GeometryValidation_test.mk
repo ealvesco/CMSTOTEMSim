@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_TotemT1T2Validation_T2GeometryValidation_test
+src_TotemT1T2Validation_T2GeometryValidation_test_parent := TotemT1T2Validation/T2GeometryValidation
+src_TotemT1T2Validation_T2GeometryValidation_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_TotemT1T2Validation_T2GeometryValidation_test,src/TotemT1T2Validation/T2GeometryValidation/test,TEST))

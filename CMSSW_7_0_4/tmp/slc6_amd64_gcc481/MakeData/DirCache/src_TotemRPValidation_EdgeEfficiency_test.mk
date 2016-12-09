@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_TotemRPValidation_EdgeEfficiency_test
+src_TotemRPValidation_EdgeEfficiency_test_parent := TotemRPValidation/EdgeEfficiency
+src_TotemRPValidation_EdgeEfficiency_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_TotemRPValidation_EdgeEfficiency_test,src/TotemRPValidation/EdgeEfficiency/test,TEST))

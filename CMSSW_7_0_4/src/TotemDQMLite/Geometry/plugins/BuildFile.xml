@@ -1,0 +1,6 @@
+<library name="TotemDQMLiteGeometryPlugins" file="*.cc">
+
+	<use name="Geometry/TotemRPGeometryBuilder" />
+
+	<flags EDM_PLUGIN="1"/>
+</library>

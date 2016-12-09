@@ -1,0 +1,12 @@
+tmp/slc6_amd64_gcc481/src/DataFormats/T1Digi/src/DataFormatsT1Digi/a/xr.cc: \
+ src/DataFormats/T1Digi/src/classes.h \
+ src/DataFormats/T1Digi/interface/T1Digi.h \
+ src/DataFormats/T1Digi/interface/T1DigiCollection.h \
+ src/DataFormats/T1DetId/interface/T1DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/DataFormats/TotemData/interface/TotemDigiCollection.h \
+
+tmp/slc6_amd64_gcc481/src/DataFormats/T1Digi/src/DataFormatsT1Digi/T1Digi.o: \
+ src/DataFormats/T1Digi/src/T1Digi.cc \
+ src/DataFormats/T1Digi/interface/T1Digi.h \
+

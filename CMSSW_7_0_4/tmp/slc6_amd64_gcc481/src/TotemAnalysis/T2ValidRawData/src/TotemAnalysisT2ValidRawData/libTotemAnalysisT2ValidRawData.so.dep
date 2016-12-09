@@ -1,0 +1,68 @@
+tmp/slc6_amd64_gcc481/src/TotemAnalysis/T2ValidRawData/src/TotemAnalysisT2ValidRawData/DAQInformationSourceXML_a.o: \
+ src/TotemAnalysis/T2ValidRawData/src/DAQInformationSourceXML_a.cc \
+ src/TotemAnalysis/T2ValidRawData/interface/DAQInformationSourceXML_a.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemAnalysis/T2ValidRawData/interface/DAQInformationT2_a.h \
+ src/TotemCondFormats/DAQInformation/interface/VFATRegisters.h \
+ src/TotemCondFormats/DataRecord/interface/TotemDAQRecord.h \
+
+tmp/slc6_amd64_gcc481/src/TotemAnalysis/T2ValidRawData/src/TotemAnalysisT2ValidRawData/T2AnalyzerRaw.o: \
+ src/TotemAnalysis/T2ValidRawData/src/T2AnalyzerRaw.cc \
+ src/TotemAnalysis/T2ValidRawData/interface/T2AnalyzerRaw.h \
+ src/TotemT1T2Validation/T2GeometryValidation/interface/DAQInformationSourceXML_a.h \
+ src/TotemRawDataLibrary/DataFormats/interface/FramePosition.h \
+ src/TotemT1T2Validation/T2GeometryValidation/interface/DAQInformationT2_a.h \
+ src/TotemCondFormats/DAQInformation/interface/VFATRegisters.h \
+ src/TotemCondFormats/DataRecord/interface/TotemDAQRecord.h \
+ src/TotemAnalysis/T2ValidRawData/interface/TrackInfo.h \
+ src/DataFormats/T2Hit/interface/T2Hit.h \
+ src/DataFormats/T2Hit/interface/hit_entry.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+ src/DataFormats/T2Cluster/interface/T2PadClusterCollection.h \
+ src/DataFormats/T2DetId/interface/T2DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/DataFormats/T2Cluster/interface/T2Cluster.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+ src/DataFormats/T2Cluster/interface/T2StripClusterCollection.h \
+ src/DataFormats/T2Road/interface/T2Road.h \
+ src/DataFormats/T2Road/interface/T2RoadCollection.h \
+ src/DataFormats/T1RecHit/interface/T1RecHit2D.h \
+ src/DataFormats/T1DetId/interface/T1DetId.h \
+ src/DataFormats/T1RecHit/interface/T1RecHit2DCollection.h \
+ src/DataFormats/T2Hit/interface/T2HitCollection.h \
+ src/DataFormats/T1T2Track/interface/T1T2Track.h \
+ src/DataFormats/T1Road/interface/T1RecHitGlobal.h \
+ src/DataFormats/T1T2Track/interface/T1T2TrackCollection.h \
+ src/TotemAnalysis/T2Cuts/interface/T2SelectionCutUtils.h \
+ src/Geometry/TotemGeometry/interface/T1Geometry.h \
+ src/Geometry/TotemGeometry/interface/T1ChamberSpecs.h \
+ src/Geometry/TotemGeometry/interface/T2GeometryUtil.h \
+ src/Geometry/TotemGeometry/interface/T2Geometry.h \
+ src/DataFormats/T2Cluster/interface/T2ROGeometry.h \
+ src/TotemRawDataLibrary/DataFormats/interface/RawEvent.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrameCollection.h \
+ src/TotemRawDataLibrary/DataFormats/interface/VFATFrame.h \
+ src/DataFormats/T2DigiVfat/interface/T2VfatInformation.h \
+ src/DataFormats/T2DigiVfat/interface/T2DigiVfat.h \
+ src/DataFormats/T2DigiVfat/interface/T2DigiVfatCollection.h \
+ src/DataFormats/TotemData/interface/TotemDigiCollection.h \
+ src/DataFormats/T2Digi/interface/T2StripDigiCollection.h \
+ src/DataFormats/T2Digi/interface/T2StripDigi.h \
+ src/DataFormats/T2Digi/interface/T2PadDigiCollection.h \
+ src/DataFormats/T2Digi/interface/T2PadDigi.h \
+
+tmp/slc6_amd64_gcc481/src/TotemAnalysis/T2ValidRawData/src/TotemAnalysisT2ValidRawData/TrackInfo.o: \
+ src/TotemAnalysis/T2ValidRawData/src/TrackInfo.cc \
+ src/TotemAnalysis/T2ValidRawData/interface/TrackInfo.h \
+ src/DataFormats/T2Hit/interface/T2Hit.h \
+ src/DataFormats/T2Hit/interface/hit_entry.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+ src/DataFormats/T2Cluster/interface/T2PadClusterCollection.h \
+ src/DataFormats/T2DetId/interface/T2DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/DataFormats/T2Cluster/interface/T2Cluster.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+ src/DataFormats/T2Cluster/interface/T2StripClusterCollection.h \
+ src/DataFormats/T2Road/interface/T2Road.h \
+ src/DataFormats/T2Road/interface/T2RoadCollection.h
+

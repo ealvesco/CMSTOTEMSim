@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_GeneratorInterface_PompytInterface_test
+src_GeneratorInterface_PompytInterface_test_parent := GeneratorInterface/PompytInterface
+src_GeneratorInterface_PompytInterface_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_GeneratorInterface_PompytInterface_test,src/GeneratorInterface/PompytInterface/test,TEST))

@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemAlignment/T1Alignment)
+subdirs_src_TotemAlignment_T1Alignment := src_TotemAlignment_T1Alignment_test src_TotemAlignment_T1Alignment_plugins src_TotemAlignment_T1Alignment_python src_TotemAlignment_T1Alignment_src

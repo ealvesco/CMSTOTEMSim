@@ -1,0 +1,15 @@
+tmp/slc6_amd64_gcc481/src/RecoTotemT1T2/T2MakeCluster/plugins/RecoTotemT1T2T2MakeClusterPlugins/SealModule.o: \
+ src/RecoTotemT1T2/T2MakeCluster/plugins/SealModule.cc \
+ src/RecoTotemT1T2/T2MakeCluster/interface/T2MakeCluster.h \
+ src/RecoTotemT1T2/T2MakeCluster/interface/T2DetClustReconst.h \
+ src/DataFormats/T2Cluster/interface/T2Cluster.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+ src/DataFormats/T2DetId/interface/T2DetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/Geometry/TotemGeometry/interface/T2GeometryUtil.h \
+ src/Geometry/TotemGeometry/interface/T2Geometry.h \
+ src/DataFormats/T2Cluster/interface/T2ROGeometry.h \
+ src/DataFormats/T2Hit/interface/T2Hit.h \
+ src/DataFormats/T2Hit/interface/hit_entry.h \
+ src/DataFormats/T2Cluster/interface/cluster_entry.h \
+

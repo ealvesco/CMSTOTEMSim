@@ -1,0 +1,77 @@
+10
+
+dir
+11762
+svn+ssh://svn.cern.ch/reps/totem/branches/CMSSW_7_0_4/offline/cmssw/src/RecoTotemRP/RPDataReduction
+svn+ssh://svn.cern.ch/reps/totem
+
+
+
+2015-06-27T21:32:46.104376Z
+10607
+jkaspar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4525493e-7705-40b1-a816-d608a930855b
+
+test
+dir
+
+interface
+dir
+
+python
+dir
+
+doc
+dir
+
+src
+dir
+
+BuildFile.xml
+file
+
+
+
+
+2016-07-11T20:45:24.000000Z
+cc7fd883cf4fd3a16352f3d5b2401de0
+2015-06-27T21:32:46.104376Z
+10607
+jkaspar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+849
+

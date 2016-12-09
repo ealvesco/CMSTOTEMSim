@@ -1,0 +1,14 @@
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/RPTimingDetectorsRecoHitsProducer/plugins/RecoTotemRPRPTimingDetectorsRecoHitsProducerAuto/RPTimingDetectorsRecoHitsProducer.o: \
+ src/RecoTotemRP/RPTimingDetectorsRecoHitsProducer/plugins/RPTimingDetectorsRecoHitsProducer.cc \
+ src/SimTotem/RPTimingDetectorsDigiProducer/interface/RPTimingDetector.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTimingDetectorHit.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPTypes.h \
+ src/DataFormats/TotemRPDetId/interface/TotRPDetId.h \
+ src/DataFormats/DetId/interface/DetId.h \
+ src/SimTotem/RPTimingDetectorsDigiProducer/interface/RPTimingDetectorElectrode.h \
+ src/SimTotem/RPTimingDetectorsDigiProducer/interface/RPTimingDetectorFactory.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPFittedTrackCollection.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPFittedTrack.h \
+ src/DataFormats/TotemRPDataTypes/interface/RPRecoHit.h \
+ src/RecoTotemRP/RPRecoDataFormats/interface/RPTrackCandidate.h \
+

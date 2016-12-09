@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_TotemRPValidation_HitDistributions_test
+src_TotemRPValidation_HitDistributions_test_parent := TotemRPValidation/HitDistributions
+src_TotemRPValidation_HitDistributions_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_TotemRPValidation_HitDistributions_test,src/TotemRPValidation/HitDistributions/test,TEST))

@@ -1,0 +1,2 @@
+ALL_PACKAGES += $(patsubst src/%,%,src/TotemAnalysis/T2DEVNtuplizer)
+subdirs_src_TotemAnalysis_T2DEVNtuplizer := src_TotemAnalysis_T2DEVNtuplizer_interface src_TotemAnalysis_T2DEVNtuplizer_plugins src_TotemAnalysis_T2DEVNtuplizer_python src_TotemAnalysis_T2DEVNtuplizer_src

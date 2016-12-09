@@ -1,0 +1,9 @@
+<!DOCTYPE layout>
+<layout>
+ <TabWindow windowTitle="Active planes" ifLayout="1">
+  <CanvasGrid>
+   <model canvasTab_1_2="RP/sector 45/station 210/fr_hr/active planes histogram" canvasTab_2_5="RP/sector 56/station 220/fr_bt/active planes histogram" canvasTab_0_0="RP/sector 45/station 220/fr_tp/active planes histogram" canvasTab_1_3="RP/sector 56/station 210/fr_hr/active planes histogram" canvasTab_0_1="RP/sector 45/station 220/nr_tp/active planes histogram" canvasTab_1_4="RP/sector 56/station 220/nr_hr/active planes histogram" canvasTab_0_2="RP/sector 45/station 210/fr_tp/active planes histogram" canvasTab_1_5="RP/sector 56/station 220/fr_hr/active planes histogram" canvasTab_0_3="RP/sector 56/station 210/fr_tp/active planes histogram" canvasTab_0_4="RP/sector 56/station 220/nr_tp/active planes histogram" canvasTab_0_5="RP/sector 56/station 220/fr_tp/active planes histogram" x="3" y="6" canvasTab_2_0="RP/sector 45/station 220/fr_bt/active planes histogram" canvasTab_2_1="RP/sector 45/station 220/nr_bt/active planes histogram" canvasTab_2_2="RP/sector 45/station 210/fr_bt/active planes histogram" canvasTab_1_0="RP/sector 45/station 220/fr_hr/active planes histogram" canvasTab_2_3="RP/sector 56/station 210/fr_bt/active planes histogram" canvasTab_1_1="RP/sector 45/station 220/nr_hr/active planes histogram" canvasTab_2_4="RP/sector 56/station 220/nr_bt/active planes histogram"/>
+   <view colNum="6" rowNum="3"/>
+  </CanvasGrid>
+ </TabWindow>
+</layout>

@@ -1,0 +1,3 @@
+Put your parameter defaults in "TotemDQMLiteRaw.cfg". For example:
+rawDir=""
+recoDir="/tmp"

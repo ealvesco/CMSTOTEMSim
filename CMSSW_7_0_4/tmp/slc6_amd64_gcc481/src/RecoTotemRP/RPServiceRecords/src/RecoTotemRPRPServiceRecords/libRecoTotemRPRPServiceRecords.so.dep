@@ -1,0 +1,4 @@
+tmp/slc6_amd64_gcc481/src/RecoTotemRP/RPServiceRecords/src/RecoTotemRPRPServiceRecords/RPClusterSigmaServiceRecord.o: \
+ src/RecoTotemRP/RPServiceRecords/src/RPClusterSigmaServiceRecord.cc \
+ src/RecoTotemRP/RPServiceRecords/interface/RPClusterSigmaServiceRecord.h \
+

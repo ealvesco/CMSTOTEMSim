@@ -1,0 +1,9 @@
+<!DOCTYPE layout>
+<layout>
+ <TabWindow windowTitle="left-right correlations, graph" ifLayout="1">
+  <CanvasGrid>
+   <model x="3" y="4" canvasTab_0_0="RP/diagonal 45bot - 56top/dx: left vs. right, graph" canvasTab_0_1="RP/diagonal 45top - 56bot/dx: left vs. right, graph" canvasTab_1_0="RP/diagonal 45bot - 56top/yn: left vs. right, graph" canvasTab_0_2="RP/antidiagonal 45bot - 56bot/dx: left vs. right, graph" canvasTab_1_1="RP/diagonal 45top - 56bot/yn: left vs. right, graph" canvasTab_2_0="RP/diagonal 45bot - 56top/yf: left vs. right, graph" canvasTab_0_3="RP/antidiagonal 45top - 56top/dx: left vs. right, graph" canvasTab_1_2="RP/antidiagonal 45bot - 56bot/yn: left vs. right, graph" canvasTab_2_1="RP/diagonal 45top - 56bot/yf: left vs. right, graph" canvasTab_1_3="RP/antidiagonal 45top - 56top/yn: left vs. right, graph" canvasTab_2_2="RP/antidiagonal 45bot - 56bot/yf: left vs. right, graph" canvasTab_2_3="RP/antidiagonal 45top - 56top/yf: left vs. right, graph"/>
+   <view colNum="4" rowNum="3"/>
+  </CanvasGrid>
+ </TabWindow>
+</layout>
