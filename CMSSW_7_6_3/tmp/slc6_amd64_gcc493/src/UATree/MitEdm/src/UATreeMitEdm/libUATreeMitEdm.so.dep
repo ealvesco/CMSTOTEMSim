@@ -1,0 +1,18 @@
+tmp/slc6_amd64_gcc493/src/UATree/MitEdm/src/UATreeMitEdm/a/UATreeMitEdm_xr.cc: \
+src/UATree/MitEdm/src/classes.h \
+ src/UATree/MitEdm/src/classes.h \
+ src/UATree/MitEdm/interface/EvtSelData.h
+
+tmp/slc6_amd64_gcc493/src/UATree/MitEdm/src/UATreeMitEdm/EvtSelData.o: \
+ src/UATree/MitEdm/src/EvtSelData.cc \
+ src/UATree/MitEdm/interface/EvtSelData.h
+
+tmp/slc6_amd64_gcc493/src/UATree/MitEdm/src/UATreeMitEdm/FilterEvtSel.o: \
+ src/UATree/MitEdm/src/FilterEvtSel.cc \
+ src/UATree/MitEdm/interface/EvtSelData.h \
+
+tmp/slc6_amd64_gcc493/src/UATree/MitEdm/src/UATreeMitEdm/ProducerEvtSelData.o: \
+ src/UATree/MitEdm/src/ProducerEvtSelData.cc \
+ src/UATree/MitEdm/interface/ProducerEvtSelData.h \
+ src/UATree/MitEdm/interface/EvtSelData.h \
+

@@ -1,0 +1,2 @@
+ALL_SUBSYSTEMS+=TotemAnalysis
+subdirs_src_TotemAnalysis = src_TotemAnalysis_TotemAnalysisEvent

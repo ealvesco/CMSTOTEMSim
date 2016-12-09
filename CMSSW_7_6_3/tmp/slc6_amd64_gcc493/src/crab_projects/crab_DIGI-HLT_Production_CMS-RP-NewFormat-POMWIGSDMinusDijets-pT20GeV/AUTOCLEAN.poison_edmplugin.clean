@@ -1,0 +1,2 @@
+01:/bin/rm -rf tmp/slc6_amd64_gcc493/edmplugins/poison/crab_projects/crab_DIGI-HLT_Production_CMS-RP-NewFormat-POMWIGSDMinusDijets-pT20GeV
+01:/bin/touch tmp/common/cache/packs/changed

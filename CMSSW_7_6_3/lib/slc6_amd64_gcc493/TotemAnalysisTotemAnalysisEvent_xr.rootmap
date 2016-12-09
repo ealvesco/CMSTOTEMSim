@@ -1,0 +1,58 @@
+{ decls }
+namespace std {  }
+namespace edm {  }
+class TotemRPEvent;
+class RPRootDumpTrackInfo;
+class RPRootDumpDigiInfo;
+class RPRootDumpReconstructedProton;
+class RPRootDumpReconstructedProtonPair;
+class RPRootDumpPattern;
+class RPRootDumpPatternInfo;
+namespace edm { template <typename T> class Wrapper; }
+
+[ libTotemAnalysisTotemAnalysisEvent.so ]
+# List of selected classes
+class RPRootDumpDigiInfo
+class RPRootDumpPattern
+class RPRootDumpPatternInfo
+class RPRootDumpReconstructedProton
+class RPRootDumpReconstructedProtonPair
+class RPRootDumpTrackInfo
+class TotemRPEvent
+class edm::Wrapper<RPRootDumpDigiInfo>
+class edm::Wrapper<RPRootDumpPattern>
+class edm::Wrapper<RPRootDumpPatternInfo>
+class edm::Wrapper<RPRootDumpReconstructedProton>
+class edm::Wrapper<RPRootDumpReconstructedProtonPair>
+class edm::Wrapper<RPRootDumpTrackInfo>
+class edm::Wrapper<TotemRPEvent>
+class edm::Wrapper<map<unsigned int,RPRootDumpDigiInfo> >
+class edm::Wrapper<map<unsigned int,RPRootDumpPatternInfo> >
+class edm::Wrapper<map<unsigned int,RPRootDumpReconstructedProton> >
+class edm::Wrapper<map<unsigned int,RPRootDumpTrackInfo> >
+class edm::Wrapper<map<unsigned int,vector<RPRootDumpTrackInfo> > >
+class edm::Wrapper<std::map<unsigned int,RPRootDumpDigiInfo> >
+class edm::Wrapper<std::map<unsigned int,RPRootDumpPatternInfo> >
+class edm::Wrapper<std::map<unsigned int,RPRootDumpReconstructedProton> >
+class edm::Wrapper<std::map<unsigned int,RPRootDumpTrackInfo> >
+class edm::Wrapper<std::map<unsigned int,std::vector<RPRootDumpTrackInfo> > >
+class edm::Wrapper<std::vector<RPRootDumpDigiInfo> >
+class edm::Wrapper<std::vector<RPRootDumpPatternInfo> >
+class edm::Wrapper<std::vector<RPRootDumpReconstructedProton> >
+class edm::Wrapper<std::vector<RPRootDumpTrackInfo> >
+class edm::Wrapper<vector<RPRootDumpDigiInfo> >
+class edm::Wrapper<vector<RPRootDumpPatternInfo> >
+class edm::Wrapper<vector<RPRootDumpReconstructedProton> >
+class edm::Wrapper<vector<RPRootDumpTrackInfo> >
+class map<unsigned int,RPRootDumpDigiInfo>
+class map<unsigned int,RPRootDumpPatternInfo>
+class map<unsigned int,RPRootDumpReconstructedProton>
+class map<unsigned int,RPRootDumpTrackInfo>
+class map<unsigned int,std::vector<RPRootDumpTrackInfo> >
+class map<unsigned int,vector<RPRootDumpTrackInfo> >
+class vector<RPRootDumpDigiInfo>
+class vector<RPRootDumpPatternInfo>
+class vector<RPRootDumpReconstructedProton>
+class vector<RPRootDumpTrackInfo>
+header TotemAnalysis/TotemAnalysisEvent/interface/RPRootTrackInfo.h
+header TotemAnalysis/TotemAnalysisEvent/interface/TotemRPEvent.h

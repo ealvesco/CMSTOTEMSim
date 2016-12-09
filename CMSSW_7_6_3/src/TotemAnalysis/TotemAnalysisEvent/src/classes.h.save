@@ -1,0 +1,52 @@
+
+#include "TotemAnalysis/TotemAnalysisEvent/interface/TotemRPEvent.h"
+#include "TotemAnalysis/TotemAnalysisEvent/interface/RPTrackInfo.h"
+
+#include "DataFormats/Common/interface/Wrapper.h"
+#include <vector>
+#include <map>
+namespace {
+   struct dictionary {
+      TotemRPEvent totemRPEvent;
+
+      RPDumpTrackInfo               rpTrackInfo;
+      RPDumpDigiInfo                rpDigiInfo;
+      RPDumpReconstructedProton     rpReconstructedProton;
+      RPDumpReconstructedProtonPair rpReconstructedProtonPair;
+      RPDumpPattern                 rpPattern;
+      RPDumpPatternInfo             rpPatternInfo;
+
+      std::vector<RPDumpTrackInfo>           vec_rpTrackInfo;
+      std::vector<RPDumpDigiInfo>            vec_rpDigiInfo;
+      std::vector<RPDumpPatternInfo>         vec_rpPatternInfo;
+      std::vector<RPDumpReconstructedProton> vec_rpReconstructedProton;
+  
+      std::map<unsigned int, RPDumpTrackInfo>    track_info_;
+      std::map<unsigned int, RPDumpDigiInfo>     digi_info_;
+      std::map<unsigned int, RPDumpPatternInfo>  patterns_info_;
+
+      std::map<unsigned int, std::vector<RPDumpTrackInfo> > multi_track_info_;
+      std::map<unsigned int, RPDumpReconstructedProton>     rec_pr_info_;
+
+      edm::Wrapper<TotemRPEvent>                  totemRPEvent_wr;
+
+      edm::Wrapper<RPDumpTrackInfo>               rpTrackInfo_wr;
+      edm::Wrapper<RPDumpDigiInfo>                rpDigiInfo_wr;
+      edm::Wrapper<RPDumpReconstructedProton>     rpReconstructedProton_wr;
+      edm::Wrapper<RPDumpReconstructedProtonPair> rpReconstructedProtonPair_wr;
+      edm::Wrapper<RPDumpPattern>                 rpPattern_wr;
+      edm::Wrapper<RPDumpPatternInfo>             rpPatternInfo_wr;
+
+      edm::Wrapper<std::vector<RPDumpTrackInfo> >           vec_rpTrackInfo_wr;
+      edm::Wrapper<std::vector<RPDumpDigiInfo> >            vec_rpDigiInfo_wr;
+      edm::Wrapper<std::vector<RPDumpPatternInfo> >         vec_rpPatternInfo_wr;
+      edm::Wrapper<std::vector<RPDumpReconstructedProton> > vec_rpReconstructedProton_wr;
+
+      edm::Wrapper<std::map<unsigned int, RPDumpTrackInfo> >               track_info_wr;
+      edm::Wrapper<std::map<unsigned int, RPDumpDigiInfo> >                digi_info_wr;
+      edm::Wrapper<std::map<unsigned int, RPDumpPatternInfo> >             patterns_info_wr;
+      edm::Wrapper<std::map<unsigned int, std::vector<RPDumpTrackInfo> > > multi_track_info_wr;
+      edm::Wrapper<std::map<unsigned int, RPDumpReconstructedProton> >     rec_pr_info_wr;
+
+   };
+} 

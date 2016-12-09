@@ -1,0 +1,10 @@
+{ decls }
+namespace mitedm {  }
+namespace edm {  }
+namespace mitedm { class EvtSelData; }
+
+[ libUATreeMitEdm.so ]
+# List of selected classes
+class edm::Wrapper<mitedm::EvtSelData>
+class mitedm::EvtSelData
+header UATree/MitEdm/interface/EvtSelData.h
