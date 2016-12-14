@@ -1,2 +1,0 @@
-ALL_PACKAGES += crab_projects/crab_DIGI-HLT_Production_CMS-RP-NewFormat-POMWIGSDMinusDijets-pT20GeV-v1
-subdirs_src_crab_projects_crab_DIGI-HLT_Production_CMS-RP-NewFormat-POMWIGSDMinusDijets-pT20GeV-v1 := src_crab_projects_crab_DIGI-HLT_Production_CMS-RP-NewFormat-POMWIGSDMinusDijets-pT20GeV-v1_results src_crab_projects_crab_DIGI-HLT_Production_CMS-RP-NewFormat-POMWIGSDMinusDijets-pT20GeV-v1_inputs

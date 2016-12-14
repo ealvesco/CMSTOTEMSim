@@ -1,2 +1,0 @@
-ALL_PACKAGES += crab_projects/crab_RECO_Production_CMS-RP-NewFormat-POMWIGSDMINUSDijets-pT20GeV
-subdirs_src_crab_projects_crab_RECO_Production_CMS-RP-NewFormat-POMWIGSDMINUSDijets-pT20GeV := 

@@ -48,7 +48,7 @@ class MyTracks : public MyPart {
 
   private:
 
-  ClassDef (MyTracks,2)
+  ClassDef (MyTracks,1)
 };
 
 #endif

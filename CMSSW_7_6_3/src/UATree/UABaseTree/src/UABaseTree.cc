@@ -35,6 +35,10 @@ UABaseTree::UABaseTree(const edm::ParameterSet& iConfig) :
   consumes<reco::VertexCompositeCandidateCollection>(edm::InputTag("generalV0Candidates","Kshort"));
   consumes<reco::VertexCompositeCandidateCollection>(edm::InputTag("generalV0Candidates","Lambda")); 
 
+  consumes<edmNew::DetSetVector<SiStripCluster>>(edm::InputTag("siStripClusters"));
+  consumes<edmNew::DetSetVector<SiPixelCluster>>(edm::InputTag("siPixelClusters")); 
+
+
   for(vector<InputTag>::iterator icoll = muons_.begin() ; icoll!= muons_.end() ; ++icoll) 
     {
       consumes<MuonCollection>(edm::InputTag(icoll->label()));
@@ -89,9 +93,12 @@ UABaseTree::UABaseTree(const edm::ParameterSet& iConfig) :
 
   consumes<reco::DeDxHitInfoAss>(edm::InputTag("hscpdedxHitInfo"));
 
-  consumes<TotemRPEvent>( edm::InputTag( totemRP_.label() ) );                                                                                                
+  consumes<TotemRPEvent>( edm::InputTag( totemRP_.label() ) );
+
+  //consumes<GenEventInfoProduct>(edm::InputTag("generator"));
   consumes<GenEventInfoProduct>(edm::InputTag("generator"));
-  consumes<std::vector<reco::GenParticle>>(edm::InputTag("genParticles"));
+  consumes<std::vector<reco::GenParticle>>(edm::InputTag("genParticles"));   
+   //consumes<reco::GenParticleCollection>(iConfig.getParameter<edm::InputTag>("genParticles"));
 
   isValidHltConfig_ = false;
   isValidHltPrescales_ = false;

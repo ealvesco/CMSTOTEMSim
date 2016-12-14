@@ -1,2 +1,2 @@
 ALL_PACKAGES += UATree/UABaseTree
-subdirs_src_UATree_UABaseTree := src_UATree_UABaseTree_python src_UATree_UABaseTree_src src_UATree_UABaseTree_data
+subdirs_src_UATree_UABaseTree := src_UATree_UABaseTree_python src_UATree_UABaseTree_src

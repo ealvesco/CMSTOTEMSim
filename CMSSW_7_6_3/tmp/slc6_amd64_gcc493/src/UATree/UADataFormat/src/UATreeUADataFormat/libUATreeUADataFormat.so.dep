@@ -31,9 +31,19 @@ tmp/slc6_amd64_gcc493/src/UATree/UADataFormat/src/UATreeUADataFormat/MyCastorRec
  src/UATree/UADataFormat/src/MyCastorRecHit.cc \
  src/UATree/UADataFormat/interface/MyCastorRecHit.h \
 
+tmp/slc6_amd64_gcc493/src/UATree/UADataFormat/src/UATreeUADataFormat/MyD0.o: \
+ src/UATree/UADataFormat/src/MyD0.cc \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyPart.h \
+
 tmp/slc6_amd64_gcc493/src/UATree/UADataFormat/src/UATreeUADataFormat/MyDiJet.o: \
  src/UATree/UADataFormat/src/MyDiJet.cc \
  src/UATree/UADataFormat/interface/MyDiJet.h \
+
+tmp/slc6_amd64_gcc493/src/UATree/UADataFormat/src/UATreeUADataFormat/MyDstar.o: \
+ src/UATree/UADataFormat/src/MyDstar.cc \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MyPart.h \
 
 tmp/slc6_amd64_gcc493/src/UATree/UADataFormat/src/UATreeUADataFormat/MyElectron.o: \
  src/UATree/UADataFormat/src/MyElectron.cc \
@@ -144,6 +154,14 @@ tmp/slc6_amd64_gcc493/src/UATree/UADataFormat/src/UATreeUADataFormat/MyPart.o: \
  src/UATree/UADataFormat/src/MyPart.cc \
  src/UATree/UADataFormat/interface/MyPart.h \
 
+tmp/slc6_amd64_gcc493/src/UATree/UADataFormat/src/UATreeUADataFormat/MySiPixelCluster.o: \
+ src/UATree/UADataFormat/src/MySiPixelCluster.cc \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+
+tmp/slc6_amd64_gcc493/src/UATree/UADataFormat/src/UATreeUADataFormat/MySiStripCluster.o: \
+ src/UATree/UADataFormat/src/MySiStripCluster.cc \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
+
 tmp/slc6_amd64_gcc493/src/UATree/UADataFormat/src/UATreeUADataFormat/MySimVertex.o: \
  src/UATree/UADataFormat/src/MySimVertex.cc \
  src/UATree/UADataFormat/interface/MySimVertex.h \
@@ -205,5 +223,9 @@ tmp/slc6_amd64_gcc493/src/UATree/UADataFormat/src/UATreeUADataFormat/eventdict.o
  src/UATree/UADataFormat/interface/MyFSCDigi.h \
  src/UATree/UADataFormat/interface/MyFSCInfo.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
- src/UATree/UADataFormat/interface/MyLambdas.h
+ src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h
 

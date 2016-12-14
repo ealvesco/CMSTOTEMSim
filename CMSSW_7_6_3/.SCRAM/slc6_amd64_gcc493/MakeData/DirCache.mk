@@ -1,3 +1,20 @@
+ALL_COMMONRULES += src_ForwardAnalysis_ForwardTTreeAnalysis_plugins
+src_ForwardAnalysis_ForwardTTreeAnalysis_plugins_parent := ForwardAnalysis/ForwardTTreeAnalysis
+src_ForwardAnalysis_ForwardTTreeAnalysis_plugins_INIT_FUNC += $$(eval $$(call CommonProductRules,src_ForwardAnalysis_ForwardTTreeAnalysis_plugins,src/ForwardAnalysis/ForwardTTreeAnalysis/plugins,PLUGINS))
+ifeq ($(strip $(ForwardAnalysis/ForwardTTreeAnalysis)),)
+ALL_COMMONRULES += src_ForwardAnalysis_ForwardTTreeAnalysis_src
+src_ForwardAnalysis_ForwardTTreeAnalysis_src_parent := ForwardAnalysis/ForwardTTreeAnalysis
+src_ForwardAnalysis_ForwardTTreeAnalysis_src_INIT_FUNC := $$(eval $$(call CommonProductRules,src_ForwardAnalysis_ForwardTTreeAnalysis_src,src/ForwardAnalysis/ForwardTTreeAnalysis/src,LIBRARY))
+ForwardAnalysisForwardTTreeAnalysis := self/ForwardAnalysis/ForwardTTreeAnalysis
+ForwardAnalysis/ForwardTTreeAnalysis := ForwardAnalysisForwardTTreeAnalysis
+ForwardAnalysisForwardTTreeAnalysis_files := $(patsubst src/ForwardAnalysis/ForwardTTreeAnalysis/src/%,%,$(wildcard $(foreach dir,src/ForwardAnalysis/ForwardTTreeAnalysis/src ,$(foreach ext,$(SRC_FILES_SUFFIXES),$(dir)/*.$(ext)))))
+ForwardAnalysisForwardTTreeAnalysis_LOC_USE := self  
+ForwardAnalysisForwardTTreeAnalysis_PACKAGE := self/src/ForwardAnalysis/ForwardTTreeAnalysis/src
+ALL_PRODS += ForwardAnalysisForwardTTreeAnalysis
+ForwardAnalysisForwardTTreeAnalysis_CLASS := LIBRARY
+ForwardAnalysis/ForwardTTreeAnalysis_forbigobj+=ForwardAnalysisForwardTTreeAnalysis
+ForwardAnalysisForwardTTreeAnalysis_INIT_FUNC        += $$(eval $$(call Library,ForwardAnalysisForwardTTreeAnalysis,src/ForwardAnalysis/ForwardTTreeAnalysis/src,src_ForwardAnalysis_ForwardTTreeAnalysis_src,$(SCRAMSTORENAME_BIN),,$(SCRAMSTORENAME_LIB),$(SCRAMSTORENAME_LOGS)))
+endif
 ifeq ($(strip $(TotemAnalysis/TotemAnalysisEvent)),)
 ALL_COMMONRULES += src_TotemAnalysis_TotemAnalysisEvent_src
 src_TotemAnalysis_TotemAnalysisEvent_src_parent := TotemAnalysis/TotemAnalysisEvent
@@ -44,7 +61,7 @@ UATreeUABaseTree := self/UATree/UABaseTree
 UATree/UABaseTree := UATreeUABaseTree
 UATreeUABaseTree_files := $(patsubst src/UATree/UABaseTree/src/%,%,$(wildcard $(foreach dir,src/UATree/UABaseTree/src ,$(foreach ext,$(SRC_FILES_SUFFIXES),$(dir)/*.$(ext)))))
 UATreeUABaseTree_BuildFile    := $(WORKINGDIR)/cache/bf/src/UATree/UABaseTree/BuildFile
-UATreeUABaseTree_LOC_USE := self  FWCore/Framework FWCore/PluginManager FWCore/ParameterSet DataFormats/Common DataFormats/Candidate DataFormats/HepMCCandidate SimGeneral/HepPDTRecord SimDataFormats/GeneratorProducts SimDataFormats/PileupSummaryInfo DataFormats/METReco L1Trigger/GlobalTriggerAnalyzer HLTrigger/HLTcore CondFormats/L1TObjects CondFormats/DataRecord DataFormats/L1GlobalTrigger DataFormats/Math DataFormats/TrackReco DataFormats/VertexReco DataFormats/JetReco DataFormats/MuonReco RecoEgamma/EgammaTools JetMETCorrections/Algorithms JetMETCorrections/Objects JetMETCorrections/Modules DataFormats/BeamSpot DataFormats/HLTReco DataFormats/CaloTowers DataFormats/HcalDetId UATree/UADataFormat UATree/MitEdm DataFormats/DetId CondFormats/CastorObjects CondFormats/JetMETObjects CalibFormats/CastorObjects CalibFormats/HcalObjects TotemAnalysis/TotemAnalysisEvent rootrflx
+UATreeUABaseTree_LOC_USE := self  FWCore/Framework FWCore/PluginManager FWCore/ParameterSet DataFormats/Common DataFormats/Candidate DataFormats/HepMCCandidate SimGeneral/HepPDTRecord SimDataFormats/GeneratorProducts SimDataFormats/PileupSummaryInfo DataFormats/METReco L1Trigger/GlobalTriggerAnalyzer HLTrigger/HLTcore CondFormats/L1TObjects CondFormats/DataRecord DataFormats/L1GlobalTrigger DataFormats/Math DataFormats/TrackReco DataFormats/VertexReco DataFormats/JetReco DataFormats/MuonReco RecoEgamma/EgammaTools JetMETCorrections/Algorithms JetMETCorrections/Objects JetMETCorrections/Modules DataFormats/BeamSpot DataFormats/HLTReco DataFormats/CaloTowers DataFormats/HcalDetId UATree/UADataFormat UATree/MitEdm DataFormats/DetId RecoLocalTracker/SiStripClusterizer CondFormats/CastorObjects CondFormats/JetMETObjects CalibFormats/CastorObjects CalibFormats/HcalObjects TotemAnalysis/TotemAnalysisEvent rootrflx
 UATreeUABaseTree_PRE_INIT_FUNC += $$(eval $$(call edmPlugin,UATreeUABaseTree,UATreeUABaseTree,$(SCRAMSTORENAME_LIB),src/UATree/UABaseTree/src))
 UATreeUABaseTree_PACKAGE := self/src/UATree/UABaseTree/src
 ALL_PRODS += UATreeUABaseTree

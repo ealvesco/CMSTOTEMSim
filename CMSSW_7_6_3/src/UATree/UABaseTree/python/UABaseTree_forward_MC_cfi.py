@@ -20,7 +20,7 @@ uabasetree.saveGenPartsInDifferentColls  = cms.untracked.bool(False)
 uabasetree.onlyStableGenPart             = cms.untracked.bool(True)
 # Saves only charged particles in genPart
 uabasetree.onlyChargedGenPart            = cms.untracked.bool(False)
-uabasetree.storePUSumInfo                = cms.untracked.bool(False) 
+uabasetree.storePUSumInfo                = cms.untracked.bool(True) 
 uabasetree.hlt_paths = cms.untracked.vstring()
 
 # Tracking --------------------------------------------------------------
@@ -34,8 +34,8 @@ if storeJets:
     uabasetree.vpfjets   = cms.untracked.VPSet(
 	    cms.PSet( jetcoll    = cms.untracked.InputTag("ak4PFJets"),
 		      corrections = cms.untracked.vstring('ak4PFL2L3') ),
-	    #cms.PSet( jetcoll    = cms.untracked.InputTag("ak7PFJets"),
-            #	      corrections = cms.untracked.vstring('ak7PFL2L3') ),
+#	    cms.PSet( jetcoll    = cms.untracked.InputTag("ak7PFJets"),
+#		      corrections = cms.untracked.vstring('ak7PFL2L3') ),
 	    )
     uabasetree.vcalojets = cms.untracked.VPSet(
 	    cms.PSet( jetcoll     = cms.untracked.InputTag("ak4CaloJets"),
@@ -43,9 +43,8 @@ if storeJets:
 		      corrections = cms.untracked.vstring('ak4CaloL2L3','ak4CaloL2L3Residual') ),
 	    #cms.PSet( jetcoll     = cms.untracked.InputTag("ak7CaloJets"),
 	    #          calojetid   = cms.untracked.InputTag("ak7JetID"),
-	 #	      corrections = cms.untracked.vstring('ak7CaloL2L3','ak7CaloL2L3Residual') ),
+            #          corrections = cms.untracked.vstring('ak7CaloL2L3','ak7CaloL2L3Residual') ),
 	    )
-#    uabasetree.genjets = cms.untracked.VInputTag("ak5GenJets","ak7GenJets")
     uabasetree.genjets = cms.untracked.VInputTag("ak4GenJets")
 
 # Basic jets:

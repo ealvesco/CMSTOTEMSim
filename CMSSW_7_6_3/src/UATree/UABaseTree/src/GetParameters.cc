@@ -22,8 +22,8 @@ void UABaseTree::GetParameters(const edm::ParameterSet& iConfig){
    storeL1Trig_    = iConfig.getUntrackedParameter<bool>("storeL1Trig",false);
    storeL1TrigOld_ = iConfig.getUntrackedParameter<bool>("storeL1TrigOld",false);
    storeMITEvtSel_ = iConfig.getUntrackedParameter<bool>("storeMITEvtSel",false);
-   storeTotemRP_   = iConfig.getUntrackedParameter<bool>("storeTotemRP",false);
 
+   storeTotemRP_   = iConfig.getUntrackedParameter<bool>("storeTotemRP",false);
 
    tracks_         = iConfig.getUntrackedParameter<vector<InputTag> >("tracks",vector<InputTag>());
    tracksPID_      = iConfig.getUntrackedParameter<vector<InputTag> >("tracksPID",vector<InputTag>());
@@ -61,7 +61,7 @@ void UABaseTree::GetParameters(const edm::ParameterSet& iConfig){
    fscrechits_    = iConfig.getUntrackedParameter<InputTag>("fscrechits",InputTag());
    fscdigis_      = iConfig.getUntrackedParameter<InputTag>("fscdigis",InputTag());
 
-   // TOTEM
+   //TOTEM
    totemRP_       = iConfig.getUntrackedParameter<InputTag>("totemRP",InputTag("totemRPAnalysis"));
 
    //Specific for fwdGap

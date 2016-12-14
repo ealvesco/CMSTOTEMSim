@@ -125,4 +125,8 @@ tmp/slc6_amd64_gcc493/src/UATree/UADataFormat/src/UATreeUADataFormat/eventdict.o
  /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyFSCDigi.h \
  /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyFSCInfo.h \
  /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyKshorts.h \
- /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyLambdas.h
+ /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyLambdas.h \
+ /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MySiStripCluster.h \
+ /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyD0.h \
+ /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyDstar.h

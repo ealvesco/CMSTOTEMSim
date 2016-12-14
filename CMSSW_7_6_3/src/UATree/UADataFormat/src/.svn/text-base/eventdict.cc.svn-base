@@ -73,6 +73,10 @@ namespace std {} using namespace std;
 #include "UATree/UADataFormat/interface/MyFSCInfo.h"
 #include "UATree/UADataFormat/interface/MyKshorts.h"
 #include "UATree/UADataFormat/interface/MyLambdas.h"
+#include "UATree/UADataFormat/interface/MySiStripCluster.h"
+#include "UATree/UADataFormat/interface/MySiPixelCluster.h"
+#include "UATree/UADataFormat/interface/MyD0.h"
+#include "UATree/UADataFormat/interface/MyDstar.h"
 
 // Header files passed via #pragma extra_include
 
@@ -1235,6 +1239,134 @@ namespace ROOT {
    }
    // Static variable to force the class initialization
    static ::ROOT::TGenericClassInfo *_R__UNIQUE_(Init) = GenerateInitInstanceLocal((const ::MyFSCInfo*)0x0); R__UseDummy(_R__UNIQUE_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
+   static void *new_MySiPixelCluster(void *p = 0);
+   static void *newArray_MySiPixelCluster(Long_t size, void *p);
+   static void delete_MySiPixelCluster(void *p);
+   static void deleteArray_MySiPixelCluster(void *p);
+   static void destruct_MySiPixelCluster(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::MySiPixelCluster*)
+   {
+      ::MySiPixelCluster *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::MySiPixelCluster >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("MySiPixelCluster", ::MySiPixelCluster::Class_Version(), "interface/MySiPixelCluster.h", 6,
+                  typeid(::MySiPixelCluster), DefineBehavior(ptr, ptr),
+                  &::MySiPixelCluster::Dictionary, isa_proxy, 4,
+                  sizeof(::MySiPixelCluster) );
+      instance.SetNew(&new_MySiPixelCluster);
+      instance.SetNewArray(&newArray_MySiPixelCluster);
+      instance.SetDelete(&delete_MySiPixelCluster);
+      instance.SetDeleteArray(&deleteArray_MySiPixelCluster);
+      instance.SetDestructor(&destruct_MySiPixelCluster);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::MySiPixelCluster*)
+   {
+      return GenerateInitInstanceLocal((::MySiPixelCluster*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_(Init) = GenerateInitInstanceLocal((const ::MySiPixelCluster*)0x0); R__UseDummy(_R__UNIQUE_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
+   static void *new_MySiStripCluster(void *p = 0);
+   static void *newArray_MySiStripCluster(Long_t size, void *p);
+   static void delete_MySiStripCluster(void *p);
+   static void deleteArray_MySiStripCluster(void *p);
+   static void destruct_MySiStripCluster(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::MySiStripCluster*)
+   {
+      ::MySiStripCluster *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::MySiStripCluster >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("MySiStripCluster", ::MySiStripCluster::Class_Version(), "interface/MySiStripCluster.h", 6,
+                  typeid(::MySiStripCluster), DefineBehavior(ptr, ptr),
+                  &::MySiStripCluster::Dictionary, isa_proxy, 4,
+                  sizeof(::MySiStripCluster) );
+      instance.SetNew(&new_MySiStripCluster);
+      instance.SetNewArray(&newArray_MySiStripCluster);
+      instance.SetDelete(&delete_MySiStripCluster);
+      instance.SetDeleteArray(&deleteArray_MySiStripCluster);
+      instance.SetDestructor(&destruct_MySiStripCluster);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::MySiStripCluster*)
+   {
+      return GenerateInitInstanceLocal((::MySiStripCluster*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_(Init) = GenerateInitInstanceLocal((const ::MySiStripCluster*)0x0); R__UseDummy(_R__UNIQUE_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
+   static void *new_MyD0(void *p = 0);
+   static void *newArray_MyD0(Long_t size, void *p);
+   static void delete_MyD0(void *p);
+   static void deleteArray_MyD0(void *p);
+   static void destruct_MyD0(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::MyD0*)
+   {
+      ::MyD0 *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::MyD0 >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("MyD0", ::MyD0::Class_Version(), "interface/MyD0.h", 11,
+                  typeid(::MyD0), DefineBehavior(ptr, ptr),
+                  &::MyD0::Dictionary, isa_proxy, 4,
+                  sizeof(::MyD0) );
+      instance.SetNew(&new_MyD0);
+      instance.SetNewArray(&newArray_MyD0);
+      instance.SetDelete(&delete_MyD0);
+      instance.SetDeleteArray(&deleteArray_MyD0);
+      instance.SetDestructor(&destruct_MyD0);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::MyD0*)
+   {
+      return GenerateInitInstanceLocal((::MyD0*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_(Init) = GenerateInitInstanceLocal((const ::MyD0*)0x0); R__UseDummy(_R__UNIQUE_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
+   static void *new_MyDstar(void *p = 0);
+   static void *newArray_MyDstar(Long_t size, void *p);
+   static void delete_MyDstar(void *p);
+   static void deleteArray_MyDstar(void *p);
+   static void destruct_MyDstar(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::MyDstar*)
+   {
+      ::MyDstar *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::MyDstar >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("MyDstar", ::MyDstar::Class_Version(), "interface/MyDstar.h", 11,
+                  typeid(::MyDstar), DefineBehavior(ptr, ptr),
+                  &::MyDstar::Dictionary, isa_proxy, 4,
+                  sizeof(::MyDstar) );
+      instance.SetNew(&new_MyDstar);
+      instance.SetNewArray(&newArray_MyDstar);
+      instance.SetDelete(&delete_MyDstar);
+      instance.SetDeleteArray(&deleteArray_MyDstar);
+      instance.SetDestructor(&destruct_MyDstar);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::MyDstar*)
+   {
+      return GenerateInitInstanceLocal((::MyDstar*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_(Init) = GenerateInitInstanceLocal((const ::MyDstar*)0x0); R__UseDummy(_R__UNIQUE_(Init));
 } // end of namespace ROOT
 
 //______________________________________________________________________________
@@ -2462,6 +2594,146 @@ TClass *MyFSCInfo::Class()
    return fgIsA;
 }
 
+//______________________________________________________________________________
+atomic_TClass_ptr MySiPixelCluster::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *MySiPixelCluster::Class_Name()
+{
+   return "MySiPixelCluster";
+}
+
+//______________________________________________________________________________
+const char *MySiPixelCluster::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::MySiPixelCluster*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int MySiPixelCluster::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::MySiPixelCluster*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *MySiPixelCluster::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::MySiPixelCluster*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *MySiPixelCluster::Class()
+{
+   if (!fgIsA) { R__LOCKGUARD2(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::MySiPixelCluster*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+atomic_TClass_ptr MySiStripCluster::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *MySiStripCluster::Class_Name()
+{
+   return "MySiStripCluster";
+}
+
+//______________________________________________________________________________
+const char *MySiStripCluster::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::MySiStripCluster*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int MySiStripCluster::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::MySiStripCluster*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *MySiStripCluster::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::MySiStripCluster*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *MySiStripCluster::Class()
+{
+   if (!fgIsA) { R__LOCKGUARD2(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::MySiStripCluster*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+atomic_TClass_ptr MyD0::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *MyD0::Class_Name()
+{
+   return "MyD0";
+}
+
+//______________________________________________________________________________
+const char *MyD0::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::MyD0*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int MyD0::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::MyD0*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *MyD0::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::MyD0*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *MyD0::Class()
+{
+   if (!fgIsA) { R__LOCKGUARD2(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::MyD0*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+atomic_TClass_ptr MyDstar::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *MyDstar::Class_Name()
+{
+   return "MyDstar";
+}
+
+//______________________________________________________________________________
+const char *MyDstar::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::MyDstar*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int MyDstar::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::MyDstar*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *MyDstar::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::MyDstar*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *MyDstar::Class()
+{
+   if (!fgIsA) { R__LOCKGUARD2(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::MyDstar*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
 namespace ROOT {
    // Wrappers around operator new
    static void *new_pairlEstringcOboolgR(void *p) {
@@ -3638,6 +3910,138 @@ namespace ROOT {
    }
 } // end of namespace ROOT for class ::MyFSCInfo
 
+//______________________________________________________________________________
+void MySiPixelCluster::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class MySiPixelCluster.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(MySiPixelCluster::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(MySiPixelCluster::Class(),this);
+   }
+}
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_MySiPixelCluster(void *p) {
+      return  p ? new(p) ::MySiPixelCluster : new ::MySiPixelCluster;
+   }
+   static void *newArray_MySiPixelCluster(Long_t nElements, void *p) {
+      return p ? new(p) ::MySiPixelCluster[nElements] : new ::MySiPixelCluster[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_MySiPixelCluster(void *p) {
+      delete ((::MySiPixelCluster*)p);
+   }
+   static void deleteArray_MySiPixelCluster(void *p) {
+      delete [] ((::MySiPixelCluster*)p);
+   }
+   static void destruct_MySiPixelCluster(void *p) {
+      typedef ::MySiPixelCluster current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::MySiPixelCluster
+
+//______________________________________________________________________________
+void MySiStripCluster::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class MySiStripCluster.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(MySiStripCluster::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(MySiStripCluster::Class(),this);
+   }
+}
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_MySiStripCluster(void *p) {
+      return  p ? new(p) ::MySiStripCluster : new ::MySiStripCluster;
+   }
+   static void *newArray_MySiStripCluster(Long_t nElements, void *p) {
+      return p ? new(p) ::MySiStripCluster[nElements] : new ::MySiStripCluster[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_MySiStripCluster(void *p) {
+      delete ((::MySiStripCluster*)p);
+   }
+   static void deleteArray_MySiStripCluster(void *p) {
+      delete [] ((::MySiStripCluster*)p);
+   }
+   static void destruct_MySiStripCluster(void *p) {
+      typedef ::MySiStripCluster current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::MySiStripCluster
+
+//______________________________________________________________________________
+void MyD0::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class MyD0.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(MyD0::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(MyD0::Class(),this);
+   }
+}
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_MyD0(void *p) {
+      return  p ? new(p) ::MyD0 : new ::MyD0;
+   }
+   static void *newArray_MyD0(Long_t nElements, void *p) {
+      return p ? new(p) ::MyD0[nElements] : new ::MyD0[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_MyD0(void *p) {
+      delete ((::MyD0*)p);
+   }
+   static void deleteArray_MyD0(void *p) {
+      delete [] ((::MyD0*)p);
+   }
+   static void destruct_MyD0(void *p) {
+      typedef ::MyD0 current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::MyD0
+
+//______________________________________________________________________________
+void MyDstar::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class MyDstar.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(MyDstar::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(MyDstar::Class(),this);
+   }
+}
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_MyDstar(void *p) {
+      return  p ? new(p) ::MyDstar : new ::MyDstar;
+   }
+   static void *newArray_MyDstar(Long_t nElements, void *p) {
+      return p ? new(p) ::MyDstar[nElements] : new ::MyDstar[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_MyDstar(void *p) {
+      delete ((::MyDstar*)p);
+   }
+   static void deleteArray_MyDstar(void *p) {
+      delete [] ((::MyDstar*)p);
+   }
+   static void destruct_MyDstar(void *p) {
+      typedef ::MyDstar current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::MyDstar
+
 namespace ROOT {
    static TClass *vectorlEunsignedsPintgR_Dictionary();
    static void vectorlEunsignedsPintgR_TClassManip(TClass*);
@@ -4204,6 +4608,132 @@ namespace ROOT {
       ((current_t*)p)->~current_t();
    }
 } // end of namespace ROOT for class vector<MySimVertex>
+
+namespace ROOT {
+   static TClass *vectorlEMySiStripClustergR_Dictionary();
+   static void vectorlEMySiStripClustergR_TClassManip(TClass*);
+   static void *new_vectorlEMySiStripClustergR(void *p = 0);
+   static void *newArray_vectorlEMySiStripClustergR(Long_t size, void *p);
+   static void delete_vectorlEMySiStripClustergR(void *p);
+   static void deleteArray_vectorlEMySiStripClustergR(void *p);
+   static void destruct_vectorlEMySiStripClustergR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<MySiStripCluster>*)
+   {
+      vector<MySiStripCluster> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<MySiStripCluster>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<MySiStripCluster>", -2, "vector", 214,
+                  typeid(vector<MySiStripCluster>), DefineBehavior(ptr, ptr),
+                  &vectorlEMySiStripClustergR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<MySiStripCluster>) );
+      instance.SetNew(&new_vectorlEMySiStripClustergR);
+      instance.SetNewArray(&newArray_vectorlEMySiStripClustergR);
+      instance.SetDelete(&delete_vectorlEMySiStripClustergR);
+      instance.SetDeleteArray(&deleteArray_vectorlEMySiStripClustergR);
+      instance.SetDestructor(&destruct_vectorlEMySiStripClustergR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<MySiStripCluster> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_(Init) = GenerateInitInstanceLocal((const vector<MySiStripCluster>*)0x0); R__UseDummy(_R__UNIQUE_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEMySiStripClustergR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<MySiStripCluster>*)0x0)->GetClass();
+      vectorlEMySiStripClustergR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEMySiStripClustergR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEMySiStripClustergR(void *p) {
+      return  p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<MySiStripCluster> : new vector<MySiStripCluster>;
+   }
+   static void *newArray_vectorlEMySiStripClustergR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<MySiStripCluster>[nElements] : new vector<MySiStripCluster>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEMySiStripClustergR(void *p) {
+      delete ((vector<MySiStripCluster>*)p);
+   }
+   static void deleteArray_vectorlEMySiStripClustergR(void *p) {
+      delete [] ((vector<MySiStripCluster>*)p);
+   }
+   static void destruct_vectorlEMySiStripClustergR(void *p) {
+      typedef vector<MySiStripCluster> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<MySiStripCluster>
+
+namespace ROOT {
+   static TClass *vectorlEMySiPixelClustergR_Dictionary();
+   static void vectorlEMySiPixelClustergR_TClassManip(TClass*);
+   static void *new_vectorlEMySiPixelClustergR(void *p = 0);
+   static void *newArray_vectorlEMySiPixelClustergR(Long_t size, void *p);
+   static void delete_vectorlEMySiPixelClustergR(void *p);
+   static void deleteArray_vectorlEMySiPixelClustergR(void *p);
+   static void destruct_vectorlEMySiPixelClustergR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<MySiPixelCluster>*)
+   {
+      vector<MySiPixelCluster> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<MySiPixelCluster>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<MySiPixelCluster>", -2, "vector", 214,
+                  typeid(vector<MySiPixelCluster>), DefineBehavior(ptr, ptr),
+                  &vectorlEMySiPixelClustergR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<MySiPixelCluster>) );
+      instance.SetNew(&new_vectorlEMySiPixelClustergR);
+      instance.SetNewArray(&newArray_vectorlEMySiPixelClustergR);
+      instance.SetDelete(&delete_vectorlEMySiPixelClustergR);
+      instance.SetDeleteArray(&deleteArray_vectorlEMySiPixelClustergR);
+      instance.SetDestructor(&destruct_vectorlEMySiPixelClustergR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<MySiPixelCluster> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_(Init) = GenerateInitInstanceLocal((const vector<MySiPixelCluster>*)0x0); R__UseDummy(_R__UNIQUE_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEMySiPixelClustergR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<MySiPixelCluster>*)0x0)->GetClass();
+      vectorlEMySiPixelClustergR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEMySiPixelClustergR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEMySiPixelClustergR(void *p) {
+      return  p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<MySiPixelCluster> : new vector<MySiPixelCluster>;
+   }
+   static void *newArray_vectorlEMySiPixelClustergR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<MySiPixelCluster>[nElements] : new vector<MySiPixelCluster>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEMySiPixelClustergR(void *p) {
+      delete ((vector<MySiPixelCluster>*)p);
+   }
+   static void deleteArray_vectorlEMySiPixelClustergR(void *p) {
+      delete [] ((vector<MySiPixelCluster>*)p);
+   }
+   static void destruct_vectorlEMySiPixelClustergR(void *p) {
+      typedef vector<MySiPixelCluster> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<MySiPixelCluster>
 
 namespace ROOT {
    static TClass *vectorlEMyPartgR_Dictionary();
@@ -5655,6 +6185,69 @@ namespace ROOT {
 } // end of namespace ROOT for class vector<MyElectron>
 
 namespace ROOT {
+   static TClass *vectorlEMyDstargR_Dictionary();
+   static void vectorlEMyDstargR_TClassManip(TClass*);
+   static void *new_vectorlEMyDstargR(void *p = 0);
+   static void *newArray_vectorlEMyDstargR(Long_t size, void *p);
+   static void delete_vectorlEMyDstargR(void *p);
+   static void deleteArray_vectorlEMyDstargR(void *p);
+   static void destruct_vectorlEMyDstargR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<MyDstar>*)
+   {
+      vector<MyDstar> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<MyDstar>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<MyDstar>", -2, "vector", 214,
+                  typeid(vector<MyDstar>), DefineBehavior(ptr, ptr),
+                  &vectorlEMyDstargR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<MyDstar>) );
+      instance.SetNew(&new_vectorlEMyDstargR);
+      instance.SetNewArray(&newArray_vectorlEMyDstargR);
+      instance.SetDelete(&delete_vectorlEMyDstargR);
+      instance.SetDeleteArray(&deleteArray_vectorlEMyDstargR);
+      instance.SetDestructor(&destruct_vectorlEMyDstargR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<MyDstar> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_(Init) = GenerateInitInstanceLocal((const vector<MyDstar>*)0x0); R__UseDummy(_R__UNIQUE_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEMyDstargR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<MyDstar>*)0x0)->GetClass();
+      vectorlEMyDstargR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEMyDstargR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEMyDstargR(void *p) {
+      return  p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<MyDstar> : new vector<MyDstar>;
+   }
+   static void *newArray_vectorlEMyDstargR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<MyDstar>[nElements] : new vector<MyDstar>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEMyDstargR(void *p) {
+      delete ((vector<MyDstar>*)p);
+   }
+   static void deleteArray_vectorlEMyDstargR(void *p) {
+      delete [] ((vector<MyDstar>*)p);
+   }
+   static void destruct_vectorlEMyDstargR(void *p) {
+      typedef vector<MyDstar> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<MyDstar>
+
+namespace ROOT {
    static TClass *vectorlEMyDiJetgR_Dictionary();
    static void vectorlEMyDiJetgR_TClassManip(TClass*);
    static void *new_vectorlEMyDiJetgR(void *p = 0);
@@ -5716,6 +6309,69 @@ namespace ROOT {
       ((current_t*)p)->~current_t();
    }
 } // end of namespace ROOT for class vector<MyDiJet>
+
+namespace ROOT {
+   static TClass *vectorlEMyD0gR_Dictionary();
+   static void vectorlEMyD0gR_TClassManip(TClass*);
+   static void *new_vectorlEMyD0gR(void *p = 0);
+   static void *newArray_vectorlEMyD0gR(Long_t size, void *p);
+   static void delete_vectorlEMyD0gR(void *p);
+   static void deleteArray_vectorlEMyD0gR(void *p);
+   static void destruct_vectorlEMyD0gR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<MyD0>*)
+   {
+      vector<MyD0> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<MyD0>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<MyD0>", -2, "vector", 214,
+                  typeid(vector<MyD0>), DefineBehavior(ptr, ptr),
+                  &vectorlEMyD0gR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<MyD0>) );
+      instance.SetNew(&new_vectorlEMyD0gR);
+      instance.SetNewArray(&newArray_vectorlEMyD0gR);
+      instance.SetDelete(&delete_vectorlEMyD0gR);
+      instance.SetDeleteArray(&deleteArray_vectorlEMyD0gR);
+      instance.SetDestructor(&destruct_vectorlEMyD0gR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<MyD0> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_(Init) = GenerateInitInstanceLocal((const vector<MyD0>*)0x0); R__UseDummy(_R__UNIQUE_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEMyD0gR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<MyD0>*)0x0)->GetClass();
+      vectorlEMyD0gR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEMyD0gR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEMyD0gR(void *p) {
+      return  p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<MyD0> : new vector<MyD0>;
+   }
+   static void *newArray_vectorlEMyD0gR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<MyD0>[nElements] : new vector<MyD0>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEMyD0gR(void *p) {
+      delete ((vector<MyD0>*)p);
+   }
+   static void deleteArray_vectorlEMyD0gR(void *p) {
+      delete [] ((vector<MyD0>*)p);
+   }
+   static void destruct_vectorlEMyD0gR(void *p) {
+      typedef vector<MyD0> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<MyD0>
 
 namespace ROOT {
    static TClass *vectorlEMyCastorRecHitgR_Dictionary();
@@ -6574,11 +7230,15 @@ namespace {
 "UATree/UADataFormat/interface/MyFSCInfo.h",
 "UATree/UADataFormat/interface/MyKshorts.h",
 "UATree/UADataFormat/interface/MyLambdas.h",
+"UATree/UADataFormat/interface/MySiStripCluster.h",
+"UATree/UADataFormat/interface/MySiPixelCluster.h",
+"UATree/UADataFormat/interface/MyD0.h",
+"UATree/UADataFormat/interface/MyDstar.h",
 0
     };
     static const char* includePaths[] = {
 "/cvmfs/cms.cern.ch/slc6_amd64_gcc493/lcg/root/6.02.12-kpegke4/include",
-"/afs/cern.ch/work/j/jjhollar/CMSTotem/CMSSW_7_6_3/src/UATree/UADataFormat/",
+"/afs/cern.ch/work/j/jjhollar/CMSTotem/CMSSW_7_6_5/src/UATree/UADataFormat/",
 0
     };
     static const char* fwdDeclCode = 
@@ -6626,6 +7286,10 @@ class __attribute__((annotate("$clingAutoload$UATree/UADataFormat/interface/MyLa
 class __attribute__((annotate("$clingAutoload$UATree/UADataFormat/interface/MyFSCHit.h")))  MyFSCHit;
 class __attribute__((annotate("$clingAutoload$UATree/UADataFormat/interface/MyFSCDigi.h")))  MyFSCDigi;
 class __attribute__((annotate("$clingAutoload$UATree/UADataFormat/interface/MyFSCInfo.h")))  MyFSCInfo;
+class __attribute__((annotate("$clingAutoload$UATree/UADataFormat/interface/MySiPixelCluster.h")))  MySiPixelCluster;
+class __attribute__((annotate("$clingAutoload$UATree/UADataFormat/interface/MySiStripCluster.h")))  MySiStripCluster;
+class __attribute__((annotate("$clingAutoload$UATree/UADataFormat/interface/MyD0.h")))  MyD0;
+class __attribute__((annotate("$clingAutoload$UATree/UADataFormat/interface/MyDstar.h")))  MyDstar;
 )DICTFWDDCLS";
     static const char* payloadCode = R"DICTPAYLOAD(
 
@@ -6669,6 +7333,10 @@ class __attribute__((annotate("$clingAutoload$UATree/UADataFormat/interface/MyFS
 #include "UATree/UADataFormat/interface/MyFSCInfo.h"
 #include "UATree/UADataFormat/interface/MyKshorts.h"
 #include "UATree/UADataFormat/interface/MyLambdas.h"
+#include "UATree/UADataFormat/interface/MySiStripCluster.h"
+#include "UATree/UADataFormat/interface/MySiPixelCluster.h"
+#include "UATree/UADataFormat/interface/MyD0.h"
+#include "UATree/UADataFormat/interface/MyDstar.h"
 
 #undef  _BACKWARD_BACKWARD_WARNING_H
 )DICTPAYLOAD";
@@ -6680,7 +7348,9 @@ class __attribute__((annotate("$clingAutoload$UATree/UADataFormat/interface/MyFS
 "MyCastorDigi", payloadCode, "@",
 "MyCastorJet", payloadCode, "@",
 "MyCastorRecHit", payloadCode, "@",
+"MyD0", payloadCode, "@",
 "MyDiJet", payloadCode, "@",
+"MyDstar", payloadCode, "@",
 "MyElectron", payloadCode, "@",
 "MyEvtId", payloadCode, "@",
 "MyFSCDigi", payloadCode, "@",
@@ -6704,6 +7374,8 @@ class __attribute__((annotate("$clingAutoload$UATree/UADataFormat/interface/MyFS
 "MyPFJet", payloadCode, "@",
 "MyPUSumInfo", payloadCode, "@",
 "MyPart", payloadCode, "@",
+"MySiPixelCluster", payloadCode, "@",
+"MySiStripCluster", payloadCode, "@",
 "MySimVertex", payloadCode, "@",
 "MyTrackJet", payloadCode, "@",
 "MyTracks", payloadCode, "@",

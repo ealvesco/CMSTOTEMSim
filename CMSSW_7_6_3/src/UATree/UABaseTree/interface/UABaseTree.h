@@ -24,10 +24,7 @@
 
 // Point 3D
 #include "DataFormats/Math/interface/Point3D.h"
-
-//GEN
-#include "SimDataFormats/GeneratorProducts/interface/GenEventInfoProduct.h" 
-
+#include "SimDataFormats/GeneratorProducts/interface/GenEventInfoProduct.h"
 // Trigger
 #include "FWCore/Common/interface/TriggerNames.h"
 #include "DataFormats/HLTReco/interface/TriggerEvent.h"
@@ -114,6 +111,10 @@
 #include "DataFormats/Candidate/interface/VertexCompositeCandidate.h" 
 #include "UATree/UADataFormat/interface/MyKshorts.h" 
 #include "UATree/UADataFormat/interface/MyLambdas.h" 
+#include "UATree/UADataFormat/interface/MyD0.h"
+#include "UATree/UADataFormat/interface/MyDstar.h"
+#include "UATree/UADataFormat/interface/MySiPixelCluster.h"
+#include "UATree/UADataFormat/interface/MySiStripCluster.h" 
 
 #include "UATree/UADataFormat/interface/MyFwdGap.h"
 
@@ -147,10 +148,14 @@
 #include "UATree/UADataFormat/interface/MyFSCDigi.h"
 #include "UATree/UADataFormat/interface/MyFSCInfo.h"
 
-// TOTEM
-#include "TotemAnalysis/TotemAnalysisEvent/interface/TotemRPEvent.h"                                                                                          
+// Charm
+#include "RecoVertex/VertexPrimitives/interface/TransientVertex.h"
+#include "RecoVertex/KalmanVertexFit/interface/KalmanVertexFitter.h"
 
+//TOTEM
+#include "TotemAnalysis/TotemAnalysisEvent/interface/TotemRPEvent.h"
 
+//GEN
 
 using namespace std;
 using namespace edm;
@@ -207,6 +212,11 @@ class UABaseTree : public EDAnalyzer {
       virtual void GetAllKshorts(    const Event& ); 
       virtual void GetAllLambdas(    const Event& ); 
 
+      virtual void GetAllCharm(    const Event&, const EventSetup& );
+
+      virtual void GetSiPixelClusters(    const Event& , const EventSetup& );
+      virtual void GetSiStripClusters(    const Event& , const EventSetup& ); 
+
       template <class T,class U>
       void FillJetCorrections(      const Event& , const EventSetup& , const vector<T>& , const vector<string>& , vector<U>& );
       virtual void GetRecoCaloJets( const Event& , const EventSetup& , const PSet& , vector<MyCaloJet>& );
@@ -247,9 +257,7 @@ class UABaseTree : public EDAnalyzer {
 
       virtual void GetFSCInfo( const Event&, const EventSetup& ); 
 
-      virtual void GetTotemRP( const Event&, const EventSetup& ); 
-
-
+      virtual void GetTotemRP( const Event&, const EventSetup& );
       // --------------------   Get All Parameters   --------------------
       virtual void GetParameters( const ParameterSet& );
      
@@ -268,11 +276,13 @@ class UABaseTree : public EDAnalyzer {
       Bool_t clusterCleaning(const SiStripCluster*   cluster,  int crosstalkInv=0, uint8_t* exitCode=NULL); 
       std::vector<int> convert(const vector<unsigned char>& input); 
       std::vector<int> CrossTalkInv(const std::vector<int>&  Q, const float x1=0.10, const float x2=0.04, bool way=true,float threshold=20,float thresholdSat=25); 
+      double FindAngle(const reco::Vertex& , const TransientVertex& , const math::XYZTLorentzVector& );
 
       const string GetBranchName(InputTag& , Bool_t = 1);
       const string GetCollName(const string&);
       const string GetColl(const string&);
       const InputTag GetCollInputTag(const string&);
+
 
       // -------------------------------------------------------------------
       // --------------------   Vars From Config File   --------------------
@@ -324,10 +334,9 @@ class UABaseTree : public EDAnalyzer {
       InputTag         fscrechits_;
       InputTag         fscdigis_;
 
-      // TOTEM
-      Bool_t           storeTotemRP_;    
-      InputTag         totemRP_;
-
+      //TOTEM
+      Bool_t           storeTotemRP_; 
+      InputTag         totemRP_;  
 
       //for fwdGap
       double energyThresholdHB_ ;
@@ -389,6 +398,9 @@ class UABaseTree : public EDAnalyzer {
 
       map<string,vector<MyKshorts> > allKshorts; 
       map<string,vector<MyLambdas> > allLambdas; 
+
+      map<string,vector<MyD0> >      allD0s;  
+      map<string,vector<MyDstar> >   allDstar;
  
       map<string,vector<MyCaloJet> > allCaloJets;
       map<string,vector<MyPFJet> >   allPFJets;
@@ -413,22 +425,21 @@ class UABaseTree : public EDAnalyzer {
       vector<MyKshorts>               outks; 
       vector<MyLambdas>               outlambda; 
 
+      vector<MyD0>                    outd0;  
+      vector<MyDstar>                 outdstar;
+
+      // Si clusters
+      vector<MySiPixelCluster>        outsipixelcluster;
+      MySiStripCluster                outsistripcluster;
+
       // FSC
       vector<MyFSCHit>  fscHits;
       vector<MyFSCDigi> fscDigis;
       MyFSCInfo         fscInfo;
 
-
       //TOTEM
-      TotemRPEvent totemRPEvent_;
-      map<unsigned int, RPRootDumpTrackInfo> track_info_;
-      map<unsigned int, RPRootDumpDigiInfo> digi_info_;
-      map<unsigned int, RPRootDumpPatternInfo > par_patterns_info_, nonpar_patterns_info_;
+      TotemRPEvent totemRPEvent_;   
 
-      map<unsigned int, std::vector<RPRootDumpTrackInfo> > multi_track_info_;
-      map<unsigned int, RPRootDumpReconstructedProton> rec_pr_info_;
-      map<unsigned int, RPRootDumpReconstructedProton> sim_pr_info_;
-      RPRootDumpReconstructedProtonPair rec_pr_pair_info_;
       // -------------------------------------------------------
       // --------------------   Vertex Id   --------------------
       Int_t vtxid;

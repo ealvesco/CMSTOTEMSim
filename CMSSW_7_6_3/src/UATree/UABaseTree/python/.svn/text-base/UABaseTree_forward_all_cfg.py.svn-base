@@ -164,8 +164,10 @@ process.reco_sequence = cms.Sequence(process.reco_sequence
                                      #process.ueSisCone5TracksJet500 * process.UEAnalysisJetsAkOnlyReco
                                     )
 
-# JH
+# RECO: with track refitting + dEdx 
 process.p = cms.Path(process.selection_sequence * process.reco_sequence * process.offlineBeamSpot +  process.MeasurementTrackerEvent + process.TrackRefitter + process.hscpdedxHitInfo + process.uabasetree)
+
+# AOD 
 #process.p = cms.Path(process.selection_sequence * process.reco_sequence * process.offlineBeamSpot + process.uabasetree)
                      
 if keepCMSData:

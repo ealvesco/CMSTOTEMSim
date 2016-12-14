@@ -164,46 +164,24 @@ void UABaseTree::Init(){
   // V0 
   this->tree->Branch( "Kshort" , &outks ); 
   this->tree->Branch( "Lambda" , &outlambda ); 
+
+  // Charm
+  this->tree->Branch( "D0" , &outd0 );
+  this->tree->Branch( "Dstar" , &outdstar );
+
    
   // FSC 
   if(storeFSCInfo_  && fscrechits_.label().size() > 0) this->tree->Branch( "fscInfo" , &fscInfo );
   if(storeFSCHits_  && fscrechits_.label().size() > 0) this->tree->Branch( "fscHits" , &fscHits );
   if(storeFSCDigis_ && fscdigis_.label().size() > 0)   this->tree->Branch( "fscDigis" , &fscDigis );
 
-  // TOTEM
-  if(storeTotemRP_) {
-    char br_name[500];
-    cout << "storeTotemRP"  << endl;
-     for (unsigned int a = 0; a < 2; ++a)
-        for (unsigned int s = 0; s < 3; ++s)
-        {
-           if (s == 1)
-              continue;
-           for (unsigned int r = 0; r < 6; r++)
-           {
-              unsigned int id = 100 * a + 10 * s + r;
-              sprintf(br_name, "track_rp_%u.", id);
-              cout << "Creating branch " << br_name << endl;
-              tree->Branch(br_name, &track_info_[id]);
-           }
-        }
-     sprintf(br_name, "rec_prot_left.");
-     cout << "Creating branch " << br_name << endl;
-     tree->Branch(br_name, &rec_pr_info_[0]);
-     sprintf(br_name, "rec_prot_right.");
-     cout << "Creating branch " << br_name << endl;
-     tree->Branch(br_name, &rec_pr_info_[1]);
-     sprintf(br_name, "rec_prot_pair.");
-     cout << "Creating branch " << br_name << endl;
-     tree->Branch(br_name, &rec_pr_pair_info_);
+  //TOTEM
+  if(storeTotemRP_) tree->Branch("TotemRP",&totemRPEvent_);
 
-     sprintf(br_name, "sim_prot_left.");
-     cout << "Creating branch " << br_name << endl;
-     tree->Branch(br_name, &sim_pr_info_[0]);
-     sprintf(br_name, "sim_prot_right.");
-     cout << "Creating branch " << br_name << endl;
-     tree->Branch(br_name, &sim_pr_info_[1]);
-  }//TOTEM
+  // Si clusters
+  this->tree->Branch( "SiPixelClusters" , &outsipixelcluster );  
+  this->tree->Branch( "SiStripClusters" , &outsistripcluster );   
+
 }
 
 

@@ -29,6 +29,7 @@
 <use   name="UATree/UADataFormat"/>
 <use   name="UATree/MitEdm"/>
 <use   name="DataFormats/DetId"/>
+<use   name="RecoLocalTracker/SiStripClusterizer"/>
 <use   name="CondFormats/CastorObjects"/>
 <use   name="CondFormats/JetMETObjects"/>
 <use   name="CalibFormats/CastorObjects"/>

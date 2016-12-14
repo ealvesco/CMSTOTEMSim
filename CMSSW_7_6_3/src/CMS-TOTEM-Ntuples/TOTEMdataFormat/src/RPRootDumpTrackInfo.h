@@ -16,20 +16,19 @@
 class RPRootDumpTrackInfo: public TObject {
 public:
 	RPRootDumpTrackInfo();
-      
-        bool valid;                       ///< whether track fit is valid
-        double x, y, z;                   ///< track fit interpolated to the middle of the RP
+
+	bool valid; // whether track fit is valid
+	double x, y, z; // track fit interpolated to the middle of the RP
         double thx, thy;                  ///< track tilt
-        double chi2;                      ///< fit chi square
-        double chi2ndf;                   ///< fit chi square divided by the number of degrees of freedom
-        unsigned int entries;             ///< the number of contributing hits
-        double res_x, res_y;              ///< seem not used
-        std::vector<int> u_sect, v_sect;  ///< list of active trigger sectors calculated from (strip) data
-        int u_sect_no, v_sect_no;         ///< sizes of u_sect and v_sect vectors
+	double chi2; // fit chi square
+	double chi2ndf; // fit chi square divided by the number of degrees of freedom
+	unsigned int entries; // the number of contributing hits
+	double res_x, res_y; // seem not used
+	std::vector<int> u_sect, v_sect; // list of active trigger sectors calculated from (strip) data
+	int u_sect_no, v_sect_no; // sizes of u_sect and v_sect vectors
         unsigned int u_id, v_id;          ///<if there are multiple tracks the uv combination id is preserved here
 
-
-	ClassDef(RPRootDumpTrackInfo,3);
+	ClassDef(RPRootDumpTrackInfo,2);
 };
 
 #endif

@@ -64,45 +64,56 @@ void UABaseTree::GetRecoTracksPID(const edm::Event& iEvent, const string TrackCo
       { 
 	DeDxHitInfoRef dedxHitsRef = dedxCollH->get(trackref.key());  
 	if(!dedxHitsRef.isNull()) 
-	  { 
+	  {
 	    dEdxHitsH = &(*dedxHitsRef); 
-	  } 
-
-	for(unsigned int h=0;h<dEdxHitsH->size();h++){  
-
-	  DetId detid(dEdxHitsH->detId(h));  
-
-	  // Here we don't have the shapetest information in CMSSW_7X that was used in CMSSW_6X
-          //      if(!usePixel && detid.subdetId()<3){continue;} // skip pixels 
-	  //          if((detid.subdetId()>=3) && (useClusterCleaning && !hscpHitsInfo.shapetest[h])){continue;} //skip strip hits failling the shape test. 
-
-	  // JH - new from Loic
-	  bool shapetest = false;
-	  if(useClusterCleaning && detid >= 3)
-	    shapetest = clusterCleaning(dEdxHitsH->stripCluster(h), 1);
-
-          double Norm = (detid.subdetId()<3)?3.61e-06:3.61e-06*265;  //compute the normalization factor to get the energy in MeV/cm 
-          Norm*=10.0; //mm --> cm 
-           
-          //save the dE/dx in MeV/cm to a vector.  The scalefactor can be used to correct for data/MC agreement. 
-	  vect_scaledcharge.push_back(scaleFactor*Norm*dEdxHitsH->charge(h)/dEdxHitsH->pathlength(h));
-	  vect_charge.push_back(dEdxHitsH->charge(h));  
-	  vect_pathlength.push_back(dEdxHitsH->pathlength(h));  
-	  vect_shapetest.push_back(shapetest);
-	  vect_detIds.push_back(dEdxHitsH->detId(h));  
-
-          //printf("%f ", Norm*hscpHitsInfo.charges[h]/hscpHitsInfo.pathlengths[h]); 
-        } 
+	    
+	    for(unsigned int h=0;h<dEdxHitsH->size();h++){  
+	      
+	      DetId detid(dEdxHitsH->detId(h));  
+	      
+	      // Here we don't have the shapetest information in CMSSW_7X that was used in CMSSW_6X
+	      //      if(!usePixel && detid.subdetId()<3){continue;} // skip pixels 
+	      //          if((detid.subdetId()>=3) && (useClusterCleaning && !hscpHitsInfo.shapetest[h])){continue;} //skip strip hits failling the shape test. 
+	      
+	      // JH - new from Loic
+	      bool shapetest = false;
+	      if(useClusterCleaning && detid >= 3)
+		{
+		  shapetest = clusterCleaning(dEdxHitsH->stripCluster(h), 1);
+		}
+	      
+	      double Norm = (detid.subdetId()<3)?3.61e-06:3.61e-06*265;  //compute the normalization factor to get the energy in MeV/cm 
+	      Norm*=10.0; //mm --> cm 
+	      
+	      //save the dE/dx in MeV/cm to a vector.  The scalefactor can be used to correct for data/MC agreement. 
+	      vect_scaledcharge.push_back(scaleFactor*Norm*dEdxHitsH->charge(h)/dEdxHitsH->pathlength(h));
+	      vect_charge.push_back(dEdxHitsH->charge(h));  
+	      vect_pathlength.push_back(dEdxHitsH->pathlength(h));  
+	      vect_shapetest.push_back(shapetest);
+	      vect_detIds.push_back(dEdxHitsH->detId(h));  
+	      
+	      //printf("%f ", Norm*hscpHitsInfo.charges[h]/hscpHitsInfo.pathlengths[h]); 
+	    }
+	  }
+        else
+	  {
+	    std::cout << "\ttdedxHitsRef IS Null!!!!!!!!" << std::endl;
+	    vect_scaledcharge.push_back(-999);
+	    vect_charge.push_back(-999);
+	    vect_pathlength.push_back(-999);
+	    vect_shapetest.push_back(false);
+	    vect_detIds.push_back(-999);
+	  }
       } 
     else 
       { 
 	std::cout << "\tInvalid dEdxHitInfo" << std::endl; 
       } 
- 
+    
     int size = vect_scaledcharge.size(); 
-     
+    
     double result=0; 
-
+    
     //build the harmonic 2 dE/dx estimator 
     double expo = -2; 
     for(int i = 0; i< size; i ++){ 
@@ -112,7 +123,7 @@ void UABaseTree::GetRecoTracksPID(const edm::Event& iEvent, const string TrackCo
 
     this->FillTrackPID(*tr , mytrack, result, vect_charge, vect_pathlength, vect_detIds, vect_shapetest); 
     TrackVector.push_back(mytrack);
-    
+
     if(TrackDebugPID) mytrack.Print();
 
     // testing dE/dx
@@ -124,7 +135,6 @@ void UABaseTree::GetRecoTracksPID(const edm::Event& iEvent, const string TrackCo
  
     iTrackCount++; 
   }
-
 }
 
 

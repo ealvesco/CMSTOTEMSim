@@ -18,6 +18,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/FilterEvents.o:
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -64,6 +68,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetAll.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -110,6 +118,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetBasicJet.o: 
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -156,6 +168,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetBeamSpot.o: 
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -202,6 +218,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetCaloTower.o:
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -248,6 +268,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetCastorDigi.o
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -294,6 +318,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetCastorJet.o:
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -340,6 +368,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetCastorRecHit
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -386,6 +418,60 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetCentralDiJet
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
+ src/UATree/UADataFormat/interface/MyFwdGap.h \
+ src/UATree/UADataFormat/interface/MyMITEvtSel.h \
+ src/UATree/UADataFormat/interface/MyCaloJet.h \
+ src/UATree/UADataFormat/interface/MyJet.h \
+ src/UATree/UADataFormat/interface/MyBaseJet.h \
+ src/UATree/UADataFormat/interface/MyTrackJet.h \
+ src/UATree/UADataFormat/interface/MyTracks.h \
+ src/UATree/UADataFormat/interface/MyPFJet.h \
+ src/UATree/UADataFormat/interface/MyGenJet.h \
+ src/UATree/UADataFormat/interface/MyGenPart.h \
+ src/UATree/UADataFormat/interface/MyCastorRecHit.h \
+ src/UATree/UADataFormat/interface/MyCastorJet.h \
+ src/UATree/UADataFormat/interface/MyCastorDigi.h \
+ src/UATree/UADataFormat/interface/MyDiJet.h \
+ src/UATree/UADataFormat/interface/MyElectron.h \
+ src/UATree/UADataFormat/interface/MyMuon.h \
+ src/UATree/UADataFormat/interface/MyPFCand.h \
+ src/UATree/UADataFormat/interface/MyMet.h \
+ src/UATree/UADataFormat/interface/MyCaloTower.h \
+ src/UATree/UADataFormat/interface/MyFSCHit.h \
+ src/UATree/UADataFormat/interface/MyFSCDigi.h \
+ src/UATree/UADataFormat/interface/MyFSCInfo.h \
+ src/TotemAnalysis/TotemAnalysisEvent/interface/TotemRPEvent.h \
+ src/TotemAnalysis/TotemAnalysisEvent/interface/RPRootTrackInfo.h \
+ src/UATree/UABaseTree/interface/TemplateFunctions_jets.h \
+
+tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetCharm.o: \
+ src/UATree/UABaseTree/src/GetCharm.cc \
+ src/UATree/UABaseTree/interface/UABaseTree.h \
+ src/UATree/UADataFormat/interface/MassParticles.h \
+ src/UATree/UADataFormat/interface/MyPart.h \
+ src/UATree/UADataFormat/interface/MyEvtId.h \
+ src/UATree/UADataFormat/interface/MyL1Trig.h \
+ src/UATree/UADataFormat/interface/MyL1TrigOld.h \
+ src/UATree/UADataFormat/interface/MyHLTrig.h \
+ src/UATree/UADataFormat/interface/MyGenKin.h \
+ src/UATree/UADataFormat/interface/MyGenMet.h \
+ src/UATree/UADataFormat/interface/MyGenPart.h \
+ src/UATree/UADataFormat/interface/MyPart.h \
+ src/UATree/UADataFormat/interface/MySimVertex.h \
+ src/UATree/UADataFormat/interface/MyPUSumInfo.h \
+ src/UATree/UADataFormat/interface/MyBeamSpot.h \
+ src/UATree/UADataFormat/interface/MyVertex.h \
+ src/UATree/UADataFormat/interface/MyTracks.h \
+ src/UATree/UADataFormat/interface/MyKshorts.h \
+ src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -432,6 +518,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetEvtId.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -478,6 +568,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetFSCInfo.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -524,6 +618,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetFwdGap.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -570,6 +668,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetGenJet.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -616,6 +718,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetGenKin.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -662,6 +768,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetGenPart.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -708,6 +818,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetHLTrig.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -754,6 +868,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetL1Trig.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -800,6 +918,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetL1TrigOld.o:
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -846,6 +968,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetMET.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -893,6 +1019,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetMITEvtSel.o:
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -939,6 +1069,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetPFCand.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -985,6 +1119,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetPUSumInfo.o:
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1031,6 +1169,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetParameters.o
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1077,6 +1219,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetRecoCaloJet.
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1123,6 +1269,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetRecoElectron
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1169,6 +1319,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetRecoMuon.o: 
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1215,6 +1369,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetRecoPFJet.o:
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1261,6 +1419,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetRecoTrackJet
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1307,6 +1469,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetRecoTracks.o
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1353,6 +1519,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetRecoTracksPI
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1399,6 +1569,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetRecoV0s.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1445,6 +1619,110 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetRecoVertex.o
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
+ src/UATree/UADataFormat/interface/MyFwdGap.h \
+ src/UATree/UADataFormat/interface/MyMITEvtSel.h \
+ src/UATree/UADataFormat/interface/MyCaloJet.h \
+ src/UATree/UADataFormat/interface/MyJet.h \
+ src/UATree/UADataFormat/interface/MyBaseJet.h \
+ src/UATree/UADataFormat/interface/MyTrackJet.h \
+ src/UATree/UADataFormat/interface/MyTracks.h \
+ src/UATree/UADataFormat/interface/MyPFJet.h \
+ src/UATree/UADataFormat/interface/MyGenJet.h \
+ src/UATree/UADataFormat/interface/MyGenPart.h \
+ src/UATree/UADataFormat/interface/MyCastorRecHit.h \
+ src/UATree/UADataFormat/interface/MyCastorJet.h \
+ src/UATree/UADataFormat/interface/MyCastorDigi.h \
+ src/UATree/UADataFormat/interface/MyDiJet.h \
+ src/UATree/UADataFormat/interface/MyElectron.h \
+ src/UATree/UADataFormat/interface/MyMuon.h \
+ src/UATree/UADataFormat/interface/MyPFCand.h \
+ src/UATree/UADataFormat/interface/MyMet.h \
+ src/UATree/UADataFormat/interface/MyCaloTower.h \
+ src/UATree/UADataFormat/interface/MyFSCHit.h \
+ src/UATree/UADataFormat/interface/MyFSCDigi.h \
+ src/UATree/UADataFormat/interface/MyFSCInfo.h \
+ src/TotemAnalysis/TotemAnalysisEvent/interface/TotemRPEvent.h \
+ src/TotemAnalysis/TotemAnalysisEvent/interface/RPRootTrackInfo.h \
+ src/UATree/UABaseTree/interface/TemplateFunctions_jets.h \
+
+tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetSiPixelClusters.o: \
+ src/UATree/UABaseTree/src/GetSiPixelClusters.cc \
+ src/UATree/UABaseTree/interface/UABaseTree.h \
+ src/UATree/UADataFormat/interface/MassParticles.h \
+ src/UATree/UADataFormat/interface/MyPart.h \
+ src/UATree/UADataFormat/interface/MyEvtId.h \
+ src/UATree/UADataFormat/interface/MyL1Trig.h \
+ src/UATree/UADataFormat/interface/MyL1TrigOld.h \
+ src/UATree/UADataFormat/interface/MyHLTrig.h \
+ src/UATree/UADataFormat/interface/MyGenKin.h \
+ src/UATree/UADataFormat/interface/MyGenMet.h \
+ src/UATree/UADataFormat/interface/MyGenPart.h \
+ src/UATree/UADataFormat/interface/MyPart.h \
+ src/UATree/UADataFormat/interface/MySimVertex.h \
+ src/UATree/UADataFormat/interface/MyPUSumInfo.h \
+ src/UATree/UADataFormat/interface/MyBeamSpot.h \
+ src/UATree/UADataFormat/interface/MyVertex.h \
+ src/UATree/UADataFormat/interface/MyTracks.h \
+ src/UATree/UADataFormat/interface/MyKshorts.h \
+ src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
+ src/UATree/UADataFormat/interface/MyFwdGap.h \
+ src/UATree/UADataFormat/interface/MyMITEvtSel.h \
+ src/UATree/UADataFormat/interface/MyCaloJet.h \
+ src/UATree/UADataFormat/interface/MyJet.h \
+ src/UATree/UADataFormat/interface/MyBaseJet.h \
+ src/UATree/UADataFormat/interface/MyTrackJet.h \
+ src/UATree/UADataFormat/interface/MyTracks.h \
+ src/UATree/UADataFormat/interface/MyPFJet.h \
+ src/UATree/UADataFormat/interface/MyGenJet.h \
+ src/UATree/UADataFormat/interface/MyGenPart.h \
+ src/UATree/UADataFormat/interface/MyCastorRecHit.h \
+ src/UATree/UADataFormat/interface/MyCastorJet.h \
+ src/UATree/UADataFormat/interface/MyCastorDigi.h \
+ src/UATree/UADataFormat/interface/MyDiJet.h \
+ src/UATree/UADataFormat/interface/MyElectron.h \
+ src/UATree/UADataFormat/interface/MyMuon.h \
+ src/UATree/UADataFormat/interface/MyPFCand.h \
+ src/UATree/UADataFormat/interface/MyMet.h \
+ src/UATree/UADataFormat/interface/MyCaloTower.h \
+ src/UATree/UADataFormat/interface/MyFSCHit.h \
+ src/UATree/UADataFormat/interface/MyFSCDigi.h \
+ src/UATree/UADataFormat/interface/MyFSCInfo.h \
+ src/TotemAnalysis/TotemAnalysisEvent/interface/TotemRPEvent.h \
+ src/TotemAnalysis/TotemAnalysisEvent/interface/RPRootTrackInfo.h \
+ src/UATree/UABaseTree/interface/TemplateFunctions_jets.h \
+
+tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetSiStripClusters.o: \
+ src/UATree/UABaseTree/src/GetSiStripClusters.cc \
+ src/UATree/UABaseTree/interface/UABaseTree.h \
+ src/UATree/UADataFormat/interface/MassParticles.h \
+ src/UATree/UADataFormat/interface/MyPart.h \
+ src/UATree/UADataFormat/interface/MyEvtId.h \
+ src/UATree/UADataFormat/interface/MyL1Trig.h \
+ src/UATree/UADataFormat/interface/MyL1TrigOld.h \
+ src/UATree/UADataFormat/interface/MyHLTrig.h \
+ src/UATree/UADataFormat/interface/MyGenKin.h \
+ src/UATree/UADataFormat/interface/MyGenMet.h \
+ src/UATree/UADataFormat/interface/MyGenPart.h \
+ src/UATree/UADataFormat/interface/MyPart.h \
+ src/UATree/UADataFormat/interface/MySimVertex.h \
+ src/UATree/UADataFormat/interface/MyPUSumInfo.h \
+ src/UATree/UADataFormat/interface/MyBeamSpot.h \
+ src/UATree/UADataFormat/interface/MyVertex.h \
+ src/UATree/UADataFormat/interface/MyTracks.h \
+ src/UATree/UADataFormat/interface/MyKshorts.h \
+ src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1491,6 +1769,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetTotemRP.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1537,6 +1819,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/InitUABaseTree.
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1583,6 +1869,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/UABaseTree.o: \
  src/UATree/UADataFormat/interface/MyTracks.h \
  src/UATree/UADataFormat/interface/MyKshorts.h \
  src/UATree/UADataFormat/interface/MyLambdas.h \
+ src/UATree/UADataFormat/interface/MyD0.h \
+ src/UATree/UADataFormat/interface/MyDstar.h \
+ src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ src/UATree/UADataFormat/interface/MySiStripCluster.h \
  src/UATree/UADataFormat/interface/MyFwdGap.h \
  src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  src/UATree/UADataFormat/interface/MyCaloJet.h \

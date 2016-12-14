@@ -46,7 +46,7 @@ endif
 endif
 LIBTYPE:= 
 
-subdirs_src+=$(filter-out Documentation, src_CMS-TOTEM-Ntuples src_UATree src_crab_projects src_TotemAnalysis)
+subdirs_src+=$(filter-out Documentation, src_CMS-TOTEM-Ntuples src_UATree src_ForwardAnalysis src_pythons src_TotemAnalysis)
 
 COND_SERIALIZATION:=$(SCRAM_SOURCEDIR)/CondFormats/Serialization/python/condformats_serialization_generate.py
 EDM_WRITE_CONFIG:=edmWriteConfigs

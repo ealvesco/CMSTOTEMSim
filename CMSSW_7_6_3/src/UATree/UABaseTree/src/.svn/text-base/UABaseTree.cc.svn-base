@@ -35,6 +35,10 @@ UABaseTree::UABaseTree(const edm::ParameterSet& iConfig) :
   consumes<reco::VertexCompositeCandidateCollection>(edm::InputTag("generalV0Candidates","Kshort"));
   consumes<reco::VertexCompositeCandidateCollection>(edm::InputTag("generalV0Candidates","Lambda")); 
 
+  consumes<edmNew::DetSetVector<SiStripCluster>>(edm::InputTag("siStripClusters"));
+  consumes<edmNew::DetSetVector<SiPixelCluster>>(edm::InputTag("siPixelClusters")); 
+
+
   for(vector<InputTag>::iterator icoll = muons_.begin() ; icoll!= muons_.end() ; ++icoll) 
     {
       consumes<MuonCollection>(edm::InputTag(icoll->label()));

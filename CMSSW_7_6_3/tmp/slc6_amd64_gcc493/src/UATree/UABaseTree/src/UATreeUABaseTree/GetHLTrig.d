@@ -1387,6 +1387,10 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetHLTrig.o: \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/DataFormats/Candidate/interface/VertexCompositeCandidateFwd.h \
  /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyKshorts.h \
  /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyLambdas.h \
+ /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyD0.h \
+ /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyDstar.h \
+ /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MySiPixelCluster.h \
+ /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MySiStripCluster.h \
  /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyFwdGap.h \
  /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyMITEvtSel.h \
  /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyCaloJet.h \
@@ -1409,6 +1413,56 @@ tmp/slc6_amd64_gcc493/src/UATree/UABaseTree/src/UATreeUABaseTree/GetHLTrig.o: \
  /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyFSCHit.h \
  /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyFSCDigi.h \
  /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/UATree/UADataFormat/interface/MyFSCInfo.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexPrimitives/interface/TransientVertex.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TransientTrack/interface/TransientTrack.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TransientTrack/interface/BasicTransientTrack.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryState/interface/ProxyBase.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryParametrization/interface/TrajectoryStateExceptions.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryState/interface/CopyUsingNew.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryState/interface/CopyUsingClone.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryState/interface/TrajectoryStateOnSurface.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryState/interface/BasicTrajectoryState.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryState/interface/ProxyBase11.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryState/interface/ChurnAllocator.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryParametrization/interface/LocalTrajectoryParameters.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryParametrization/interface/LocalTrajectoryError.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryParametrization/interface/GlobalTrajectoryParameters.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryParametrization/interface/CartesianTrajectoryError.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryParametrization/interface/CurvilinearTrajectoryError.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryState/interface/SurfaceSideDefinition.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryState/interface/FreeTrajectoryState.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryState/interface/BasicSingleTrajectoryState.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryState/interface/TrajectoryStateClosestToPoint.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryParametrization/interface/PerigeeTrajectoryParameters.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryParametrization/interface/PerigeeTrajectoryError.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryState/interface/PerigeeConversions.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/Geometry/CommonDetUnit/interface/GlobalTrackingGeometry.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/Geometry/CommonDetUnit/interface/TrackingGeometry.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/TrackingTools/TrajectoryState/interface/TrajectoryStateClosestToBeamLine.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/DataFormats/GeometryCommonDetAlgo/interface/Measurement1D.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexPrimitives/interface/VertexState.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexPrimitives/interface/BasicVertexState.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/DataFormats/GeometryCommonDetAlgo/interface/GlobalWeight.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/DataFormats/GeometryCommonDetAlgo/interface/WeightMatrixTag.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexPrimitives/interface/BasicSingleVertexState.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexPrimitives/interface/TTtoTTmap.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/DataFormats/Candidate/interface/VertexCompositePtrCandidate.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/DataFormats/Candidate/interface/VertexCompositePtrCandidateFwd.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/KalmanVertexFit/interface/KalmanVertexFitter.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexTools/interface/SequentialVertexFitter.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexPrimitives/interface/VertexFitter.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexPrimitives/interface/CachingVertex.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexPrimitives/interface/VertexTrack.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexPrimitives/interface/LinearizedTrackState.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexPrimitives/interface/RefittedTrackState.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexPrimitives/interface/VertexException.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexTools/interface/LinearizationPointFinder.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexPrimitives/interface/VertexUpdator.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexPrimitives/interface/VertexSmoother.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexTools/interface/LinearizedTrackStateFactory.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexTools/interface/AbstractLTSFactory.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/RecoVertex/VertexTools/interface/VertexTrackFactory.h \
+ /cvmfs/cms.cern.ch/slc6_amd64_gcc493/cms/cmssw/CMSSW_7_6_3/src/FWCore/Utilities/interface/isFinite.h \
  /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/TotemAnalysis/TotemAnalysisEvent/interface/TotemRPEvent.h \
  /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_6_3/src/TotemAnalysis/TotemAnalysisEvent/interface/RPRootTrackInfo.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc493/lcg/root/6.02.12-kpegke4/include/TNamed.h \

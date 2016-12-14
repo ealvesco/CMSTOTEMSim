@@ -75,6 +75,14 @@
 #pragma link C++ class vector<MyFSCDigi>+;
 #pragma link C++ class MyFSCInfo+;
 #pragma link C++ class vector<MyFSCInfo>+;
+#pragma link C++ class MySiPixelCluster+; 
+#pragma link C++ class vector<MySiPixelCluster>+; 
+#pragma link C++ class MySiStripCluster+;
+#pragma link C++ class vector<MySiStripCluster>+;
+#pragma link C++ class MyD0+; 
+#pragma link C++ class vector<MyD0>+; 
+#pragma link C++ class MyDstar+;
+#pragma link C++ class vector<MyDstar>+;
 
 #endif
 

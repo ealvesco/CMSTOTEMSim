@@ -30,7 +30,7 @@ process.maxEvents = cms.untracked.PSet(
 # Input source
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(#'/store/group/phys_diffraction/CMSTotemLowPU2015/emc/MC/pythia8/step2/Production_CMSSIM-RPRECO_PYTHIA8-Dijets_v2/Production_CMSSIM-DIGI-HLT-RPRECO-NewFormat-PYTHIA8Dijets-pT20GeV/161024_134301/0000/step1_DIGI_L1_DIGI2RAW_HLT_9.root'),
-   'file:step1_DIGI_L1_DIGI2RAW_HLT.root'),#step1_DIGI_L1_DIGI2RAW_HLT.root
+   'file:step2_DIGI_L1_DIGI2RAW_HLT_pwsdplus.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
@@ -55,7 +55,7 @@ process.AODSIMoutput = cms.OutputModule("PoolOutputModule",
         filterName = cms.untracked.string('')
     ),
     eventAutoFlushCompressedSize = cms.untracked.int32(15728640),
-    fileName = cms.untracked.string('file:step1_DijetsPomwigSDMinus_RPRECO_CMS_RECO.root'),
+    fileName = cms.untracked.string('file:step3_PWSDPlus_RPRECO_CMS_RECO.root'),
     outputCommands = process.AODSIMEventContent.outputCommands
 )
 
@@ -70,6 +70,22 @@ outputCommandsRP = [
         'keep *_generator_*_*'
 ]
 process.AODSIMoutput.outputCommands.extend( outputCommandsRP )
+outputCommandsRECO = [
+    'keep *_towerMaker_*_*',
+    'keep *_generalTracks_*_*',
+    'keep *_ckfInOutTracksFromConversions_*_*',
+    'keep *_ckfOutInTracksFromConversions_*_*',
+    'keep *_cconversionStepTracks_*_*',
+    'keep *_electronGsfTracks_*_*',
+    'keep *_generalTracks_*_*',
+    'keep *_globalSETMuons_*_*',
+    'keep *_standAloneSETMuons_*_*',
+    'keep *_uncleanedOnlyCkfInOutTracksFromConversions_*_*',
+    'keep *_uncleanedOnlyCkfOutInTracksFromConversions_*_*',
+    'keep *_siStripClusters_*_*',
+    'keep *_siPixelClusters_*_*'
+]
+process.AODSIMoutput.outputCommands.extend( outputCommandsRECO )
 # Other statements
 from Configuration.AlCa.GlobalTag import GlobalTag
 process.GlobalTag = GlobalTag(process.GlobalTag, '76X_mcRun2_asymptotic_v12', '')
