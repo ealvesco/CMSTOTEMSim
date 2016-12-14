@@ -33,7 +33,6 @@ void UABaseTree::GetTotemRP(const edm::Event& event, const edm::EventSetup& setu
 	cout << "RP Patterns size: " << totemRPEvent_.nonpar_patterns_info_.size() << endl; 
 	cout << "RP Multi Track size: " << totemRPEvent_.multi_track_info_.size() << endl; 
 	cout << "RP Rec. Proton size: " << totemRPEvent_.rec_pr_info_.size() << endl; 
-        cout << "RP Rec. Proton var: " <<" , p-r: "<<rec_pr_info_[1].t << ",p-l: " <<rec_pr_info_[0].t << endl;
 	cout << "RP Sim. Proton size: " << totemRPEvent_.sim_pr_info_.size() << endl; 
      }
 
@@ -46,8 +45,7 @@ void UABaseTree::GetTotemRP(const edm::Event& event, const edm::EventSetup& setu
      rec_pr_info_ = totemRPEvent_.rec_pr_info_;
      sim_pr_info_ = totemRPEvent_.sim_pr_info_;
      rec_pr_pair_info_ = totemRPEvent_.rec_pr_pair_info_;
- // }else  if(TotemRPDebug){
- //       cout << "totemRPEventH.isValid(): " << totemRPEventH.isValid() << endl; 
+ 
      }
 
   //if(TotemRPDebug) {}
