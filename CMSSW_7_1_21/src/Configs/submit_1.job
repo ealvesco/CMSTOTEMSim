@@ -1,0 +1,19 @@
+#!/bin/tcsh
+cd /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_1_21/src
+cmsenv
+rehash
+
+
+cd /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_1_21/src/Configs
+
+
+echo "Running PW Plus CMS SIM"
+#cmsRun step1_CMSOnly_generatedpw.py
+cmsRun step1_CMSOnly_updated.py
+
+#cp /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_1_21/src/COnfigs/step1_SDPlusPomwig_RPRECO_CMS_SIM_oficialChain.root /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_1_21/src/RootFiles
+
+#echo "Running PW Minus CMS SIM"
+#cmsRun step1_CMSOnly_generatedpwminus.py
+
+#cp /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_1_21/src/Configs/step1_SDMinusPomwig_RPRECO_CMS_SIM_oficialChain.root /afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_1_21/src/RootFiles 

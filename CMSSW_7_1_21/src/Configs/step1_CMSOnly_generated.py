@@ -6,10 +6,10 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process('SIM')
-
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
-process.load('SimGeneral.HepPDTESSource.pythiapdt_cfi')
+process.load('PhysicsTools.HepMCCandAlgos.genParticles_cfi')
+process.load('SimGeneral.HepPDTESSource.pythiapdt_cfi') 
 process.load('FWCore.MessageService.MessageLogger_cfi')
 process.load('Configuration.EventContent.EventContent_cff')
 process.load('SimGeneral.MixingModule.mixNoPU_cfi')
@@ -27,10 +27,11 @@ process.maxEvents = cms.untracked.PSet(
 # Input source
 process.source = cms.Source("PoolSource",
     secondaryFileNames = cms.untracked.vstring(),
-     fileNames = cms.untracked.vstring('/store/group/phys_diffraction/CMSTotemLowPU2015/emc/MC/pomwig/SDPlus/step0/Dijets_v1/RP-GEN-SIM-RECO-PomwigDijetsPlus-newformat-v1//POMWIGPlus_13TeV_RPRECO_119.root')
-#'/store/group/phys_diffraction/CMSTotemLowPU2015/emc/MC/pomwig/sdminus/step0/Dijets_v1/RP-GEN-SIM-RECO-PomwigDijetsMinus-newformat-v1//POMWIGPlus_13TeV_RPRECO_184.root')
-#    fileNames = cms.untracked.vstring('file:/afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_0_4/src/Configuration/TotemStandardSequences/test/CMSTOTEM_LowPU2015/PYTHIA8_MB_13TeV_RPRECO_1.root')
-#     fileNames = cms.untracked.vstring('file:/afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_0_4/src/Configuration/TotemStandardSequences/test/CMSTOTEM_LowPU2015/POMWIGPlus_13TeV_RPRECO_1.root')
+      fileNames = cms.untracked.vstring(#'file:../../CMSSW_7_0_4/src/Configuration/TotemStandardSequences/test/RUN_CMSRP/cmssw_704/submit_gen-sim-reco-rp_2015-POMWIGMinusDijets-v1/jobarea_1/POMWIGMinus_13TeV_RPRECO_1.root')
+ #    'file:/afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_0_4/src/Configuration/TotemStandardSequences/test/CMSTOTEM_LowPU2015/TEST-POMWIGSDPlus/jobarea_1/POMWIGPlus_13TeV_RPRECO_1.root')
+    'file:/afs/cern.ch/user/e/eliza/private/TOTEM_JPSI/RPSIM/CMSSW_7_0_4/src/Configuration/TotemStandardSequences/test/CMSTOTEM_LowPU2015/submit_gen-sim-reco-rp_2015-POMWIGPlusDijetsSDPlus-v2/jobarea_1/POMWIGPlus_13TeV_RPRECO_1.root')
+#     fileNames = cms.untracked.vstring('/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO-PYTHIA8-v2/PYTHIA8_MB_13TeV_RPRECO_1.root')
+#    fileNames = cms.untracked.vstring('/store/caf/user/eliza/validation/cmstotem/RP-GEN-SIM-RECO-POMWIGPlusDijets-v1/POMWIGPlus_13TeV_RPRECO_1.root')
 )
 
 process.options = cms.untracked.PSet(
@@ -50,7 +51,7 @@ process.RAWSIMoutput = cms.OutputModule("PoolOutputModule",
     splitLevel = cms.untracked.int32(0),
     eventAutoFlushCompressedSize = cms.untracked.int32(5242880),
     outputCommands = process.RAWSIMEventContent.outputCommands,
-    fileName = cms.untracked.string('file:step1_SDPlusPomwig_RPRECO_CMS_SIM.root'),
+    fileName = cms.untracked.string('file:step1_MCPWSDPlus_RPRECO_CMS_SIM_v1.root'),
     dataset = cms.untracked.PSet(
         filterName = cms.untracked.string(''),
         dataTier = cms.untracked.string('SIM')
@@ -58,34 +59,31 @@ process.RAWSIMoutput = cms.OutputModule("PoolOutputModule",
 )
 
 # Additional output definition
+# Additional output definition
 outputCommandsRP = [
-     'keep *_totemRPAnalysis_*_*',
-     'drop *_*_TotemHitsRP_SIM',
-     'drop *_*_TotemHitsT1_SIM',
-     'drop *_*_TotemHitsT2Gem_SIM',
-     'keep *_SmearingGenerator_*_*',
-     'keep *_genParticles_*_*', 
-     'keep *_genParticlesForJets_*_*', 
-     'keep *_kt4GenJets_*_*', 
-     'keep *_kt6GenJets_*_*', 
-     'keep *_iterativeCone5GenJets_*_*', 
-     'keep *_ak4GenJets_*_*', 
-     'keep *_ak7GenJets_*_*', 
-     'keep *_ak8GenJets_*_*', 
-     'keep *_ak4GenJetsNoNu_*_*', 
-     'keep *_ak8GenJetsNoNu_*_*', 
-     'keep *_genCandidatesForMET_*_*', 
-     'keep *_genParticlesForMETAllVisible_*_*', 
-     'keep *_genMetCalo_*_*', 
-     'keep *_genMetCaloAndNonPrompt_*_*', 
-     'keep *_genMetTrue_*_*', 
-     'keep *_genMetIC5GenJs_*_*',
-     'keep *_generator_*_*'
-
-
-             ]
+       'keep *_totemRPAnalysis_*_*',
+        'keep *_SmearingGenerator_*_*',
+        'keep *_genParticles_*_*', 
+        'keep *_genParticlesForJets_*_*', 
+        'keep *_kt4GenJets_*_*', 
+        'keep *_kt6GenJets_*_*', 
+        'keep *_iterativeCone5GenJets_*_*', 
+        'keep *_ak4GenJets_*_*', 
+        'keep *_ak7GenJets_*_*', 
+        'keep *_ak8GenJets_*_*', 
+        'keep *_ak4GenJetsNoNu_*_*', 
+        'keep *_ak8GenJetsNoNu_*_*', 
+        'keep *_genCandidatesForMET_*_*', 
+        'keep *_genParticlesForMETAllVisible_*_*', 
+        'keep *_genMetCalo_*_*', 
+        'keep *_genMetCaloAndNonPrompt_*_*', 
+        'keep *_genMetTrue_*_*', 
+        'keep *_genMetIC5GenJs_*_*',
+        'drop *_*_TotemHitsRP_SIM',
+        'drop *_*_TotemHitsT1_SIM',
+        'drop *_*_TotemHitsT2Gem_SIM'        
+  ]
 process.RAWSIMoutput.outputCommands.extend( outputCommandsRP )
-
 # Other statements
 from Configuration.AlCa.GlobalTag import GlobalTag
 process.GlobalTag = GlobalTag(process.GlobalTag, 'MCRUN2_71_V3::All', '')
